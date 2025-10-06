@@ -11,10 +11,9 @@
 	version();
 
 	const preloadFont = [
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2"
+		"/fonts/AmsiPro-Ultra.woff2",
+		"/fonts/Carlito/Carlito-Regular.ttf",
+		"/fonts/Carlito/Carlito-Bold.ttf"
 	];
 
 	const { title, description, url, keywords } = copy;

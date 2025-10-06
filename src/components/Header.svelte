@@ -5,7 +5,7 @@
 
 <header>
 	<div class="wordmark">
-		<a href="https://pudding.cool" aria-label="The Pudding" target="_self"
+		<a href="/" aria-label="Prime Members for Cleaner Amazon" target="_self"
 			>{@html wordmark}</a
 		>
 	</div>
