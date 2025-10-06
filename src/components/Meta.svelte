@@ -1,8 +1,8 @@
 <script>
 	let {
-		title = "Title TK",
-		description = "Description TK",
-		url = "",
+		title = "Prime Members for Clean Amazon",
+		description = "Prime members want Amazon to do more on climate",
+		url = "https://primemembers.earth",
 		keywords = "",
 		preloadFont = []
 	} = $props();
@@ -21,8 +21,8 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="en_US" />
 
-	<meta property="og:image" content="{url}/assets/social-facebook.jpg" />
-	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image" content="{url}/static/hero-bg.webp" />
+	<meta property="og:image:type" content="image/webp" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="628" />
 
@@ -31,11 +31,14 @@
 	<meta name="twitter:creator" content="" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image:src" content="{url}/assets/social-twitter.jpg" />
+	<meta name="twitter:image:src" content="{url}/static/hero-bg.webp" />
 
 	<meta name="robots" content="max-image-preview:large" />
 
 	<link rel="canonical" href="{url}/" />
+	
+	<link rel="icon" type="image/svg+xml" href="/marker.svg" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 	{#each preloadFont as href}
 		<link rel="preload" {href} as="font" type="font/woff2" crossorigin />

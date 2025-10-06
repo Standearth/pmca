@@ -1,6 +1,7 @@
 {
 	"name": "svelte-starter",
 	"version": "6.15.0",
+	"type":"module",
 	"scripts": {
 		"gdoc": "node tasks/fetch-google.js",
 		"style": "node tasks/style-dictionary.js",
@@ -13,7 +14,7 @@
 	"devDependencies": {
 		"@lucide/svelte": "^0.544.0",
 		"@rollup/plugin-dsv": "^3.0.5",
-		"@sveltejs/adapter-static": "^3.0.9",
+		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.43.4",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
 		"archieml": "^0.5.0",
@@ -34,7 +35,6 @@
 		"vite": "^6.3.6",
 		"vite-plugin-svgstring": "^1.0.0"
 	},
-	"type": "module",
 	"engines": {
 		"node": ">= 18.20.4"
 	},

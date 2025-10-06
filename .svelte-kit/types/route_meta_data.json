@@ -1,0 +1,16 @@
+{
+	"/": [
+		"src/routes/+page.server.js",
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/get-started": [
+		"src/routes/+layout.js"
+	],
+	"/leaderboard": [
+		"src/routes/+layout.js"
+	],
+	"/learn-more": [
+		"src/routes/+layout.js"
+	]
+}
