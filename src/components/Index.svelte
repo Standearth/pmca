@@ -373,7 +373,7 @@
 	
 	.btn-cta {
 		background: #ff9f2e;
-		color: white;
+		color: #000;
 		font-size: 1.1rem;
 		padding: 1rem 2rem;
 	}
@@ -385,6 +385,7 @@
 	
 	.btn-cta.large {
 		font-size: 1.3rem;
+		color:#000;
 		padding: 1.2rem 3rem;
 	}
 	
