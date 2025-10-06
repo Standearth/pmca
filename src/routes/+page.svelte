@@ -1,6 +1,7 @@
 <script>
 	import { setContext } from "svelte";
 	import { browser } from "$app/environment";
+	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Index from "$components/Index.svelte";
 	import copy from "$data/copy.json";
@@ -11,9 +12,9 @@
 	version();
 
 	const preloadFont = [
-		"/fonts/AmsiPro-Ultra.woff2",
-		"/fonts/Carlito/Carlito-Regular.ttf",
-		"/fonts/Carlito/Carlito-Bold.ttf"
+		`${base}/fonts/AmsiPro-Ultra.woff2`,
+		`${base}/fonts/Carlito/Carlito-Regular.ttf`,
+		`${base}/fonts/Carlito/Carlito-Bold.ttf`
 	];
 
 	const { title, description, url, keywords } = copy;

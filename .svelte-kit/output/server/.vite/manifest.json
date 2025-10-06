@@ -6,7 +6,8 @@
     "isEntry": true,
     "imports": [
       "_internal.js",
-      "_environment.js"
+      "_environment.js",
+      "_server.js"
     ]
   },
   "_Header.GuaPoAD9.css": {
@@ -16,6 +17,10 @@
   "_Header.js": {
     "file": "chunks/Header.js",
     "name": "Header",
+    "imports": [
+      "_index.js",
+      "_server.js"
+    ],
     "css": [
       "_app/immutable/assets/Header.GuaPoAD9.css"
     ]
@@ -24,7 +29,8 @@
     "file": "chunks/Meta.js",
     "name": "Meta",
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_server.js"
     ]
   },
   "_environment.js": {
@@ -51,8 +57,13 @@
     "name": "internal",
     "imports": [
       "_index.js",
-      "_environment.js"
+      "_environment.js",
+      "_server.js"
     ]
+  },
+  "_server.js": {
+    "file": "chunks/server.js",
+    "name": "server"
   },
   "_shared.js": {
     "file": "chunks/shared.js",
@@ -74,6 +85,7 @@
       "_shared.js",
       "_utils.js",
       "_false.js",
+      "_server.js",
       "_environment.js"
     ]
   },
@@ -84,7 +96,7 @@
     "isEntry": true,
     "imports": [
       "_false.js",
-      "_environment.js",
+      "_server.js",
       "_exports.js",
       "_utils.js",
       "_index.js",
@@ -115,10 +127,11 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_Header.js"
+      "_Header.js",
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Cyyw4k0w.css"
+      "_app/immutable/assets/_layout.ivZx4mKQ.css"
     ]
   },
   "src/routes/+page.server.js": {
@@ -134,6 +147,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_server.js",
       "_Meta.js",
       "_Header.js"
     ],

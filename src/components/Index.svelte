@@ -1,5 +1,6 @@
 <script>
 	import { getContext, onMount } from "svelte";
+	import { base } from '$app/paths';
 	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	
@@ -48,10 +49,10 @@
 				autoplay 
 				muted 
 				playsinline 
-				poster="/hero-bg.webp"
+				poster="{base}/hero-bg.webp"
 				class="hero-video"
 			>
-				<source src="/bg_video.mp4" type="video/mp4">
+				<source src="{base}/bg_video.mp4" type="video/mp4">
 			</video>
 		</div>
 		
@@ -105,7 +106,7 @@
 	
 	<!-- Tape Transition -->
 	<div class="tape-section">
-		<img src="/tape.png" alt="Tape" class="tape-image" />
+		<img src="{base}/tape.png" alt="Tape" class="tape-image" />
 	</div>
 	
 	<!-- How Section -->

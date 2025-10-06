@@ -8,13 +8,22 @@ const preprocess = sveltePreprocess({
 	}
 });
 
+const dev = process.argv.includes('dev');
+
 const config = {
 	compilerOptions: {
 		runes: true
 	},
 	preprocess,
 	kit: {
-		adapter: adapterStatic({ strict: false })
+		adapter: adapterStatic({ 
+			strict: false,
+			pages: 'docs',
+			assets: 'docs'
+		}),
+		paths: {
+			base: dev ? '' : process.env.BASE_PATH || '/pmca'
+		}
 	}
 };
 

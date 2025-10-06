@@ -1,10 +1,9 @@
-import "clsx";
-import { H as Header } from "../../chunks/Header.js";
-import { $ as head } from "../../chunks/index.js";
-import "@sveltejs/kit/internal/server";
-function FontLoader($$renderer) {
-  head($$renderer, ($$renderer2) => {
-    $$renderer2.push(`<style>
+<script>
+	import { base } from '$app/paths';
+</script>
+
+<svelte:head>
+	<style>
 		@font-face {
 			font-family: "AmsiPro";
 			src: url("{base}/fonts/AmsiPro-Ultra.woff2") format("woff2"),
@@ -49,18 +48,6 @@ function FontLoader($$renderer) {
 			font-style: italic;
 			font-stretch: normal;
 			font-display: swap;
-		}</style>`);
-  });
-}
-function _layout($$renderer, $$props) {
-  let { children } = $$props;
-  FontLoader($$renderer);
-  $$renderer.push(`<!----> `);
-  Header($$renderer);
-  $$renderer.push(`<!----> <main id="content">`);
-  children?.($$renderer);
-  $$renderer.push(`<!----></main>`);
-}
-export {
-  _layout as default
-};
+		}
+	</style>
+</svelte:head>

@@ -1,6 +1,7 @@
 import { H as HYDRATION_ERROR, C as COMMENT_NODE, a as HYDRATION_END, g as get_next_sibling, b as HYDRATION_START, c as HYDRATION_START_ELSE, e as effect_tracking, d as get, f as source, r as render_effect, u as untrack, i as increment, q as queue_micro_task, h as internal_set, j as active_effect, k as block, l as branch, B as Batch, p as pause_effect, m as set_active_effect, o as set_active_reaction, t as set_component_context, v as handle_error, w as active_reaction, x as component_context, y as effect_pending_updates, z as destroy_effect, A as invoke_error_boundary, D as svelte_boundary_reset_onerror, E as EFFECT_TRANSPARENT, F as EFFECT_PRESERVED, G as BOUNDARY_EFFECT, I as define_property, J as is_array, K as init_operations, L as get_first_child, M as hydration_failed, N as clear_text_content, O as array_from, P as component_root, Q as is_passive_event, R as create_text, S as push, T as pop, U as set, V as LEGACY_PROPS, W as flushSync, X as mutable_source, Y as render, Z as experimental_async_ssr, _ as setContext } from "./index.js";
 import "clsx";
 import "./environment.js";
+import "./server.js";
 let public_env = {};
 function set_private_env(environment) {
 }
@@ -957,7 +958,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "u7a9lh"
+  version_hash: "1b4leb"
 };
 async function get_hooks() {
   let handle;

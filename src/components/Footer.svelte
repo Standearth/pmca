@@ -1,16 +1,17 @@
 <script>
+	import { base } from '$app/paths';
 </script>
 
 <footer class="campaign-footer">
 	<div class="container">
 		<div class="footer-content">
 			<div class="footer-logo">
-				<a target="_new" href="https://stand.earth/"><img src="/stand_white.png" alt="Stand.earth" /></a>
+				<a target="_new" href="https://stand.earth/"><img src="{base}/stand_white.png" alt="Stand.earth" /></a>
 			</div>
 			
 			<nav class="footer-nav">
-				<a href="/learn-more">Learn More</a>
-				<a href="/get-started" class="get-involved-btn">Get Involved</a>
+				<a href="{base}/learn-more">Learn More</a>
+				<a href="{base}/get-started" class="get-involved-btn">Get Involved</a>
 			</nav>
 		</div>
 	</div>

@@ -1,11 +1,4 @@
-import "clsx";
-import { H as Header } from "../../chunks/Header.js";
-import { $ as head } from "../../chunks/index.js";
-import "@sveltejs/kit/internal/server";
-function FontLoader($$renderer) {
-  head($$renderer, ($$renderer2) => {
-    $$renderer2.push(`<style>
-		@font-face {
+import"../chunks/Bzak7iHL.js";import{af as m,T as e,W as l,_ as c,ag as n,Y as p,O as y,Z as d}from"../chunks/D4S9hLi-.js";import{a as u}from"../chunks/MJLOPqBc.js";import{H as h}from"../chunks/5qpoJzGd.js";import"../chunks/BcSZxdFh.js";const w=!0,g="always",$=Object.freeze(Object.defineProperty({__proto__:null,prerender:w,trailingSlash:g},Symbol.toStringTag,{value:"Module"}));var C=e(`<style>@font-face {
 			font-family: "AmsiPro";
 			src: url("{base}/fonts/AmsiPro-Ultra.woff2") format("woff2"),
 				 url("{base}/fonts/AmsiPro-Ultra.woff") format("woff");
@@ -49,18 +42,4 @@ function FontLoader($$renderer) {
 			font-style: italic;
 			font-stretch: normal;
 			font-display: swap;
-		}</style>`);
-  });
-}
-function _layout($$renderer, $$props) {
-  let { children } = $$props;
-  FontLoader($$renderer);
-  $$renderer.push(`<!----> `);
-  Header($$renderer);
-  $$renderer.push(`<!----> <main id="content">`);
-  children?.($$renderer);
-  $$renderer.push(`<!----></main>`);
-}
-export {
-  _layout as default
-};
+		}</style>`);function _(a){m(o=>{var t=C();l(o,t)})}var b=e('<!> <!> <main id="content"><!></main>',1);function j(a,o){var t=b(),s=c(t);_();var r=n(s,2);h(r,{});var f=n(r,2),i=p(f);u(i,()=>o.children??y),d(f),l(a,t)}export{j as component,$ as universal};

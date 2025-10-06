@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 	
 	let showMenu = $state(false);
 	
@@ -25,8 +26,8 @@
 	<div class="container">
 	<div class="nav-container">
 		<div class="logo">
-			<a href="/" aria-label="Prime Members for Cleaner Amazon">
-				<img src="/logo_white.png" alt="Prime Members for Cleaner Amazon" />
+			<a href="{base}/" aria-label="Prime Members for Cleaner Amazon">
+				<img src="{base}/logo_white.png" alt="Prime Members for Cleaner Amazon" />
 			</a>
 		</div>
 		
@@ -42,10 +43,10 @@
 		<div class="nav-menu" class:show={showMenu}>
 			<button class="menu-close" onclick={closeMenu} aria-label="Close menu">&times;</button>
 			<nav>
-				<a href="/" onclick={closeMenu}>Home</a>
-				<a href="/learn-more" onclick={closeMenu}>Learn More</a>
-				<a href="/leaderboard" onclick={closeMenu}>Leaderboard</a>
-				<a href="/get-started" class="get-started-cta" onclick={closeMenu}>Get Started</a>
+				<a href="{base}/" onclick={closeMenu}>Home</a>
+				<a href="{base}/learn-more" onclick={closeMenu}>Learn More</a>
+				<a href="{base}/leaderboard" onclick={closeMenu}>Leaderboard</a>
+				<a href="{base}/get-started" class="get-started-cta" onclick={closeMenu}>Get Started</a>
 			</nav>
 		</div>
 	{/if}
