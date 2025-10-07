@@ -3,27 +3,18 @@
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Footer from "$components/Footer.svelte";
+	import TapeTransition from "$components/TapeTransition.svelte";
+	import PopupModal from "$components/PopupModal.svelte";
 
 	const title = "Learn More - Prime Members for Cleaner Amazon";
 	const description = "Learn more about how Prime members can push Amazon to do more on climate.";
 	
 	let showPopup = $state(false);
-	let iframeSrc = $state('https://act.stand.earth/page/88799/petition/1');
 	
 	function openPopup() {
 		showPopup = true;
 		document.body.style.overflow = 'hidden';
 	}
-	
-	function closePopup() {
-		showPopup = false;
-		document.body.style.overflow = 'auto';
-	}
-	
-	onMount(() => {
-		// Update iframe src with URL parameters
-		iframeSrc = `https://act.stand.earth/page/89116/petition/1${window.location.search}`;
-	});
 </script>
 
 <Meta {title} {description} />
@@ -95,9 +86,7 @@
 	</div>
 </section>
 <!-- Tape Transition -->
-<div class="tape-section">
-	<img src="{base}/tape.png" alt="Tape" class="tape-image" />
-</div>
+<TapeTransition />
 
 <!-- Our Demands Section -->
 <section class="demands">
@@ -136,18 +125,8 @@
 	</div>
 </section>
 
-<!-- Popup Modal - Preloaded iframe for better performance -->
-<div class="popup-overlay" class:show={showPopup} onclick={closePopup}>
-	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
-		<button class="popup-close" onclick={closePopup}>&times;</button>
-		<iframe 
-			src={iframeSrc}
-			title="Join the campaign"
-			class="popup-iframe"
-			loading="eager"
-		/>
-	</div>
-</div>
+<!-- Popup Modal -->
+<PopupModal bind:show={showPopup} baseUrl="https://act.stand.earth/page/89116/petition/1" />
 
 <Footer />
 
@@ -355,18 +334,6 @@
 		opacity: 0.8;
 	}
 	
-	/* Tape Section */
-	.tape-section {
-		width: 100%;
-		overflow: hidden;
-	}
-	
-	.tape-image {
-		width: 100%;
-		min-width: 1600px;
-		height: auto;
-		display: block;
-	}
 	
 	/* Good News Section */
 	.good-news {
@@ -505,56 +472,6 @@
 		margin-right: auto;
 	}
 	
-	/* Popup Styles */
-	.popup-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0,0,0,0.8);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 10000;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
-	}
-	
-	.popup-overlay.show {
-		opacity: 1;
-		visibility: visible;
-	}
-	
-	.popup-content {
-		position: relative;
-		width: 90%;
-		max-width: 440px;
-		height: 80%;
-		background: white;
-		border-radius: 0px;
-		border: 10px solid #ff9f2e;
-		overflow: hidden;
-	}
-	
-	.popup-close {
-		position: absolute;
-		top: 15px;
-		right: 20px;
-		background: none;
-		border: none;
-		font-size: 2rem;
-		cursor: pointer;
-		z-index: 10001;
-		color: #666;
-	}
-	
-	.popup-iframe {
-		width: 100%;
-		height: 100%;
-		border: none;
-	}
 	
 	/* Mobile Responsiveness */
 	@media (max-width: 768px) {
@@ -596,10 +513,6 @@
 			grid-template-columns: 1fr;
 		}
 		
-		.popup-content {
-			width: 95%;
-			height: 90%;
-		}
 		
 		.container {
 			padding: 0 1rem;

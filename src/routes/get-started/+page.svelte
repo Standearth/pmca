@@ -3,6 +3,7 @@
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Footer from "$components/Footer.svelte";
+	import TapeTransition from "$components/TapeTransition.svelte";
 
 	const title = "Get Started - Prime Members for Cleaner Amazon";
 	const description = "Your Prime member power has been activated! Share your voice and help mobilize more Prime members.";
@@ -13,7 +14,9 @@
 	let hasRef = $state(false);
 	let refId = $state('');
 	let copySuccess = $state(false);
-	let typeformSrc = $state('');
+	let typeformId = $state('');
+	let urlHits = $state(0);
+	let showBadge = $state(false);
 	
 	const API_ENDPOINT = "https://amazonpri.me/shorten";
 	const LONG_URL_BASE = "https://primemembers.earth/?ref=";
@@ -82,6 +85,13 @@
 				const data = await response.json();
 				if (data.short_url) {
 					uniqueShareUrl = data.short_url;
+					// Handle hits count from API response
+					if (data.hits !== undefined) {
+						urlHits = data.hits;
+						if (urlHits > 0) {
+							showBadge = true;
+						}
+					}
 				} else {
 					console.error('API returned success but missing short_url');
 					uniqueShareUrl = fullUrl; // fallback to long URL
@@ -105,12 +115,18 @@
 			refId = refParam;
 			hasRef = true;
 			generateUniqueUrl(refParam);
-			// Set typeform URL with ref parameter
-			typeformSrc = `https://primemembers.typeform.com/to/YOUR_FORM_ID?ref=${encodeURIComponent(refParam)}`;
+			// Set typeform ID with ref parameter
+			typeformId = `01K70GM4RX0NA2YJG92V2E4K4W?ref=${encodeURIComponent(refParam)}`;
 		} else {
-			// Set default typeform URL without ref parameter
-			typeformSrc = 'https://primemembers.typeform.com/to/YOUR_FORM_ID';
+			// Set default typeform ID without ref parameter
+			typeformId = '01K70GM4RX0NA2YJG92V2E4K4W';
 		}
+		
+		// Load Typeform embed script
+		const script = document.createElement('script');
+		script.src = '//embed.typeform.com/next/embed.js';
+		script.async = true;
+		document.head.appendChild(script);
 	});
 </script>
 
@@ -147,8 +163,21 @@
 <!-- Social Sharing Section -->
 <section class="social-sharing">
 	<div class="container">
-		<h2>Spread the word on social media</h2>
+		<h2>Step 1: Spread the word on social media</h2>
 		<p class="section-intro">Help us reach more Prime members by sharing our campaign on your social networks.</p>
+		
+		{#if showBadge && urlHits > 0}
+			<div class="engagement-badge">
+				<div class="badge-content">
+					<div class="badge-icon">🎉</div>
+					<div class="badge-text">
+						<div class="badge-number">{urlHits}</div>
+						<div class="badge-label">{urlHits === 1 ? 'person has' : 'people have'} clicked your link!</div>
+					</div>
+				</div>
+				<div class="badge-glow"></div>
+			</div>
+		{/if}
 		
 		<div class="social-buttons">
 			<a href={getShareUrl('facebook')} target="_blank" class="social-btn facebook">
@@ -161,9 +190,7 @@
 			</a>
 			<a href={getShareUrl('bluesky')} target="_blank" class="social-btn bluesky">
 				<span class="social-icon">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
-					</svg>
+					<img src="{base}/Bluesky_Logo_White.svg" alt="Bluesky" />
 				</span>
 				<span>Bluesky</span>
 			</a>
@@ -198,26 +225,24 @@
 <!-- Survey Section -->
 <section class="survey">
 	<div class="container">
-		<h2>Tell us more about your priorities</h2>
+		<h2>Step 2: Tell us more about your priorities</h2>
 		<p class="section-intro">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p>
 		
 		<div class="survey-container">
-			{#if typeformSrc}
-				<iframe src={typeformSrc} title="Prime Member Survey" class="survey-iframe"></iframe>
+			{#if typeformId}
+				<div data-tf-live={typeformId}></div>
 			{/if}
 		</div>
 	</div>
 </section>
 
 <!-- Tape Transition -->
-<div class="tape-section">
-	<img src="{base}/tape.png" alt="Tape" class="tape-image" />
-</div>
+<TapeTransition />
 
 <!-- Donation Section -->
 <section class="donation">
 	<div class="container">
-		<h2>Power our campaign with a donation</h2>
+		<h2>Step 3: Power our campaign with a donation</h2>
 		<p class="section-intro">Your contribution helps us reach more Prime members and build the pressure needed to change Amazon.</p>
 		
 		<div class="donation-grid">
@@ -312,7 +337,7 @@
 		background: rgba(255, 255, 255, 0.1);
 		border: 2px solid #ff9f2e;
 		border-radius: 12px;
-		padding: 2rem;
+		padding: 1rem;
 		margin-top: 2rem;
 		backdrop-filter: blur(10px);
 	}
@@ -442,7 +467,8 @@
 		height: 20px;
 	}
 	
-	.social-icon svg {
+	.social-icon svg,
+	.social-icon img {
 		width: 100%;
 		height: 100%;
 	}
@@ -453,17 +479,95 @@
 	.whatsapp { background: #25D366; }
 	.linkedin { background: #0A66C2; }
 	
-	/* Tape Section */
-	.tape-section {
-		width: 100%;
+	/* Engagement Badge */
+	.engagement-badge {
+		position: relative;
+		background: linear-gradient(135deg, #ff9f2e 0%, #ffb84d 50%, #ff9f2e 100%);
+		border: 3px solid #fff;
+		border-radius: 20px;
+		padding: 1.5rem 2rem;
+		margin: 2rem auto 3rem auto;
+		max-width: 400px;
+		box-shadow: 0 8px 25px rgba(255, 159, 46, 0.4);
+		animation: badgePulse 2s ease-in-out infinite;
 		overflow: hidden;
 	}
 	
-	.tape-image {
-		width: 100%;
-		min-width: 1600px;
-		height: auto;
-		display: block;
+	.badge-content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		position: relative;
+		z-index: 2;
+	}
+	
+	.badge-icon {
+		font-size: 2.5rem;
+		animation: iconBounce 2s ease-in-out infinite;
+	}
+	
+	.badge-text {
+		flex: 1;
+	}
+	
+	.badge-number {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: 2rem;
+		font-weight: bold;
+		color: #000;
+		line-height: 1;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+	
+	.badge-label {
+		font-family: 'Carlito', sans-serif;
+		font-size: 1rem;
+		color: #000;
+		font-weight: 600;
+		margin-top: 0.25rem;
+	}
+	
+	.badge-glow {
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+		animation: glowRotate 3s linear infinite;
+		pointer-events: none;
+	}
+	
+	@keyframes badgePulse {
+		0%, 100% {
+			transform: scale(1);
+			box-shadow: 0 8px 25px rgba(255, 159, 46, 0.4);
+		}
+		50% {
+			transform: scale(1.02);
+			box-shadow: 0 12px 35px rgba(255, 159, 46, 0.6);
+		}
+	}
+	
+	@keyframes iconBounce {
+		0%, 100% {
+			transform: translateY(0) rotate(0deg);
+		}
+		25% {
+			transform: translateY(-5px) rotate(-5deg);
+		}
+		75% {
+			transform: translateY(-2px) rotate(5deg);
+		}
+	}
+	
+	@keyframes glowRotate {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
 	}
 	
 	/* Survey Section */
@@ -486,17 +590,13 @@
 	}
 	
 	.survey-container {
-		background: white;
-		border-radius: 12px;
+		border-radius: 0px;
 		overflow: hidden;
-		height: 600px;
-		box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 	}
 	
-	.survey-iframe {
+	.survey-container > div {
 		width: 100%;
-		height: 100%;
-		border: none;
+		min-height: 600px;
 	}
 	
 	/* Donation Section */
@@ -620,6 +720,27 @@
 			align-self: stretch;
 		}
 		
+		.engagement-badge {
+			padding: 1rem 1.5rem;
+			margin: 1.5rem auto 2rem auto;
+		}
+		
+		.badge-content {
+			gap: 0.75rem;
+		}
+		
+		.badge-icon {
+			font-size: 2rem;
+		}
+		
+		.badge-number {
+			font-size: 1.5rem;
+		}
+		
+		.badge-label {
+			font-size: 0.9rem;
+		}
+		
 		.social-buttons {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -630,7 +751,11 @@
 		}
 		
 		.survey-container {
-			height: 500px;
+			min-height: 500px;
+		}
+		
+		.survey-container > div {
+			min-height: 500px;
 		}
 		
 		.donation-grid {

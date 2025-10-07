@@ -10,21 +10,6 @@
       "_server.js"
     ]
   },
-  "_Footer.DJ3nP5aV.css": {
-    "file": "_app/immutable/assets/Footer.DJ3nP5aV.css",
-    "src": "_Footer.DJ3nP5aV.css"
-  },
-  "_Footer.js": {
-    "file": "chunks/Footer.js",
-    "name": "Footer",
-    "imports": [
-      "_index.js",
-      "_server.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Footer.DJ3nP5aV.css"
-    ]
-  },
   "_Header.GuaPoAD9.css": {
     "file": "_app/immutable/assets/Header.GuaPoAD9.css",
     "src": "_Header.GuaPoAD9.css"
@@ -46,6 +31,35 @@
     "imports": [
       "_index.js",
       "_server.js"
+    ]
+  },
+  "_PopupModal.BQW_epEu.css": {
+    "file": "_app/immutable/assets/PopupModal.BQW_epEu.css",
+    "src": "_PopupModal.BQW_epEu.css"
+  },
+  "_PopupModal.js": {
+    "file": "chunks/PopupModal.js",
+    "name": "PopupModal",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PopupModal.BQW_epEu.css"
+    ]
+  },
+  "_TapeTransition.BuHYnLHs.css": {
+    "file": "_app/immutable/assets/TapeTransition.BuHYnLHs.css",
+    "src": "_TapeTransition.BuHYnLHs.css"
+  },
+  "_TapeTransition.js": {
+    "file": "chunks/TapeTransition.js",
+    "name": "TapeTransition",
+    "imports": [
+      "_index.js",
+      "_server.js"
+    ],
+    "css": [
+      "_app/immutable/assets/TapeTransition.BuHYnLHs.css"
     ]
   },
   "_environment.js": {
@@ -164,10 +178,11 @@
       "_server.js",
       "_Meta.js",
       "_Header.js",
-      "_Footer.js"
+      "_TapeTransition.js",
+      "_PopupModal.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.R1fAxSgk.css"
+      "_app/immutable/assets/_page.Cb_H-a7l.css"
     ]
   },
   "src/routes/get-started/+page.svelte": {
@@ -179,10 +194,10 @@
       "_index.js",
       "_server.js",
       "_Meta.js",
-      "_Footer.js"
+      "_TapeTransition.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DjAo87F4.css"
+      "_app/immutable/assets/_page.BEWXdehi.css"
     ]
   },
   "src/routes/leaderboard/+page.svelte": {
@@ -206,10 +221,11 @@
       "_index.js",
       "_server.js",
       "_Meta.js",
-      "_Footer.js"
+      "_TapeTransition.js",
+      "_PopupModal.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B_M9hnNo.css"
+      "_app/immutable/assets/_page.CIr5-i6P.css"
     ]
   }
 }

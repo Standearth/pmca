@@ -2326,6 +2326,15 @@ function unsubscribe_stores(store_values) {
     store_values[store_name][1]();
   }
 }
+function bind_props(props_parent, props_now) {
+  for (const key in props_now) {
+    const initial_value = props_parent[key];
+    const value = props_now[key];
+    if (initial_value === void 0 && value !== void 0 && Object.getOwnPropertyDescriptor(props_parent, key)?.set) {
+      props_parent[key] = value;
+    }
+  }
+}
 function ensure_array_like(array_like_or_iterator) {
   if (array_like_or_iterator) {
     return array_like_or_iterator.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
@@ -2366,10 +2375,11 @@ export {
   store_get as a1,
   unsubscribe_stores as a2,
   attr as a3,
-  attr_class as a4,
-  stringify as a5,
-  head as a6,
-  ensure_array_like as a7,
+  stringify as a4,
+  attr_class as a5,
+  bind_props as a6,
+  head as a7,
+  ensure_array_like as a8,
   HYDRATION_START as b,
   HYDRATION_START_ELSE as c,
   get as d,
