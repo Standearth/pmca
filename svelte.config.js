@@ -22,7 +22,7 @@ const config = {
 			assets: 'docs'
 		}),
 		paths: {
-			base: dev ? '' : process.env.BASE_PATH || '/pmca'
+			base: '/pmca'
 		}
 	}
 };
