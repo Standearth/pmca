@@ -8,7 +8,7 @@
 	let currentCount = $state(0);
 	const targetCount = 13428;
 	let showPopup = $state(false);
-	let iframeSrc = $state('https://act.stand.earth/page/88799/petition/1');
+	let iframeSrc = $state('https://act.stand.earth/page/89116/petition/1');
 	
 	// const copy = getContext("copy");
 	// const data = getContext("data");
@@ -26,7 +26,7 @@
 	
 	onMount(() => {
 		// Update iframe src with URL parameters
-		iframeSrc = `https://act.stand.earth/page/88799/petition/1${window.location.search}`;
+		iframeSrc = `https://act.stand.earth/page/89116/petition/1${window.location.search}`;
 		
 		// Animate counter
 		const duration = 2000;

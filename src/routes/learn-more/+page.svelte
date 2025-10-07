@@ -21,7 +21,7 @@
 	
 	onMount(() => {
 		// Update iframe src with URL parameters
-		iframeSrc = `https://act.stand.earth/page/88799/petition/1${window.location.search}`;
+		iframeSrc = `https://act.stand.earth/page/89116/petition/1${window.location.search}`;
 	});
 </script>
 
@@ -144,12 +144,11 @@
 			title="Join the campaign"
 			class="popup-iframe"
 			loading="eager"
-		></iframe>
+		/>
 	</div>
 </div>
 
 <style>
-	/* Hero Section */
 	.hero {
 		position: relative;
 		height: 70vh;
