@@ -1,4 +1,4 @@
-import"../chunks/Bzak7iHL.js";import{af as m,T as e,W as l,_ as c,ag as n,Y as p,O as y,Z as d}from"../chunks/D4S9hLi-.js";import{a as u}from"../chunks/MJLOPqBc.js";import{H as h}from"../chunks/5qpoJzGd.js";import"../chunks/BcSZxdFh.js";const w=!0,g="always",$=Object.freeze(Object.defineProperty({__proto__:null,prerender:w,trailingSlash:g},Symbol.toStringTag,{value:"Module"}));var C=e(`<style>@font-face {
+import"../chunks/Bzak7iHL.js";import{af as m,T as e,W as l,_ as c,ag as n,Y as p,O as y,Z as d}from"../chunks/D4S9hLi-.js";import{a as u}from"../chunks/MJLOPqBc.js";import{H as h}from"../chunks/BghvN22q.js";import"../chunks/BiaHXelj.js";const w=!0,g="always",$=Object.freeze(Object.defineProperty({__proto__:null,prerender:w,trailingSlash:g},Symbol.toStringTag,{value:"Module"}));var C=e(`<style>@font-face {
 			font-family: "AmsiPro";
 			src: url("{base}/fonts/AmsiPro-Ultra.woff2") format("woff2"),
 				 url("{base}/fonts/AmsiPro-Ultra.woff") format("woff");
