@@ -153,7 +153,7 @@
 	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
 		<button class="popup-close" onclick={closePopup}>&times;</button>
 		<iframe 
-			src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
+			src="https://act.stand.earth/page/89116/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
 			title="Join the campaign"
 			class="popup-iframe"
 			loading="eager"
