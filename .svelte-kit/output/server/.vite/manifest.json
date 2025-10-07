@@ -151,7 +151,7 @@
       "_Header.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CbNrhJ-9.css"
+      "_app/immutable/assets/_page.Cgljygir.css"
     ]
   },
   "src/routes/get-started/+page.svelte": {
@@ -184,10 +184,12 @@
     "src": "src/routes/learn-more/+page.svelte",
     "isEntry": true,
     "imports": [
+      "_index.js",
+      "_server.js",
       "_Meta.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D-RB_wJK.css"
+      "_app/immutable/assets/_page.DrU9Bq1N.css"
     ]
   }
 }

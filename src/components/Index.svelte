@@ -61,7 +61,7 @@
 				<h1>Prime members want Amazon to do more on climate.</h1>
 				<div class="hero-buttons">
 					<button class="btn btn-primary" onclick={openPopup}>I want to join</button>
-					<button class="btn btn-secondary" onclick={openPopup}>Learn more</button>
+					<button class="btn btn-secondary"><a href="{base}/learn-more">Why this matters</a></button>
 				</div>
 			</div>
 			
@@ -81,10 +81,9 @@
 		<div class="container">
 			<div class="demands-content">
 				<div class="demands-text">
-					<h2>Together, we can make Amazon a better company</h2>
-					<p>You aren't just a customer; you are a <strong>member</strong>. You pay for a premium service that shapes the global economy.</p>
-					<p>That membership gives you leverage. We love the convenience of Prime, but it shouldn't come at the cost of our future.</p>
-					<p>Together, as members, we have the collective power to demand that Amazon's innovation and efficiency are used to build a cleaner future for all of us.</p>
+					<h2>Here is the problem: Amazon isn't delivering on its climate promises.</h2>
+					<p>Behind the fast deliveries, one-click orders, and flashy climate promises, Amazon's emissions are on the rise, mainly driven by the company’s rapidly expanding data centers and delivery fleet.</p>
+					<h3><strong>As Prime members, we have the leverage to say our future is not for sale.</strong></h3>
 				</div>
 				
 				<div class="demands-card">
@@ -92,11 +91,11 @@
 						<strong>TO: Amazon</strong><br>
 						<strong>FROM: Prime members</strong>
 					</div>
-					<p>As your most loyal customers, we are calling on you to:</p>
+					<p>As your most loyal customers, we are calling on you to commit to:</p>
 					<ol>
-						<li>Commit to zero-emission deliveries by 2030</li>
-						<li>Ensure that your data centres are powered by renewable energy</li>
-						<li>Stop funding politicians and lobbyists who deny the science on climate change</li>
+						<li>Zero-emission deliveries by 2030</li>
+						<li>Full renewable energy across operations</li>
+						<li>Respect for local communities</li>
 					</ol>
 					<button class="btn btn-cta" onclick={openPopup}>Add my name</button>
 				</div>
@@ -113,29 +112,29 @@
 	<section class="how">
 		<div class="container">
 			<h2>Here is how we move Amazon</h2>
-			<p class="how-subtitle">Recent polling showed that vast majority of Prime members want Amazon to do better on climate. Let's use our collective voice to demand a more ethical, sustainable Amazon.</p>
+			<p class="how-subtitle">Recent polling showed 4 out of 5 Prime members want Amazon to do better on climate. Let's use our collective voice to demand a more ethical, sustainable Amazon.</p>
 			
 			<div class="action-grid">
 				<div class="action-item">
-					<div class="action-icon">📢</div>
+					<div class="action-icon"><img src="{base}/marker.svg"></div>
 					<h3>Build Power</h3>
 					<p>Let's reach as many Prime members as possible. Share <span class="highlight">your unique link</span> and spread the word.</p>
 				</div>
 				
 				<div class="action-item">
-					<div class="action-icon">🔔</div>
+					<div class="action-icon"><img src="{base}/marker.svg"></div>
 					<h3>Get Noticed</h3>
 					<p>We need to make sure Amazon hears our demands loud and clear. We have <span class="highlight">just the tools</span> for the job.</p>
 				</div>
 				
 				<div class="action-item">
-					<div class="action-icon">💪</div>
+					<div class="action-icon"><img src="{base}/marker.svg"></div>
 					<h3>Add Pressure</h3>
 					<p>What if we all decided to <span class="highlight">pause our membership</span> for a month? A bit of pressure never hurts.</p>
 				</div>
 				
 				<div class="action-item">
-					<div class="action-icon">🏢</div>
+					<div class="action-icon"><img src="{base}/marker.svg"></div>
 					<h3>Organize</h3>
 					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here.</p>
 				</div>
@@ -173,6 +172,7 @@
 		align-items: center;
 		justify-content: flex-start;
 	}
+	
 	
 	.hero-background {
 		position: absolute;
@@ -245,6 +245,16 @@
 		border: 2px solid #ff9f2e;
 		border-radius:0px;
 	}
+
+	.btn-secondary a {
+		color:#ff9f2e;
+		text-decoration:none;
+	}
+
+	.btn-secondary a:hover {
+		color:#000;
+		text-decoration:none;
+	}
 	
 	.btn-secondary:hover {
 		background: #ff9f2e;
@@ -275,14 +285,14 @@
 	
 	.counter-number {
 		font-family: 'AmsiPro', sans-serif;
-		font-size: 1.8rem;
+		font-size: 2.2rem;
 		font-weight: bold;
 		line-height: 1;
 	}
 	
 	.counter-text {
 		font-family: 'Carlito', sans-serif;
-		font-size: 0.9rem;
+		font-size: 1.2rem;
 		text-align: center;
 		margin-top: 0.5rem;
 		line-height: 1.2;
@@ -331,9 +341,14 @@
 	
 	.demands-text h2 {
 		font-family: 'AmsiPro', sans-serif;
-		font-size: clamp(1.8rem, 4vw, 3rem);
+		font-size: clamp(2.2rem, 4vw, 3rem);
 		margin-bottom: 1.5rem;
 		line-height: 1.2;
+	}
+
+	.demands-text h3 {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: clamp(1.2rem, 3vw, 1.5rem);
 	}
 	
 	.demands-text p {
@@ -345,9 +360,10 @@
 	
 	.demands-card {
 		background: white;
+		font-size:1.6rem;
 		color: black;
 		padding: 2rem;
-		border-radius: 12px;
+		border-radius: 0px;
 		border: 4px solid #ff9f2e;
 	}
 	
@@ -360,6 +376,7 @@
 	.demands-card p {
 		font-family: 'Carlito', sans-serif;
 		margin-bottom: 1rem;
+		
 	}
 	
 	.demands-card ol {
@@ -378,6 +395,7 @@
 		color: #000;
 		font-size: 1.1rem;
 		padding: 1rem 2rem;
+		border-radius:0px;
 	}
 	
 	.btn-cta:hover {
@@ -434,7 +452,7 @@
 	}
 	
 	.action-item {
-		border: 3px solid #ff9f2e;
+		border: 3px solid #1298ff;
 		padding: 2rem 1.5rem;
 		border-radius: 12px;
 		text-align: left;
@@ -443,6 +461,11 @@
 	.action-icon {
 		font-size: 2rem;
 		margin-bottom: 1rem;
+	}
+
+	.action-icon img {
+		width:40px;
+		float:left;
 	}
 	
 	.action-item h3 {

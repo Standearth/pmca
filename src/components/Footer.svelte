@@ -65,9 +65,9 @@
 	
 	.get-involved-btn {
 		background: #ff9f2e;
-		color: white;
+		color: #000 !important;
 		padding: 0.8rem 2rem;
-		border-radius: 8px;
+		border-radius: 0px;
 		font-family: 'AmsiPro', sans-serif;
 		font-weight: bold;
 		transition: all 0.3s ease;
