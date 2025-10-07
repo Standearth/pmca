@@ -47,3 +47,73 @@ I want you to follow each of the following steps and confirm when each step has 
     - How - the third section that uses the bg2.png file from the static folder
     - Footer - as per design specification 
 
+## Step 3 - Get started page
+
+I want you to design the get started page with the following elements and functionality. This is the page that user would land on after filling out the get involved/get started form. The objective of the page is to maximize the window of attention of the end user, with three primary asks - to share the campaign on social media, fill out an embedded typeform survey and donate.
+
+The hero should be similar to the Learn more page and include the heading "Your Prime member power has been activated!". The hero should also feature a box for a unique share link that will be generated using the instructions below. The user should have the option of copying the unique link to clipboard. There should then be a icons for Facebook, Bluesky, Mailto email sharirng, Whatsapp and Linkedin, all sharing the unique URL generated on the page. 
+
+Below is sample code for the unique link generation. If a ref parameter exists in the URL the code should use it to generate a unique URL and populate the relevant box in the hero section and update all the social sharing links. If no ref parameter is present, there should be no unique link box and the share buttons should use the regular full URL of the page. 
+```
+<script>
+        $(document).ready(function() {
+            const API_ENDPOINT = "https://amazonpri.me/shorten";
+            const LONG_URL_BASE = "https://primemembers.earth/?ref=";
+            
+            const $hiddenField = $('input[name="supporter.NOT_TAGGED_77"]');
+
+            // --- Step 1: Extract ref from URL ---
+            const supporterId = [[fill in the proper code]]
+            if (!supporterId) {
+                return;
+            }
+
+            // --- Step 2: Construct full URL and Payload ---
+            const fullUrl = LONG_URL_BASE + supporterId;
+            const payload = {
+                unique_id: supporterId,
+                full_url: fullUrl
+            };
+
+
+            // --- Step 3: Call the Cloud Run API ---
+            $.ajax({
+                url: API_ENDPOINT,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(payload),
+                // Crucial: The browser automatically sets the 'Referer' header to the current page's URL.
+                // The Cloud Run service MUST be configured to trust this page's domain.
+                
+                success: function(response) {
+                    const shortUrl = response.short_url;
+
+                    if (shortUrl) {
+                        // --- Step 4 & 5: Populate the hidden field and update status ---
+                        $hiddenField.val(shortUrl);
+
+                        // In a production scenario, you would set the field type to "hidden" now:
+                        // $hiddenField.attr('type', 'hidden'); 
+                    } else {
+                        throw new Error("API returned success but missing 'short_url'.");
+                    }
+                },
+                error: function(xhr, status, error) {
+                    let errorMessage = `API Call Failed: ${xhr.status} ${xhr.statusText}`;
+                    try {
+                        const err = JSON.parse(xhr.responseText);
+                        errorMessage = `Error: ${err.error || errorMessage}. Check Cloud Run logs.`;
+                    } catch {
+                        // Use generic message if response is not JSON
+                    }
+                    
+                    console.error("Shortener API Error:", errorMessage);
+                }
+            });
+        });
+    </script>
+```
+
+The next step for the user would be to fill out a survey, which will be embedded as an iframe from typeform. The iframe URL should include the ref parameter from the URL of the parent page, if it exists. 
+
+The final call to action would be to donate. The page should offer a grid of 6 buttons with present dollar amounts. Upon clicking, a modal should open up with the URL: https://act.stand.earth/page/77077/donate/1?transaction.donationAmt= and append the respective amount from the button. The options should be $25, $50, $75, $100, $250, $500. 

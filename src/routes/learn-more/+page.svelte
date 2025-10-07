@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
+	import Footer from "$components/Footer.svelte";
 
 	const title = "Learn More - Prime Members for Cleaner Amazon";
 	const description = "Learn more about how Prime members can push Amazon to do more on climate.";
@@ -147,6 +148,8 @@
 		/>
 	</div>
 </div>
+
+<Footer />
 
 <style>
 	.hero {

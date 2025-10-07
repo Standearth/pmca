@@ -10,6 +10,21 @@
       "_server.js"
     ]
   },
+  "_Footer.DJ3nP5aV.css": {
+    "file": "_app/immutable/assets/Footer.DJ3nP5aV.css",
+    "src": "_Footer.DJ3nP5aV.css"
+  },
+  "_Footer.js": {
+    "file": "chunks/Footer.js",
+    "name": "Footer",
+    "imports": [
+      "_index.js",
+      "_server.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Footer.DJ3nP5aV.css"
+    ]
+  },
   "_Header.GuaPoAD9.css": {
     "file": "_app/immutable/assets/Header.GuaPoAD9.css",
     "src": "_Header.GuaPoAD9.css"
@@ -148,10 +163,11 @@
       "_index.js",
       "_server.js",
       "_Meta.js",
-      "_Header.js"
+      "_Header.js",
+      "_Footer.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CGIQBDKn.css"
+      "_app/immutable/assets/_page.R1fAxSgk.css"
     ]
   },
   "src/routes/get-started/+page.svelte": {
@@ -160,10 +176,13 @@
     "src": "src/routes/get-started/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_Meta.js"
+      "_index.js",
+      "_server.js",
+      "_Meta.js",
+      "_Footer.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DKBA5qnq.css"
+      "_app/immutable/assets/_page.DjAo87F4.css"
     ]
   },
   "src/routes/leaderboard/+page.svelte": {
@@ -186,7 +205,8 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Meta.js"
+      "_Meta.js",
+      "_Footer.js"
     ],
     "css": [
       "_app/immutable/assets/_page.B_M9hnNo.css"

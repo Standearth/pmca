@@ -1,12 +1,10 @@
 import "clsx";
-import { a3 as attr, a4 as stringify, a0 as escape_html, a5 as attr_class, _ as setContext } from "../../chunks/index.js";
+import { a3 as attr, a0 as escape_html, a4 as attr_class, a5 as stringify, _ as setContext } from "../../chunks/index.js";
 import { b as base } from "../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
 import { M as Meta } from "../../chunks/Meta.js";
 import { H as Header } from "../../chunks/Header.js";
-function Footer($$renderer) {
-  $$renderer.push(`<footer class="campaign-footer svelte-1sr6y3t"><div class="container svelte-1sr6y3t"><div class="footer-content svelte-1sr6y3t"><div class="footer-logo svelte-1sr6y3t"><a target="_new" href="https://stand.earth/"><img${attr("src", `${stringify(base)}/stand_white.png`)} alt="Stand.earth" class="svelte-1sr6y3t"/></a></div> <nav class="footer-nav svelte-1sr6y3t"><a${attr("href", `${stringify(base)}/learn-more`)} class="svelte-1sr6y3t">Learn More</a> <a${attr("href", `${stringify(base)}/get-started`)} class="get-involved-btn svelte-1sr6y3t">Get Involved</a></nav></div></div></footer>`);
-}
+import { F as Footer } from "../../chunks/Footer.js";
 function Index($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let currentCount = 0;
@@ -27,7 +25,7 @@ const copy = {
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2025-10-07-09:03"}`);
+  console.log(`build: ${"2025-10-07-16:07"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {
