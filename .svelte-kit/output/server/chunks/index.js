@@ -2306,7 +2306,7 @@ function ensure_array_like(array_like_or_iterator) {
   return [];
 }
 export {
-  head as $,
+  getContext as $,
   invoke_error_boundary as A,
   Batch as B,
   COMMENT_NODE as C,
@@ -2335,12 +2335,12 @@ export {
   experimental_async_ssr as Z,
   setContext as _,
   HYDRATION_END as a,
-  getContext as a0,
-  escape_html as a1,
-  store_get as a2,
-  unsubscribe_stores as a3,
-  attr as a4,
-  stringify as a5,
+  escape_html as a0,
+  store_get as a1,
+  unsubscribe_stores as a2,
+  attr as a3,
+  stringify as a4,
+  head as a5,
   ensure_array_like as a6,
   HYDRATION_START as b,
   HYDRATION_START_ELSE as c,

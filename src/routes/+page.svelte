@@ -12,9 +12,9 @@
 	version();
 
 	const preloadFont = [
-		`${base}/fonts/AmsiPro-Ultra.woff2`,
-		`${base}/fonts/Carlito/Carlito-Regular.ttf`,
-		`${base}/fonts/Carlito/Carlito-Bold.ttf`
+		base+"/fonts/AmsiPro-Ultra.woff2",
+		base+"/fonts/Carlito/Carlito-Regular.ttf",
+		base+"/fonts/Carlito/Carlito-Bold.ttf"
 	];
 
 	const { title, description, url, keywords } = copy;

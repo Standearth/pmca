@@ -1,4 +1,4 @@
-import { $ as head, a1 as escape_html, a4 as attr, a5 as stringify, a6 as ensure_array_like } from "./index.js";
+import { a5 as head, a0 as escape_html, a3 as attr, a4 as stringify, a6 as ensure_array_like } from "./index.js";
 import { b as base } from "./server.js";
 import "@sveltejs/kit/internal/server";
 function Meta($$renderer, $$props) {
@@ -17,7 +17,7 @@ function Meta($$renderer, $$props) {
     const each_array = ensure_array_like(preloadFont);
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let href = each_array[$$index];
-      $$renderer2.push(`<link rel="preload"${attr("base", base)}${attr("href", href)} as="font" type="font/woff2" crossorigin=""/>`);
+      $$renderer2.push(`<link rel="preload"${attr("href", href)} as="font" type="font/woff2" crossorigin=""/>`);
     }
     $$renderer2.push(`<!--]-->`);
   });

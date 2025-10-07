@@ -1,5 +1,5 @@
 import "clsx";
-import { a4 as attr, a5 as stringify, a1 as escape_html, _ as setContext } from "../../chunks/index.js";
+import { a3 as attr, a4 as stringify, a0 as escape_html, _ as setContext } from "../../chunks/index.js";
 import { b as base } from "../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
 import { M as Meta } from "../../chunks/Meta.js";
@@ -29,7 +29,7 @@ const copy = {
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2025-10-06-17:07"}`);
+  console.log(`build: ${"2025-10-06-17:22"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {
@@ -37,9 +37,9 @@ function _page($$renderer, $$props) {
     let { data } = $$props;
     version();
     const preloadFont = [
-      `${base}/fonts/AmsiPro-Ultra.woff2`,
-      `${base}/fonts/Carlito/Carlito-Regular.ttf`,
-      `${base}/fonts/Carlito/Carlito-Bold.ttf`
+      base + "/fonts/AmsiPro-Ultra.woff2",
+      base + "/fonts/Carlito/Carlito-Regular.ttf",
+      base + "/fonts/Carlito/Carlito-Bold.ttf"
     ];
     const { title, description, url, keywords } = copy;
     setContext("copy", copy);

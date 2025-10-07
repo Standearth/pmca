@@ -1,4 +1,4 @@
-import { a4 as attr, a5 as stringify } from "./index.js";
+import { a3 as attr, a4 as stringify } from "./index.js";
 import { b as base } from "./server.js";
 import "@sveltejs/kit/internal/server";
 function Header($$renderer, $$props) {

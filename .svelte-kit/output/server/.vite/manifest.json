@@ -127,11 +127,10 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_Header.js",
-      "_index.js"
+      "_Header.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.ivZx4mKQ.css"
+      "_app/immutable/assets/_layout.DqLEJfI7.css"
     ]
   },
   "src/routes/+page.server.js": {

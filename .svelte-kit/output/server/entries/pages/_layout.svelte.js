@@ -1,61 +1,7 @@
 import "clsx";
 import { H as Header } from "../../chunks/Header.js";
-import { $ as head } from "../../chunks/index.js";
-import "@sveltejs/kit/internal/server";
-function FontLoader($$renderer) {
-  head($$renderer, ($$renderer2) => {
-    $$renderer2.push(`<style>
-		@font-face {
-			font-family: "AmsiPro";
-			src: url("{base}/fonts/AmsiPro-Ultra.woff2") format("woff2"),
-				 url("{base}/fonts/AmsiPro-Ultra.woff") format("woff");
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: "Carlito";
-			src: url("{base}/fonts/Carlito/Carlito-Regular.ttf") format("truetype");
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: "Carlito";
-			src: url("{base}/fonts/Carlito/Carlito-Bold.ttf") format("truetype");
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: "Carlito";
-			src: url("{base}/fonts/Carlito/Carlito-Italic.ttf") format("truetype");
-			font-weight: 400;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: "Carlito";
-			src: url("{base}/fonts/Carlito/Carlito-BoldItalic.ttf") format("truetype");
-			font-weight: 700;
-			font-style: italic;
-			font-stretch: normal;
-			font-display: swap;
-		}</style>`);
-  });
-}
 function _layout($$renderer, $$props) {
   let { children } = $$props;
-  FontLoader($$renderer);
-  $$renderer.push(`<!----> `);
   Header($$renderer);
   $$renderer.push(`<!----> <main id="content">`);
   children?.($$renderer);
