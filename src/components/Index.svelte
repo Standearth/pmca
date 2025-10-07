@@ -148,20 +148,18 @@
 	
 <Footer />
 
-<!-- Popup Modal -->
-{#if showPopup}
-	<div class="popup-overlay" onclick={closePopup}>
-		<div class="popup-content" onclick={(e) => e.stopPropagation()}>
-			<button class="popup-close" onclick={closePopup}>&times;</button>
-			<iframe 
-				src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
-				title="Join the campaign"
-				class="popup-iframe"
-				loading="eager"
-			></iframe>
-		</div>
+<!-- Popup Modal - Preloaded iframe for better performance -->
+<div class="popup-overlay" class:show={showPopup} onclick={closePopup}>
+	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
+		<button class="popup-close" onclick={closePopup}>&times;</button>
+		<iframe 
+			src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
+			title="Join the campaign"
+			class="popup-iframe"
+			loading="eager"
+		></iframe>
 	</div>
-{/if}
+</div>
 
 <style>
 	.hero {
@@ -501,6 +499,14 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 10000;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+	
+	.popup-overlay.show {
+		opacity: 1;
+		visibility: visible;
 	}
 	
 	.popup-content {

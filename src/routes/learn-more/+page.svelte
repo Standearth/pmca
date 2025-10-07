@@ -128,20 +128,18 @@
 	</div>
 </section>
 
-<!-- Popup Modal -->
-{#if showPopup}
-	<div class="popup-overlay" onclick={closePopup}>
-		<div class="popup-content" onclick={(e) => e.stopPropagation()}>
-			<button class="popup-close" onclick={closePopup}>&times;</button>
-			<iframe 
-				src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
-				title="Join the campaign"
-				class="popup-iframe"
-				loading="eager"
-			></iframe>
-		</div>
+<!-- Popup Modal - Preloaded iframe for better performance -->
+<div class="popup-overlay" class:show={showPopup} onclick={closePopup}>
+	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
+		<button class="popup-close" onclick={closePopup}>&times;</button>
+		<iframe 
+			src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
+			title="Join the campaign"
+			class="popup-iframe"
+			loading="eager"
+		></iframe>
 	</div>
-{/if}
+</div>
 
 <style>
 	/* Hero Section */
@@ -155,6 +153,7 @@
 		justify-content: center;
 		color: white;
 		text-align: center;
+		padding-top: 6rem; /* Account for header */
 	}
 	
 	.hero-background {
@@ -509,6 +508,14 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 10000;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+	
+	.popup-overlay.show {
+		opacity: 1;
+		visibility: visible;
 	}
 	
 	.popup-content {
@@ -543,8 +550,20 @@
 	/* Mobile Responsiveness */
 	@media (max-width: 768px) {
 		.hero {
-			height: 60vh;
-			min-height: 400px;
+			height: auto;
+			min-height: 70vh;
+			padding-top: 8rem; /* More space for mobile header */
+			padding-bottom: 4rem;
+		}
+		
+		.hero-text h1 {
+			font-size: clamp(1.5rem, 8vw, 2.5rem);
+			margin-bottom: 1rem;
+		}
+		
+		.hero-subtitle {
+			font-size: 1rem;
+			margin-bottom: 1.5rem;
 		}
 		
 		.hero-content {
@@ -554,10 +573,13 @@
 		.hero-buttons {
 			flex-direction: column;
 			align-items: center;
+			gap: 0.75rem;
 		}
 		
 		.btn {
 			width: 200px;
+			padding: 0.75rem 1.5rem;
+			font-size: 1rem;
 		}
 		
 		.problem-grid,
@@ -572,6 +594,66 @@
 		
 		.container {
 			padding: 0 1rem;
+		}
+		
+		/* Mobile-specific section spacing */
+		.problem,
+		.good-news,
+		.demands,
+		.cta {
+			padding: 3rem 0;
+		}
+		
+		.problem h2,
+		.good-news h2,
+		.demands h2,
+		.cta h2 {
+			font-size: clamp(1.5rem, 6vw, 2.5rem);
+			margin-bottom: 1rem;
+		}
+		
+		.section-intro,
+		.demands-intro,
+		.cta p {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+		
+		.problem-card,
+		.demand-card {
+			padding: 1.5rem;
+		}
+		
+		.problem-icon {
+			font-size: 2.5rem;
+		}
+		
+		.demand-number {
+			width: 35px;
+			height: 35px;
+			font-size: 1.2rem;
+		}
+	}
+	
+	/* Extra small mobile screens */
+	@media (max-width: 480px) {
+		.hero {
+			padding-top: 10rem;
+			min-height: 80vh;
+		}
+		
+		.hero-text h1 {
+			font-size: 1.75rem;
+			line-height: 1.1;
+		}
+		
+		.hero-subtitle {
+			font-size: 0.9rem;
+		}
+		
+		.btn {
+			width: 180px;
+			font-size: 0.9rem;
 		}
 	}
 </style>
