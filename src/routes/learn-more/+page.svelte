@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 
@@ -6,6 +7,7 @@
 	const description = "Learn more about how Prime members can push Amazon to do more on climate.";
 	
 	let showPopup = $state(false);
+	let iframeSrc = $state('https://act.stand.earth/page/88799/petition/1');
 	
 	function openPopup() {
 		showPopup = true;
@@ -16,6 +18,11 @@
 		showPopup = false;
 		document.body.style.overflow = 'auto';
 	}
+	
+	onMount(() => {
+		// Update iframe src with URL parameters
+		iframeSrc = `https://act.stand.earth/page/88799/petition/1${window.location.search}`;
+	});
 </script>
 
 <Meta {title} {description} />
@@ -133,7 +140,7 @@
 	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
 		<button class="popup-close" onclick={closePopup}>&times;</button>
 		<iframe 
-			src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
+			src={iframeSrc}
 			title="Join the campaign"
 			class="popup-iframe"
 			loading="eager"

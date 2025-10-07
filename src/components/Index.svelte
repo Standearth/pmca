@@ -8,6 +8,7 @@
 	let currentCount = $state(0);
 	const targetCount = 13428;
 	let showPopup = $state(false);
+	let iframeSrc = $state('https://act.stand.earth/page/88799/petition/1');
 	
 	// const copy = getContext("copy");
 	// const data = getContext("data");
@@ -24,6 +25,9 @@
 	}
 	
 	onMount(() => {
+		// Update iframe src with URL parameters
+		iframeSrc = `https://act.stand.earth/page/88799/petition/1${window.location.search}`;
+		
 		// Animate counter
 		const duration = 2000;
 		const increment = targetCount / (duration / 50);
@@ -153,7 +157,7 @@
 	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
 		<button class="popup-close" onclick={closePopup}>&times;</button>
 		<iframe 
-			src="https://act.stand.earth/page/89116/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
+			src={iframeSrc}
 			title="Join the campaign"
 			class="popup-iframe"
 			loading="eager"
