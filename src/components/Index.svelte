@@ -158,6 +158,7 @@
 				src="https://act.stand.earth/page/88799/petition/1{typeof window !== 'undefined' ? window.location.search : ''}"
 				title="Join the campaign"
 				class="popup-iframe"
+				loading="eager"
 			></iframe>
 		</div>
 	</div>
@@ -482,10 +483,11 @@
 	.popup-content {
 		position: relative;
 		width: 90%;
-		max-width: 800px;
+		max-width: 440px;
 		height: 80%;
 		background: white;
-		border-radius: 12px;
+		border-radius: 0px;
+		border:10px solid #ff9f2e;
 		overflow: hidden;
 	}
 	
