@@ -66,7 +66,7 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content={ogType} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content="{url}{base}/hero-bg.webp" />
+	<meta property="og:image" content="{url}/pmca_og.jpg" />
 	<meta property="og:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
 	<meta property="og:image:type" content="image/webp" />
 	<meta property="og:image:width" content="1200" />
@@ -78,23 +78,12 @@
 	<meta name="twitter:creator" content="@standearth" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content="{url}{base}/hero-bg.webp" />
+	<meta name="twitter:image" content="{url}/pmca_og.jpg" />
 	<meta name="twitter:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
 
 	<!-- LinkedIn -->
 	<meta property="og:image:secure_url" content="{url}{base}/hero-bg.webp" />
 	
-	<!-- Facebook -->
-	<meta property="fb:app_id" content="" />
-	<meta property="og:updated_time" content="2025-10-08T00:00:00+00:00" />
-	<meta property="article:published_time" content="2025-10-08T00:00:00+00:00" />
-	<meta property="article:modified_time" content="2025-10-08T00:00:00+00:00" />
-	
-	<!-- Debug headers for Facebook -->
-	<meta name="facebook-domain-verification" content="" />
-	<meta http-equiv="cache-control" content="no-cache" />
-	<meta http-equiv="expires" content="0" />
-	<meta http-equiv="pragma" content="no-cache" />
 
 	<!-- Search engine directives -->
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
