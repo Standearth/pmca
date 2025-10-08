@@ -166,19 +166,6 @@
 		<h2>Step 1: Spread the word on social media</h2>
 		<p class="section-intro">Help us reach more Prime members by sharing our campaign on your social networks.</p>
 		
-		{#if showBadge && urlHits > 0}
-			<div class="engagement-badge">
-				<div class="badge-content">
-					<div class="badge-icon">🎉</div>
-					<div class="badge-text">
-						<div class="badge-number">{urlHits}</div>
-						<div class="badge-label">{urlHits === 1 ? 'person has' : 'people have'} clicked your link!</div>
-					</div>
-				</div>
-				<div class="badge-glow"></div>
-			</div>
-		{/if}
-		
 		<div class="social-buttons">
 			<a href={getShareUrl('facebook')} target="_blank" class="social-btn facebook">
 				<span class="social-icon">
@@ -219,6 +206,18 @@
 				<span>LinkedIn</span>
 			</a>
 		</div>
+		{#if showBadge && urlHits > 0}
+			<div class="engagement-badge">
+				<div class="badge-content">
+					<div class="badge-icon">🎉</div>
+					<div class="badge-text">
+						<div class="badge-number">{urlHits}</div>
+						<div class="badge-label">{urlHits === 1 ? 'person has' : 'people have'} clicked your link!</div>
+					</div>
+				</div>
+				<div class="badge-glow"></div>
+			</div>
+		{/if}
 	</div>
 </section>
 
@@ -313,7 +312,7 @@
 	.hero-content {
 		position: relative;
 		z-index: 2;
-		max-width: 800px;
+		max-width: 1000px;
 		padding: 0 2rem;
 	}
 	
@@ -340,6 +339,9 @@
 		padding: 1rem;
 		margin-top: 2rem;
 		backdrop-filter: blur(10px);
+		max-width:700px;
+		margin-left:auto;
+		margin-right:auto;
 	}
 	
 	.share-link-box h3 {
@@ -513,8 +515,11 @@
 	.badge-number {
 		font-family: 'AmsiPro', sans-serif;
 		font-size: 2rem;
+		float:left;
+		display:inline;
 		font-weight: bold;
 		color: #000;
+		margin-right:15px;
 		line-height: 1;
 		text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 	}
@@ -522,6 +527,8 @@
 	.badge-label {
 		font-family: 'Carlito', sans-serif;
 		font-size: 1rem;
+		float:left;
+		display:inline;
 		color: #000;
 		font-weight: 600;
 		margin-top: 0.25rem;
