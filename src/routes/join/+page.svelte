@@ -53,7 +53,7 @@
 		<div class="hero-text">
 			<h1>Join Prime members demanding cleaner Amazon.</h1>
 			<p class="hero-subtitle">Prime members agree that Amazon needs to do more on climate, from reducing emissions in its delivery fleet, to using renewable energy in its operations.</p>
-            <h3>Use your Prime membership power to make Amazon a leader!</h3>
+            <h3>Use your Prime membership power to make Amazon deliver on climate!</h3>
 		<!-- Counter -->
 		<div class="counter">
 			<div class="counter-circle">
@@ -83,7 +83,7 @@
 	<div class="container">
 		<div class="demands-content">
 			<div class="demands-text">
-				<h2>Here is the problem: Amazon isn't delivering on its climate promises.</h2>
+				<h2>Amazon isn't delivering on its climate promises.</h2>
 				<p>Behind the fast deliveries, one-click orders, and flashy climate promises, Amazon's emissions are on the rise, mainly driven by the company's rapidly expanding data centers and delivery fleet.</p>
 				<h3><strong>As Prime members, we have the leverage to say our future is not for sale.</strong></h3>
 			</div>
@@ -217,7 +217,7 @@
 		padding: 0rem;
 		box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 		border: 10px solid #ff9f2e;
-		height: 700px;
+		height: 710px;
 	}
 	
 	.signup-iframe {

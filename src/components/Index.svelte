@@ -352,7 +352,7 @@
 		color: black;
 		padding: 2rem;
 		border-radius: 0px;
-		border: 4px solid #ff9f2e;
+		border: 10px solid #ff9f2e;
 	}
 	
 	.card-header {
