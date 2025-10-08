@@ -140,7 +140,7 @@
 			<div class="plug-content">
 				<div class="plug-text">
 					<h3>Considering canceling your Prime membership?</h3>
-					<p>Amazon recently lost a $25 million lawsuit for making Prime cancellation deliberately difficult. Learn how the process works now.</p>
+					<p>Amazon just got in BIG trouble for making cancelling Prime membership deliberately difficult.. Learn how the process works now.</p>
 				</div>
 				<div class="plug-cta">
 					<a href="{base}/cancel-prime" class="btn btn-secondary">Learn about canceling Prime</a>

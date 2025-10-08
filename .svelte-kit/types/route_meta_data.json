@@ -10,6 +10,9 @@
 	"/get-started": [
 		"src/routes/+layout.js"
 	],
+	"/join": [
+		"src/routes/+layout.js"
+	],
 	"/learn-more": [
 		"src/routes/+layout.js"
 	]

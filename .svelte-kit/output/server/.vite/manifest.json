@@ -26,6 +26,14 @@
       "_app/immutable/assets/Header.BVHjpmNE.css"
     ]
   },
+  "_Meta.js": {
+    "file": "chunks/Meta.js",
+    "name": "Meta",
+    "imports": [
+      "_index.js",
+      "_server.js"
+    ]
+  },
   "_PopupModal.BQW_epEu.css": {
     "file": "_app/immutable/assets/PopupModal.BQW_epEu.css",
     "src": "_PopupModal.BQW_epEu.css"
@@ -170,8 +178,9 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_TapeTransition.js",
+      "_Meta.js",
       "_Header.js",
+      "_TapeTransition.js",
       "_PopupModal.js"
     ],
     "css": [
@@ -186,6 +195,7 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Meta.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
@@ -201,10 +211,26 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Meta.js",
       "_TapeTransition.js"
     ],
     "css": [
       "_app/immutable/assets/_page.BfEJ-Q_E.css"
+    ]
+  },
+  "src/routes/join/+page.svelte": {
+    "file": "entries/pages/join/_page.svelte.js",
+    "name": "entries/pages/join/_page.svelte",
+    "src": "src/routes/join/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Header.js",
+      "_TapeTransition.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DIWjjiM2.css"
     ]
   },
   "src/routes/learn-more/+page.svelte": {
@@ -215,6 +241,7 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Meta.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
