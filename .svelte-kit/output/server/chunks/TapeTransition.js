@@ -1,6 +1,7 @@
-import { a7 as head, a0 as escape_html, a3 as attr, a4 as stringify, a8 as ensure_array_like } from "./index.js";
+import { a6 as head, a0 as escape_html, a3 as attr, a4 as stringify, a7 as ensure_array_like } from "./index.js";
 import { b as base } from "./server.js";
 import "@sveltejs/kit/internal/server";
+import { P as PopupModal } from "./PopupModal.js";
 function Meta($$renderer, $$props) {
   let {
     title = "Prime Members for Clean Amazon",
@@ -23,7 +24,28 @@ function Meta($$renderer, $$props) {
   });
 }
 function Footer($$renderer) {
-  $$renderer.push(`<footer class="campaign-footer svelte-1sr6y3t"><div class="container svelte-1sr6y3t"><div class="footer-content svelte-1sr6y3t"><div class="footer-logo svelte-1sr6y3t"><a target="_new" href="https://stand.earth/"><img${attr("src", `${stringify(base)}/stand_white.png`)} alt="Stand.earth" class="svelte-1sr6y3t"/></a></div> <nav class="footer-nav svelte-1sr6y3t"><a${attr("href", `${stringify(base)}/learn-more`)} class="svelte-1sr6y3t">Learn More</a> <a${attr("href", `${stringify(base)}/get-started`)} class="get-involved-btn svelte-1sr6y3t">Get Involved</a></nav></div></div></footer>`);
+  let showPopup = false;
+  let $$settled = true;
+  let $$inner_renderer;
+  function $$render_inner($$renderer2) {
+    $$renderer2.push(`<footer class="campaign-footer svelte-1sr6y3t"><div class="container svelte-1sr6y3t"><div class="footer-content svelte-1sr6y3t"><div class="footer-logo svelte-1sr6y3t"><a target="_new" href="https://stand.earth/"><img${attr("src", `${stringify(base)}/stand_white.png`)} alt="Stand.earth" class="svelte-1sr6y3t"/></a></div> <nav class="footer-nav svelte-1sr6y3t"><a${attr("href", `${stringify(base)}/learn-more`)} class="svelte-1sr6y3t">Learn More</a> <button class="get-started-cta svelte-1sr6y3t">Get Started</button></nav></div></div></footer> `);
+    PopupModal($$renderer2, {
+      get show() {
+        return showPopup;
+      },
+      set show($$value) {
+        showPopup = $$value;
+        $$settled = false;
+      }
+    });
+    $$renderer2.push(`<!---->`);
+  }
+  do {
+    $$settled = true;
+    $$inner_renderer = $$renderer.copy();
+    $$render_inner($$inner_renderer);
+  } while (!$$settled);
+  $$renderer.subsume($$inner_renderer);
 }
 function TapeTransition($$renderer) {
   $$renderer.push(`<div class="tape-section svelte-ex5d9t"><img${attr("src", `${stringify(base)}/tape.png`)} alt="Tape" class="tape-image svelte-ex5d9t"/></div>`);

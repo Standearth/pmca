@@ -190,6 +190,7 @@
 		color: white !important;
 		padding: 1rem 2rem !important;
 		border-radius: 8px !important;
+		font-family: 'AmsiPro', sans-serif;
 		border: none !important;
 		margin-top: 1rem !important;
 		text-align: center !important;

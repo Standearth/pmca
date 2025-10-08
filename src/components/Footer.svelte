@@ -1,5 +1,14 @@
 <script>
 	import { base } from '$app/paths';
+	import PopupModal from "$components/PopupModal.svelte";
+
+	let showPopup = $state(false);
+		
+	function openPopup() {
+		showPopup = true;
+		document.body.style.overflow = 'hidden';
+	}
+
 </script>
 
 <footer class="campaign-footer">
@@ -11,12 +20,13 @@
 			
 			<nav class="footer-nav">
 				<a href="{base}/learn-more">Learn More</a>
-				<a href="{base}/get-started" class="get-involved-btn">Get Involved</a>
+				<button class="get-started-cta" onclick={openPopup}>Get Started</button>
 			</nav>
 		</div>
 	</div>
 </footer>
-
+<!-- Popup Modal -->
+<PopupModal bind:show={showPopup} />
 <style>
 	.campaign-footer {
 		background: #1298ff;
@@ -42,6 +52,24 @@
 		height: 40px;
 		width: auto;
 	}
+
+	.get-started-cta {
+		background: #ff9f2e !important;
+		color: white !important;
+		padding: 1rem 2rem !important;
+		border-radius: 8px !important;
+		font-family: 'AmsiPro', sans-serif;
+		border: none !important;
+		text-align: center !important;
+		transition: all 0.3s ease !important;
+		font-family:'AmsiPro' sans-serif;
+	}
+	
+	.get-started-cta:hover {
+		background: #e88a1a !important;
+		opacity: 1 !important;
+		transform: translateY(-2px);
+	}
 	
 	.footer-nav {
 		display: flex;
@@ -53,7 +81,7 @@
 	.footer-nav a {
 		color: white;
 		text-decoration: none;
-		font-family: 'Carlito', sans-serif;
+		font-family:'AmsiPro', sans-serif;
 		font-size: 1rem;
 		font-weight: 500;
 		transition: opacity 0.3s ease;
