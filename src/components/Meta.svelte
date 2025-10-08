@@ -86,6 +86,15 @@
 	
 	<!-- Facebook -->
 	<meta property="fb:app_id" content="" />
+	<meta property="og:updated_time" content="2025-10-08T00:00:00+00:00" />
+	<meta property="article:published_time" content="2025-10-08T00:00:00+00:00" />
+	<meta property="article:modified_time" content="2025-10-08T00:00:00+00:00" />
+	
+	<!-- Debug headers for Facebook -->
+	<meta name="facebook-domain-verification" content="" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="pragma" content="no-cache" />
 
 	<!-- Search engine directives -->
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -96,8 +105,7 @@
 	<link rel="canonical" href={url} />
 	
 	<!-- Favicon and icons -->
-	<link rel="icon" type="image/svg+xml" href="{base}/favicon.svg" />
-	<link rel="icon" type="image/x-icon" href="{base}/favicon.ico" />
+	<link rel="icon" type="image/svg+xml" href="{base}/marker.svg" />
 	<link rel="apple-touch-icon" href="{base}/logo_black.png" />
 	<link rel="manifest" href="{base}/manifest.json" />
 
