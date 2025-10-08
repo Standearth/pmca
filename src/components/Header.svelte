@@ -57,7 +57,7 @@
 				<a href="{base}/" onclick={closeMenu}>Home</a>
 				<a href="{base}/learn-more" onclick={closeMenu}>Learn More</a>
 				<a href="{base}/cancel-prime" onclick={closeMenu}>Cancel Prime</a>
-				<a href="{base}/get-started" class="get-started-cta" onclick={openPopup}>Get Started</a>
+				<button class="get-started-cta" onclick={openPopup}>Get Started</button>
 			</nav>
 		</div>
 	{/if}
@@ -194,6 +194,7 @@
 		margin-top: 1rem !important;
 		text-align: center !important;
 		transition: all 0.3s ease !important;
+		font-family:'AmsiPro' sans-serif;
 	}
 	
 	.get-started-cta:hover {

@@ -5,7 +5,6 @@
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
-	import RollCall from "$components/RollCall.svelte";
 	
 	let heroVideo;
 	let currentCount = $state(0);
@@ -68,7 +67,6 @@
 					<div class="counter-number">{Math.floor(currentCount).toLocaleString()}</div>
 					<div class="counter-text">Prime members<br>and counting!</div>
 				</div>
-				<RollCall />
 			</div>
 		</div>
 		
