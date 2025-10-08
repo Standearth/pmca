@@ -142,9 +142,21 @@
 	<div class="hero-content">
 		<div class="hero-text">
 			<h1>Your Prime member power has been activated!</h1>
-			<p class="hero-subtitle">You've joined thousands of Prime members demanding a cleaner Amazon. Now let's amplify your voice and mobilize more members to join our movement.</p>
+			<p class="hero-subtitle">You've joined thousands of Prime members demanding a cleaner Amazon.</p> 
+			<div class="share-link-box">
+					<h3>Our strength will come from numbers. Let's amplify your voice and mobilize more Prime members to join our movement.</h3>
+			</div>
 			
-			{#if hasRef && uniqueShareUrl}
+		</div>
+	</div>
+</section>
+
+<!-- Social Sharing Section -->
+<section class="social-sharing">
+	<div class="container">
+		<h2>Step 1: Spread the word</h2>
+		<p class="section-intro">Help us reach more Prime members by sharing our campaign on your social networks.</p>
+		{#if hasRef && uniqueShareUrl}
 				<div class="share-link-box">
 					<h3>Your Unique Share Link</h3>
 					<div class="link-container">
@@ -153,19 +165,9 @@
 							{copySuccess ? '✓ Copied!' : 'Copy'}
 						</button>
 					</div>
-					<p class="share-note">Share this link to get credit for new supporters you recruit!</p>
+					<p class="share-note">Share this link to see how many other Prime members you can bring to this campaign!</p>
 				</div>
 			{/if}
-		</div>
-	</div>
-</section>
-
-<!-- Social Sharing Section -->
-<section class="social-sharing">
-	<div class="container">
-		<h2>Step 1: Spread the word on social media</h2>
-		<p class="section-intro">Help us reach more Prime members by sharing our campaign on your social networks.</p>
-		
 		<div class="social-buttons">
 			<a href={getShareUrl('facebook')} target="_blank" class="social-btn facebook">
 				<span class="social-icon">
@@ -315,6 +317,10 @@
 		max-width: 1000px;
 		padding: 0 2rem;
 	}
+
+	.hero-text h3 {
+		font-family: 'AmsiPro', sans-serif;
+	}
 	
 	.hero-text h1 {
 		font-family: 'AmsiPro', sans-serif;
@@ -339,7 +345,7 @@
 		padding: 1rem;
 		margin-top: 2rem;
 		backdrop-filter: blur(10px);
-		max-width:700px;
+		max-width:900px;
 		margin-left:auto;
 		margin-right:auto;
 	}

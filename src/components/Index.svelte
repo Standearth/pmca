@@ -196,6 +196,7 @@
 		font-weight: bold;
 		margin-bottom: 2rem;
 		line-height: 1.2;
+		margin-top:10rem;
 	}
 	
 	.hero-buttons {
