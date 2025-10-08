@@ -2,6 +2,7 @@ PHONY: github pudding
 
 github:
 	touch docs/.nojekyll
+	echo "primemembers.earth" > docs/CNAME
 	git add -A
 	git commit -m "update github pages"
 	git push
