@@ -211,10 +211,10 @@
 	.signup-form {
 		background: rgba(255, 255, 255, 0.98);
 		border-radius: 0px;
-		padding: 1rem;
+		padding: 10rem;
 		box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 		border: 10px solid #ff9f2e;
-		height: 500px;
+		height: 700px;
 	}
 	
 	.signup-iframe {
