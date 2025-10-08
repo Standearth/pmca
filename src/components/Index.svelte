@@ -399,7 +399,10 @@
 	
 	
 	.how {
-		background: white;
+		background: white url('{base}/bg2.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		padding: 4rem 0;
 		text-align: center;
 	}
