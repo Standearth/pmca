@@ -29,7 +29,7 @@
 	<div class="hero-content">
 		<div class="hero-text">
 			<h1>Your Membership, Your Choice</h1>
-			<p class="hero-subtitle">Amazon recently <a class="accent-orange" href="https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon" target="_blank" >lost a major lawsuit</a> for making Prime cancellation deliberately difficult. If the right step for you is cancelling your membership, here is how to do it.</p>
+			<p class="hero-subtitle">Amazon recently <a class="accent-orange" href="https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon" target="_blank" >got into BIG trouble</a> for making Prime cancellation deliberately difficult. If the right step for you is cancelling your membership, here is how to do it.</p>
 	
 		</div>
 	</div>
