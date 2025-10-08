@@ -95,7 +95,7 @@
 				<ol>
 					<li><span class="accent-orange">Electrify your global delivery fleet</span> from dock to door</li>
 					<li>Power every data center and warehouse with <span class="accent-orange">real renewable energy</span></li>
-					<li>Use your influence to <span class="accent-orange">support solutions</span> that reflect the needs and values of communities</li>
+					<li>Create <span class="accent-orange">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li>
 				</ol>
 			</div>
 		</div>
@@ -139,7 +139,7 @@
 		<div class="plug-content">
 			<div class="plug-text">
 				<h3>Considering canceling your Prime membership?</h3>
-				<p>Amazon recently lost a $25 million lawsuit for making Prime cancellation deliberately difficult. Learn how the process works now.</p>
+				<p>Amazon got into BIG trouble for making Prime cancellation deliberately difficult. Learn how the process works now.</p>
 			</div>
 			<div class="plug-cta">
 				<a href="{base}/cancel-prime" class="btn btn-secondary">Learn about canceling Prime</a>
@@ -487,13 +487,30 @@
 	}
 	
 	@media (max-width: 768px) {
+		.hero {
+			min-height: auto;
+		}
+		
 		.hero-content {
-			padding: 4rem 1rem 2rem;
+			padding: 8rem 1rem 2rem;
+			gap: 1.5rem;
+		}
+		
+		.hero-text h1 {
+			font-size: clamp(1.8rem, 8vw, 2.5rem);
+			margin-bottom: 1rem;
+		}
+		
+		.hero-subtitle {
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
 		}
 		
 		.signup-form {
-			height: 350px;
-			padding: 0.5rem;
+			height: 60vh;
+			min-height: 500px;
+			padding: 0.8rem;
+			border-width: 6px;
 		}
 		
 		.plug-content {
@@ -526,6 +543,36 @@
 		
 		.action-grid {
 			grid-template-columns: 1fr;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.hero-content {
+			padding: 9rem 1rem 2rem;
+		}
+		
+		.signup-form {
+			height: 65vh;
+			min-height: 450px;
+			border-width: 4px;
+		}
+		
+		.hero-text h1 {
+			font-size: 2rem;
+			line-height: 1.1;
+		}
+		
+		.counter-circle {
+			width: 120px;
+			height: 120px;
+		}
+		
+		.counter-number {
+			font-size: 1.2rem;
+		}
+		
+		.counter-text {
+			font-size: 0.75rem;
 		}
 	}
 </style>

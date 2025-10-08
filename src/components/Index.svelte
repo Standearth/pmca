@@ -91,7 +91,7 @@
 					<ol>
 						<li><span class="accent-orange">Electrify your global delivery fleet</span> from dock to door</li>
 						<li>Power every data center and warehouse with <span class="accent-orange">real renewable energy</span></li>
-						<li>Use your influence to <span class="accent-orange">support solutions</span> that reflect the needs and values of communities</li>
+						<li>Create <span class="accent-orange">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li>
 					</ol>
 					<button class="btn btn-cta" onclick={openPopup}>Add my name</button>
 				</div>
