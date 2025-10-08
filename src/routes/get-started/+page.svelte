@@ -362,7 +362,8 @@
 		border: 10px solid #1298ff;
 		border-radius: 0px;
 		padding: 1rem;
-		margin-top: 2rem;
+		margin-top: 0rem;
+		margin-bottom: 3rem;
 		backdrop-filter: blur(10px);
 		max-width:400px;
 		margin-left:auto;
@@ -374,8 +375,7 @@
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
 		color: #1DA1F2;
-		margin-left:auto;
-		margin-right:auto;
+		text-align:center;
 	}
 	
 	.link-container {
@@ -456,8 +456,8 @@
 		line-height: 1.6;
 		color: #666;
 		text-align: center;
-		max-width: 600px;
-		margin: 0 auto 3rem auto;
+		max-width: 800px;
+		margin: 0 auto 1rem auto;
 	}
 	
 	.social-buttons {
