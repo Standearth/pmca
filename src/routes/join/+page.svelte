@@ -54,7 +54,15 @@
 			<h1>Join Prime members demanding cleaner Amazon.</h1>
 			<p class="hero-subtitle">Prime members agree that Amazon needs to do more on climate, from reducing emissions in its delivery fleet, to using renewable energy in its operations.</p>
             <h3>Use your Prime membership power to make Amazon a leader!</h3>
+		<!-- Counter -->
+		<div class="counter">
+			<div class="counter-circle">
+				<div class="counter-number">{Math.floor(currentCount).toLocaleString()}</div>
+				<div class="counter-text">Prime members<br>and counting!</div>
+			</div>
 		</div>
+		</div>
+		
 		
 		<!-- Embedded Signup Form -->
 		<div class="signup-form">
@@ -66,13 +74,7 @@
 			></iframe>
 		</div>
 		
-		<!-- Counter -->
-		<div class="counter">
-			<div class="counter-circle">
-				<div class="counter-number">{Math.floor(currentCount).toLocaleString()}</div>
-				<div class="counter-text">Prime members<br>and counting!</div>
-			</div>
-		</div>
+		
 	</div>
 </section>
 
@@ -198,6 +200,7 @@
 		font-weight: bold;
 		margin-bottom: 1.5rem;
 		line-height: 1.2;
+		margin-top:5rem;
 	}
 	
 	.hero-subtitle {
@@ -211,7 +214,7 @@
 	.signup-form {
 		background: rgba(255, 255, 255, 0.98);
 		border-radius: 0px;
-		padding: 10rem;
+		padding: 0rem;
 		box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 		border: 10px solid #ff9f2e;
 		height: 700px;
@@ -225,9 +228,7 @@
 	}
 	
 	.counter {
-		position: absolute;
-		bottom: -8rem;
-		left: 2rem;
+		margin-top: 2rem;
 		z-index: 3;
 	}
 	
@@ -474,9 +475,7 @@
 		}
 		
 		.counter {
-			position: static;
 			order: 2;
-			margin-top: 2rem;
 			text-align: center;
 		}
 		

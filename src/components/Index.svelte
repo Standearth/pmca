@@ -254,10 +254,7 @@
 	}
 	
 	.counter {
-		position: absolute;
-		bottom: -10rem;
-		left: 15%;
-		transform: translateX(-50%);
+		margin-top: 2rem;
 		z-index: 3;
 	}
 	
