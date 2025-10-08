@@ -1,0 +1,40 @@
+{
+  "name": "Prime Members for Cleaner Amazon",
+  "short_name": "PMCA",
+  "description": "Join Prime members demanding Amazon do more on climate. Use your Prime membership power to push for electrified delivery fleets, renewable energy, and better working conditions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1298ff",
+  "orientation": "portrait-primary",
+  "categories": ["environmental", "activism", "climate"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo_black.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo_black.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

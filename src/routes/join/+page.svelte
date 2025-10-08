@@ -20,6 +20,52 @@
 		base+"/fonts/Carlito/Carlito-Bold.ttf"
 	];
 
+	// Page-specific structured data for Join page
+	const joinPageStructuredData = {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Join Prime Members for Cleaner Amazon",
+		"description": "Join the movement! Prime members are demanding Amazon electrify their delivery fleet, use renewable energy, and improve working conditions. Add your voice today.",
+		"url": "https://primemembers.earth/join",
+		"mainEntity": {
+			"@type": "Organization",
+			"name": "Prime Members for Cleaner Amazon",
+			"url": "https://primemembers.earth",
+			"description": "A campaign by Prime members demanding Amazon do more on climate change",
+			"logo": "https://primemembers.earth/logo_black.svg",
+			"sameAs": ["https://stand.earth"],
+			"potentialAction": [
+				{
+					"@type": "JoinAction",
+					"target": "https://primemembers.earth/join",
+					"name": "Join the Campaign"
+				},
+				{
+					"@type": "DonateAction",
+					"target": "https://act.stand.earth/page/77077/donate/1",
+					"name": "Donate to the Campaign"
+				}
+			]
+		},
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://primemembers.earth"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Join",
+					"item": "https://primemembers.earth/join"
+				}
+			]
+		}
+	};
+
 	onMount(() => {
 		// Animate counter
 		const duration = 2000;
@@ -44,6 +90,8 @@
 	description="Join the movement! Prime members are demanding Amazon electrify their delivery fleet, use renewable energy, and improve working conditions. Add your voice today." 
 	url="https://primemembers.earth/join" 
 	keywords="Amazon Prime, join campaign, climate action, electric delivery, renewable energy, environmental activism"
+	ogType="website"
+	structuredData={joinPageStructuredData}
 	{preloadFont} 
 />
 <Header />
