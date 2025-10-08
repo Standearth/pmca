@@ -143,7 +143,7 @@
 		<div class="hero-text">
 			<h1>Your Prime member power has been activated!</h1>
 			<p class="hero-subtitle">You've joined thousands of Prime members demanding a cleaner Amazon.</p> 
-			<div class="share-link-box">
+			<div class="hero-box">
 					<h3>Our strength will come from numbers. Let's amplify your voice and mobilize more Prime members to join our movement.</h3>
 			</div>
 			
@@ -337,11 +337,11 @@
 		margin-bottom: 2rem;
 		opacity: 0.9;
 	}
-	
-	.share-link-box {
+
+	.hero-box {
 		background: rgba(255, 255, 255, 0.1);
 		border: 2px solid #ff9f2e;
-		border-radius: 12px;
+		border-radius: 0;
 		padding: 1rem;
 		margin-top: 2rem;
 		backdrop-filter: blur(10px);
@@ -350,11 +350,32 @@
 		margin-right:auto;
 	}
 	
-	.share-link-box h3 {
+	.hero-box h3 {
 		font-family: 'AmsiPro', sans-serif;
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
 		color: #ff9f2e;
+	}
+	
+	.share-link-box {
+		background: rgba(255, 255, 255, 0.1);
+		border: 10px solid #1298ff;
+		border-radius: 0px;
+		padding: 1rem;
+		margin-top: 2rem;
+		backdrop-filter: blur(10px);
+		max-width:400px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.share-link-box h3 {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: #1DA1F2;
+		margin-left:auto;
+		margin-right:auto;
 	}
 	
 	.link-container {
@@ -369,7 +390,7 @@
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		border-radius: 6px;
 		background: rgba(255, 255, 255, 0.1);
-		color: white;
+		color: #1298ff;
 		font-family: 'Carlito', sans-serif;
 	}
 	
