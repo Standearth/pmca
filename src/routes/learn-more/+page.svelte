@@ -55,7 +55,7 @@
 				<div class="problem-icon">⚡</div>
 				<h3>The Renewable Energy Illusion</h3>
 				<p>Amazon claims its data centers run on clean energy. Research from the Amazon Employees for Climate Justice (AECJ) shows the company leans heavily on <strong>Renewable Energy Credits (RECs)</strong> to make this claim. These are accounting tricks that let companies pretend to be green while still burning fossil fuels.</p>
-				<a href="https://stand.earth/press-releases/amazons-2024-sustainability-report-reveals-companys-direct-emissions-have-increased-162-since-announcing-climate-pledge-in-2019/" target="_blank" class="learn-link">Read the analysis →</a>
+				<a href="https://static1.squarespace.com/static/65681f099d7c3d48feb86a5f/t/6721c4047213ea343e50536f/1730266118471/unsustainability-report-2.pdf" target="_blank" class="learn-link">Read the analysis →</a>
 			</div>
 			
 			<div class="problem-card">

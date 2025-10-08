@@ -1,7 +1,18 @@
 <script>
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import PopupModal from "$components/PopupModal.svelte";
+
+	let showPopup = $state(false);
 	
+	// const copy = getContext("copy");
+	// const data = getContext("data");
+	
+	function openPopup() {
+		showPopup = true;
+		document.body.style.overflow = 'hidden';
+	}
+
 	let showMenu = $state(false);
 	
 	function toggleMenu() {
@@ -45,12 +56,15 @@
 			<nav>
 				<a href="{base}/" onclick={closeMenu}>Home</a>
 				<a href="{base}/learn-more" onclick={closeMenu}>Learn More</a>
-				<a href="{base}/leaderboard" onclick={closeMenu}>Leaderboard</a>
-				<a href="{base}/get-started" class="get-started-cta" onclick={closeMenu}>Get Started</a>
+				<a href="{base}/cancel-prime" onclick={closeMenu}>Cancel Prime</a>
+				<a href="{base}/get-started" class="get-started-cta" onclick={openPopup}>Get Started</a>
 			</nav>
 		</div>
 	{/if}
 </header>
+
+<!-- Popup Modal -->
+<PopupModal bind:show={showPopup} />
 
 <style>
 	.header {

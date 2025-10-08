@@ -1,7 +1,7 @@
 {
 	"name": "svelte-starter",
 	"version": "6.15.0",
-	"type":"module",
+	"type": "module",
 	"scripts": {
 		"gdoc": "node tasks/fetch-google.js",
 		"style": "node tasks/style-dictionary.js",
@@ -38,5 +38,8 @@
 	"engines": {
 		"node": ">= 18.20.4"
 	},
-	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11"
+	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
+	"dependencies": {
+		"lucide-svelte": "^0.545.0"
+	}
 }

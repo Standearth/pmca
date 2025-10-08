@@ -27,17 +27,17 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/get-started" | "/leaderboard" | "/learn-more";
+		RouteId(): "/" | "/cancel-prime" | "/get-started" | "/learn-more";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
+			"/cancel-prime": Record<string, never>;
 			"/get-started": Record<string, never>;
-			"/leaderboard": Record<string, never>;
 			"/learn-more": Record<string, never>
 		};
-		Pathname(): "/" | "/get-started" | "/get-started/" | "/leaderboard" | "/leaderboard/" | "/learn-more" | "/learn-more/";
+		Pathname(): "/" | "/cancel-prime" | "/cancel-prime/" | "/get-started" | "/get-started/" | "/learn-more" | "/learn-more/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/Bluesky_Logo_White.svg" | "/bg2.png" | "/bg_video.mp4" | "/favicon.ico" | "/favicon.svg" | "/fonts/AmsiPro-Ultra.woff" | "/fonts/AmsiPro-Ultra.woff2" | "/fonts/Carlito/Carlito-Bold.ttf" | "/fonts/Carlito/Carlito-BoldItalic.ttf" | "/fonts/Carlito/Carlito-Italic.ttf" | "/fonts/Carlito/Carlito-Regular.ttf" | "/fonts/Carlito/OFL.txt" | "/hero-bg.webp" | "/logo_black.png" | "/logo_black.svg" | "/logo_white.png" | "/logo_white.svg" | "/marker.svg" | "/mockup.jpg" | "/stand_white.png" | "/tape.png" | string & {};
 	}

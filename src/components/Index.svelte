@@ -5,6 +5,7 @@
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
+	import RollCall from "$components/RollCall.svelte";
 	
 	let heroVideo;
 	let currentCount = $state(0);
@@ -67,6 +68,7 @@
 					<div class="counter-number">{Math.floor(currentCount).toLocaleString()}</div>
 					<div class="counter-text">Prime members<br>and counting!</div>
 				</div>
+				<RollCall />
 			</div>
 		</div>
 		
@@ -87,11 +89,11 @@
 						<strong>TO: Amazon</strong><br>
 						<strong>FROM: Prime members</strong>
 					</div>
-					<p>As your most loyal customers, we are calling on you to commit to:</p>
+					<p>As your most loyal customers, we are calling on you to:</p>
 					<ol>
-						<li>Zero-emission deliveries by 2030</li>
-						<li>Full renewable energy across operations</li>
-						<li>Respect for local communities</li>
+						<li><span class="accent-orange">Electrify your global delivery fleet</span> from dock to door</li>
+						<li>Power every data center and warehouse with <span class="accent-orange">real renewable energy</span></li>
+						<li>Use your influence to <span class="accent-orange">support solutions</span> that reflect the needs and values of communities</li>
 					</ol>
 					<button class="btn btn-cta" onclick={openPopup}>Add my name</button>
 				</div>
@@ -123,12 +125,6 @@
 				
 				<div class="action-item">
 					<div class="action-icon"><img src="{base}/marker.svg"></div>
-					<h3>Add Pressure</h3>
-					<p>What if we all decided to <span class="highlight">pause our membership</span> for a month? A bit of pressure never hurts.</p>
-				</div>
-				
-				<div class="action-item">
-					<div class="action-icon"><img src="{base}/marker.svg"></div>
 					<h3>Organize</h3>
 					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here.</p>
 				</div>
@@ -136,6 +132,21 @@
 			
 			<div class="ready-section">
 				<button class="btn btn-cta large" onclick={openPopup}>I am ready to join</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cancel Prime Page Plug -->
+	<section class="cancel-prime-plug">
+		<div class="container">
+			<div class="plug-content">
+				<div class="plug-text">
+					<h3>Considering canceling your Prime membership?</h3>
+					<p>Amazon recently lost a $25 million lawsuit for making Prime cancellation deliberately difficult. Learn how the process works now.</p>
+				</div>
+				<div class="plug-cta">
+					<a href="{base}/cancel-prime" class="btn btn-secondary">Learn about canceling Prime</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -457,12 +468,63 @@
 		font-weight: bold;
 	}
 	
+	.accent-orange {
+		text-decoration: underline;
+		text-decoration-color: #ff9f2e;
+		text-underline-offset: 2px;
+		text-decoration-thickness: 4px;
+		text-decoration-style: solid;
+	}
+	
 	.ready-section {
 		margin-top: 3rem;
 	}
 	
+	/* Cancel Prime Plug Section */
+	.cancel-prime-plug {
+		background: #f8f9fa;
+		padding: 3rem 0;
+	}
+	
+	.plug-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 2rem;
+		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	.plug-text h3 {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: clamp(1.3rem, 3vw, 1.8rem);
+		color: black;
+		margin-bottom: 1rem;
+	}
+	
+	.plug-text p {
+		font-family: 'Carlito', sans-serif;
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: #666;
+		margin: 0;
+	}
+	
+	.plug-cta {
+		text-align: center;
+	}
+	
 	
 	@media (max-width: 768px) {
+		.plug-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 1.5rem;
+		}
+		
+		.cancel-prime-plug {
+			padding: 2rem 0;
+		}
 		.demands-content {
 			grid-template-columns: 1fr;
 			gap: 2rem;

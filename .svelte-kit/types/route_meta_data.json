@@ -4,10 +4,10 @@
 		"src/routes/+layout.js",
 		"src/routes/+layout.js"
 	],
-	"/get-started": [
+	"/cancel-prime": [
 		"src/routes/+layout.js"
 	],
-	"/leaderboard": [
+	"/get-started": [
 		"src/routes/+layout.js"
 	],
 	"/learn-more": [
