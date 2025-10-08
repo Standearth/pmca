@@ -1,8 +1,7 @@
 import { a3 as attr, a5 as attr_class, a4 as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
-import { M as Meta } from "../../../chunks/Meta.js";
-import { T as TapeTransition, F as Footer } from "../../../chunks/TapeTransition.js";
+import { M as Meta, T as TapeTransition, F as Footer } from "../../../chunks/TapeTransition.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const title = "Get Started - Prime Members for Cleaner Amazon";

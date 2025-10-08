@@ -2,9 +2,8 @@ import "clsx";
 import { a3 as attr, a0 as escape_html, a4 as stringify, _ as setContext } from "../../chunks/index.js";
 import { b as base } from "../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
-import { M as Meta } from "../../chunks/Meta.js";
+import { T as TapeTransition, F as Footer, M as Meta } from "../../chunks/TapeTransition.js";
 import { H as Header } from "../../chunks/Header.js";
-import { T as TapeTransition, F as Footer } from "../../chunks/TapeTransition.js";
 import { P as PopupModal } from "../../chunks/PopupModal.js";
 function Index($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
@@ -38,16 +37,24 @@ function Index($$renderer, $$props) {
     $$renderer2.subsume($$inner_renderer);
   });
 }
-const meta = { "title": "Title TK", "description": "Description tk." };
-const body = [{ "section": "intro", "content": [{ "type": "h4", "value": "An h4 element with no attributes" }, { "type": "text", "value": "Some random text here, followed by an img tag." }, { "type": "img", "value": { "src": "../assets/demo/test.jpg", "alt": "A cat" } }, { "type": "Test", "value": { "label": "I’m a custom component!", "value": "50" } }] }];
+const title = "Prime Members for Cleaner Amazon";
+const description = "Join Prime members demanding Amazon do more on climate. Use your Prime membership power to push for electrified delivery fleets, renewable energy, and better working conditions.";
+const url = "https://primemembers.earth";
+const keywords = "Amazon, Prime, climate change, renewable energy, electric delivery, working conditions, environmental activism, corporate accountability";
+const meta = { "title": "Prime Members for Cleaner Amazon", "description": "Join Prime members demanding Amazon do more on climate. Use your Prime membership power to push for electrified delivery fleets, renewable energy, and better working conditions." };
+const body = [{ "section": "intro", "content": [{ "type": "h4", "value": "An h4 element with no attributes" }, { "type": "text", "value": "Some random text here, followed by an img tag." }, { "type": "img", "value": { "src": "../assets/demo/test.jpg", "alt": "A cat" } }, { "type": "Test", "value": { "label": "I'm a custom component!", "value": "50" } }] }];
 const copy = {
+  title,
+  description,
+  url,
+  keywords,
   meta,
   body
 };
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2025-10-08-15:57"}`);
+  console.log(`build: ${"2025-10-08-16:11"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {
@@ -59,10 +66,10 @@ function _page($$renderer, $$props) {
       base + "/fonts/Carlito/Carlito-Regular.ttf",
       base + "/fonts/Carlito/Carlito-Bold.ttf"
     ];
-    const { title, description, url, keywords } = copy;
+    const { title: title2, description: description2, url: url2, keywords: keywords2 } = copy;
     setContext("copy", copy);
     setContext("data", data);
-    Meta($$renderer2, { title, description, url, preloadFont, keywords });
+    Meta($$renderer2, { title: title2, description: description2, url: url2, preloadFont, keywords: keywords2 });
     $$renderer2.push(`<!----> `);
     Index($$renderer2);
     $$renderer2.push(`<!---->`);

@@ -1,6 +1,7 @@
 <script>
 	import { getContext, onMount } from "svelte";
 	import { base } from '$app/paths';
+	import Meta from "$components/Meta.svelte";
 	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
@@ -13,6 +14,12 @@
 	// const copy = getContext("copy");
 	// const data = getContext("data");
 	
+	const preloadFont = [
+		base+"/fonts/AmsiPro-Ultra.woff2",
+		base+"/fonts/Carlito/Carlito-Regular.ttf",
+		base+"/fonts/Carlito/Carlito-Bold.ttf"
+	];
+
 	onMount(() => {
 		// Animate counter
 		const duration = 2000;
@@ -32,6 +39,13 @@
 	});
 </script>
 
+<Meta 
+	title="Join Prime Members for Cleaner Amazon" 
+	description="Join the movement! Prime members are demanding Amazon electrify their delivery fleet, use renewable energy, and improve working conditions. Add your voice today." 
+	url="https://primemembers.earth/join" 
+	keywords="Amazon Prime, join campaign, climate action, electric delivery, renewable energy, environmental activism"
+	{preloadFont} 
+/>
 <Header />
 
 <!-- Hero Section with Embedded Form -->

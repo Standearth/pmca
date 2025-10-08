@@ -1,12 +1,25 @@
 import { a3 as attr, a0 as escape_html, a4 as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
+import { M as Meta, T as TapeTransition, F as Footer } from "../../../chunks/TapeTransition.js";
 import { H as Header } from "../../../chunks/Header.js";
-import { T as TapeTransition, F as Footer } from "../../../chunks/TapeTransition.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let currentCount = 0;
     let iframeSrc = "https://act.stand.earth/page/88799/petition/1";
+    const preloadFont = [
+      base + "/fonts/AmsiPro-Ultra.woff2",
+      base + "/fonts/Carlito/Carlito-Regular.ttf",
+      base + "/fonts/Carlito/Carlito-Bold.ttf"
+    ];
+    Meta($$renderer2, {
+      title: "Join Prime Members for Cleaner Amazon",
+      description: "Join the movement! Prime members are demanding Amazon electrify their delivery fleet, use renewable energy, and improve working conditions. Add your voice today.",
+      url: "https://primemembers.earth/join",
+      keywords: "Amazon Prime, join campaign, climate action, electric delivery, renewable energy, environmental activism",
+      preloadFont
+    });
+    $$renderer2.push(`<!----> `);
     Header($$renderer2);
     $$renderer2.push(`<!----> <section class="hero svelte-1rdz7hh"><div class="hero-background svelte-1rdz7hh"><video autoplay muted playsinline${attr("poster", `${stringify(base)}/hero-bg.webp`)} class="hero-video svelte-1rdz7hh"><source${attr("src", `${stringify(base)}/bg_video.mp4`)} type="video/mp4"/></video></div> <div class="hero-content svelte-1rdz7hh"><div class="hero-text svelte-1rdz7hh"><h1 class="svelte-1rdz7hh">Join Prime members demanding cleaner Amazon.</h1> <p class="hero-subtitle svelte-1rdz7hh">Prime members agree that Amazon needs to do more on climate, from reducing emissions in its delivery fleet, to using renewable energy in its operations.</p> <h3 class="svelte-1rdz7hh">Use your Prime membership power to make Amazon deliver on climate!</h3> <div class="counter svelte-1rdz7hh"><div class="counter-circle svelte-1rdz7hh"><div class="counter-number svelte-1rdz7hh">${escape_html(Math.floor(currentCount).toLocaleString())}</div> <div class="counter-text svelte-1rdz7hh">Prime members<br/>and counting!</div></div></div></div> <div class="signup-form svelte-1rdz7hh"><iframe${attr("src", iframeSrc)} title="Join the campaign" class="signup-iframe svelte-1rdz7hh" loading="eager"></iframe></div></div></section> <section class="demands svelte-1rdz7hh"><div class="container svelte-1rdz7hh"><div class="demands-content svelte-1rdz7hh"><div class="demands-text svelte-1rdz7hh"><h2 class="svelte-1rdz7hh">Amazon isn't delivering on its climate promises.</h2> <p class="svelte-1rdz7hh">Behind the fast deliveries, one-click orders, and flashy climate promises, Amazon's emissions are on the rise, mainly driven by the company's rapidly expanding data centers and delivery fleet.</p> <h3 class="svelte-1rdz7hh"><strong>As Prime members, we have the leverage to say our future is not for sale.</strong></h3></div> <div class="demands-card svelte-1rdz7hh"><div class="card-header svelte-1rdz7hh"><strong>TO: Amazon</strong><br/> <strong>FROM: Prime members</strong></div> <p class="svelte-1rdz7hh">As your most loyal customers, we are calling on you to:</p> <ol class="svelte-1rdz7hh"><li class="svelte-1rdz7hh"><span class="accent-orange svelte-1rdz7hh">Electrify your global delivery fleet</span> from dock to door</li> <li class="svelte-1rdz7hh">Power every data center and warehouse with <span class="accent-orange svelte-1rdz7hh">real renewable energy</span></li> <li class="svelte-1rdz7hh">Create <span class="accent-orange svelte-1rdz7hh">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li></ol></div></div></div></section> `);
     TapeTransition($$renderer2);

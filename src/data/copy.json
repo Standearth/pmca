@@ -1,5 +1,9 @@
 {
-	"meta": { "title": "Title TK", "description": "Description tk." },
+	"title": "Prime Members for Cleaner Amazon",
+	"description": "Join Prime members demanding Amazon do more on climate. Use your Prime membership power to push for electrified delivery fleets, renewable energy, and better working conditions.",
+	"url": "https://primemembers.earth",
+	"keywords": "Amazon, Prime, climate change, renewable energy, electric delivery, working conditions, environmental activism, corporate accountability",
+	"meta": { "title": "Prime Members for Cleaner Amazon", "description": "Join Prime members demanding Amazon do more on climate. Use your Prime membership power to push for electrified delivery fleets, renewable energy, and better working conditions." },
 	"body": [
 		{
 			"section": "intro",
@@ -15,7 +19,7 @@
 				},
 				{
 					"type": "Test",
-					"value": { "label": "I’m a custom component!", "value": "50" }
+					"value": { "label": "I'm a custom component!", "value": "50" }
 				}
 			]
 		}

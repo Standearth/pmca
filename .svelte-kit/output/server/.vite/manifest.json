@@ -26,14 +26,6 @@
       "_app/immutable/assets/Header.DEk9tFkF.css"
     ]
   },
-  "_Meta.js": {
-    "file": "chunks/Meta.js",
-    "name": "Meta",
-    "imports": [
-      "_index.js",
-      "_server.js"
-    ]
-  },
   "_PopupModal.BQW_epEu.css": {
     "file": "_app/immutable/assets/PopupModal.BQW_epEu.css",
     "src": "_PopupModal.BQW_epEu.css"
@@ -178,9 +170,8 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Meta.js",
-      "_Header.js",
       "_TapeTransition.js",
+      "_Header.js",
       "_PopupModal.js"
     ],
     "css": [
@@ -195,7 +186,6 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Meta.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
@@ -211,7 +201,6 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Meta.js",
       "_TapeTransition.js"
     ],
     "css": [
@@ -226,8 +215,8 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Header.js",
-      "_TapeTransition.js"
+      "_TapeTransition.js",
+      "_Header.js"
     ],
     "css": [
       "_app/immutable/assets/_page.BYJg7ooY.css"
@@ -241,7 +230,6 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Meta.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
