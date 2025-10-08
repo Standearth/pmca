@@ -3,6 +3,6 @@
 export const index = 4;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/get-started/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/4.BgjkWkz_.js","_app/immutable/chunks/DCKjsh0j.js","_app/immutable/chunks/CxkseGyt.js","_app/immutable/chunks/DK_2_GuF.js","_app/immutable/chunks/cfLirrx7.js","_app/immutable/chunks/RrpnwaSH.js","_app/immutable/chunks/CyW5RSt9.js","_app/immutable/chunks/B1GHm-Tt.js","_app/immutable/chunks/BhSBFnCt.js"];
+export const imports = ["_app/immutable/nodes/4.DZ8swwui.js","_app/immutable/chunks/DCKjsh0j.js","_app/immutable/chunks/CxkseGyt.js","_app/immutable/chunks/DK_2_GuF.js","_app/immutable/chunks/cfLirrx7.js","_app/immutable/chunks/RrpnwaSH.js","_app/immutable/chunks/5sNU61oP.js","_app/immutable/chunks/C70Bfp8T.js","_app/immutable/chunks/Zgws4SuJ.js"];
 export const stylesheets = ["_app/immutable/assets/PopupModal.BQW_epEu.css","_app/immutable/assets/TapeTransition.Cq0Fx_qn.css","_app/immutable/assets/4.ClEBfhpm.css"];
 export const fonts = [];

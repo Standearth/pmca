@@ -22,7 +22,7 @@ const config = {
 			assets: 'docs'
 		}),
 		paths: {
-			base: '/pmca'
+			base: ''
 		}
 	}
 };
