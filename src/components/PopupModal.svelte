@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { preloadIframe, createVisibleIframe, isIframeCached, getCacheStats } from '$utils/iframeCache.js';
 	
 	let { 
 		show = $bindable(),
@@ -7,28 +8,84 @@
 	} = $props();
 	
 	let iframeSrc = $state(baseUrl);
+	let iframeContainer;
+	let isIframeReady = $state(false);
 	
 	function closePopup() {
 		show = false;
 		document.body.style.overflow = 'auto';
 	}
 	
+	// Create or show the iframe when popup becomes visible
+	$effect(() => {
+		if (show && iframeContainer && iframeSrc) {
+			showIframe();
+		}
+	});
+	
+	function showIframe() {
+		if (!iframeContainer) return;
+		
+		// Try to use cached iframe first
+		const visibleIframe = createVisibleIframe(iframeSrc, iframeContainer);
+		
+		if (visibleIframe) {
+			console.log('Using cached iframe for popup');
+			isIframeReady = true;
+		} else {
+			// Fallback: create new iframe if cache failed
+			console.log('Creating fallback iframe for popup');
+			createFallbackIframe();
+		}
+	}
+	
+	function createFallbackIframe() {
+		if (!iframeContainer) return;
+		
+		const iframe = document.createElement('iframe');
+		iframe.src = iframeSrc;
+		iframe.title = 'Join the campaign';
+		iframe.style.width = '100%';
+		iframe.style.height = '100%';
+		iframe.style.border = 'none';
+		
+		iframe.onload = () => {
+			isIframeReady = true;
+		};
+		
+		iframeContainer.innerHTML = '';
+		iframeContainer.appendChild(iframe);
+	}
+	
 	onMount(() => {
 		// Update iframe src with URL parameters
 		iframeSrc = `${baseUrl}${window.location.search}`;
+		
+		// Preload iframe immediately (only happens once globally)
+		preloadIframe(iframeSrc).then(() => {
+			console.log('Popup iframe preloaded successfully');
+		}).catch((error) => {
+			console.error('Failed to preload popup iframe:', error);
+		});
+		
+		// Debug: Log cache statistics
+		console.log('Iframe cache stats:', getCacheStats());
 	});
 </script>
 
-<!-- Popup Modal - Preloaded iframe for better performance -->
+<!-- Popup Modal - Uses cached iframe for better performance -->
 <div class="popup-overlay" class:show onclick={closePopup}>
 	<div class="popup-content" onclick={(e) => e.stopPropagation()}>
 		<button class="popup-close" onclick={closePopup}>&times;</button>
-		<iframe 
-			src={iframeSrc}
-			title="Join the campaign"
-			class="popup-iframe"
-			loading="eager"
-		></iframe>
+		
+		<!-- Iframe container -->
+		<div class="popup-iframe" bind:this={iframeContainer}>
+			{#if !isIframeReady}
+				<div class="iframe-loading">
+					<p>Loading...</p>
+				</div>
+			{/if}
+		</div>
 	</div>
 </div>
 
@@ -82,6 +139,25 @@
 		width: 100%;
 		height: 100%;
 		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.iframe-loading {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		background: #f8f9fa;
+	}
+	
+	.iframe-loading p {
+		font-family: 'Carlito', sans-serif;
+		font-size: 1.1rem;
+		color: #666;
+		margin: 0;
 	}
 	
 	/* Mobile Responsiveness */

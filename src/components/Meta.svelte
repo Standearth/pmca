@@ -1,5 +1,7 @@
 <script>
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+	import { initGA, trackPageView } from '$utils/analytics.js';
 	
 	let {
 		title = "Join Prime members demanding cleaner Amazon.",
@@ -35,6 +37,17 @@
 	};
 
 	const finalStructuredData = structuredData || defaultStructuredData;
+
+	// Initialize Google Analytics and track page view
+	onMount(() => {
+		// Initialize GA (will only initialize once)
+		initGA();
+		
+		// Track page view after a small delay to ensure GA is loaded
+		setTimeout(() => {
+			trackPageView(title, url);
+		}, 100);
+	});
 </script>
 
 <svelte:head>
@@ -102,16 +115,7 @@
 	<link rel="dns-prefetch" href="//act.stand.earth" />
 	<link rel="dns-prefetch" href="//primemembers.earth" />
 	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SZBSE6Y23"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-8SZBSE6Y23');
-	</script>
+	<link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
 	<!-- Structured Data -->
 	{@html `<script type="application/ld+json">${JSON.stringify(finalStructuredData)}</script>`}
