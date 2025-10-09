@@ -142,7 +142,7 @@
 	<div class="hero-content">
 		<div class="hero-text">
 			<h1>Your Prime member power has been activated!</h1>
-			<p class="hero-subtitle">You've joined thousands of Prime members demanding a cleaner Amazon. In the next couple of weeks, we will our collective power to ramp up pressure on Amazon. Stay tuned!</p> 
+			<p class="hero-subtitle">You've just joined thousands of Prime members demanding a cleaner Amazon. In the next couple of weeks, we will use our collective power to ramp up pressure on Amazon. Stay tuned!</p> 
 			<div class="hero-box">
 					<h3>Our strength will come from numbers. Let's amplify your voice and mobilize more Prime members to join our movement.</h3>
 			</div>
