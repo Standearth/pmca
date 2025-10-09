@@ -36,7 +36,7 @@ function _page($$renderer, $$props) {
     {
       $$renderer2.push("<!--[!-->");
     }
-    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Tell us more about your priorities</h2> <p class="section-intro svelte-1py19mn">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p> <div class="survey-container svelte-1py19mn">`);
+    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Share your story</h2> <p class="section-intro svelte-1py19mn">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p> <div class="survey-container svelte-1py19mn">`);
     {
       $$renderer2.push("<!--[!-->");
     }

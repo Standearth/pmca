@@ -2,8 +2,8 @@
 	import { base } from '$app/paths';
 	
 	let {
-		title = "Prime Members for Cleaner Amazon",
-		description = "Join Prime members demanding cleaner Amazon.",
+		title = "Join Prime members demanding cleaner Amazon.",
+		description = "Use your Prime membership power to make Amazon deliver on climate!",
 		url = "https://primemembers.earth",
 		keywords = "",
 		preloadFont = [],
@@ -68,7 +68,7 @@
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:image" content="{url}/pmca_og.jpg" />
 	<meta property="og:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
-	<meta property="og:image:type" content="image/webp" />
+	<meta property="og:image:type" content="image/jpg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 
@@ -82,7 +82,7 @@
 	<meta name="twitter:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
 
 	<!-- LinkedIn -->
-	<meta property="og:image:secure_url" content="{url}{base}/hero-bg.webp" />
+	<meta property="og:image:secure_url" content="{url}/pmca_og.jpg" />
 	
 
 	<!-- Search engine directives -->

@@ -226,7 +226,7 @@
 <!-- Survey Section -->
 <section class="survey">
 	<div class="container">
-		<h2>Step 2: Tell us more about your priorities</h2>
+		<h2>Step 2: Share your story</h2>
 		<p class="section-intro">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p>
 		
 		<div class="survey-container">
