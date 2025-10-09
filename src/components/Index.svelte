@@ -400,7 +400,7 @@
 	
 	
 	.how {
-		background: white url('{base}/bg2.png');
+		background: white url('/bg2.png');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
