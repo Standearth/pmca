@@ -103,6 +103,16 @@
 	<link rel="dns-prefetch" href="//primemembers.earth" />
 	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SZBSE6Y23"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-8SZBSE6Y23');
+	</script>
+
 	<!-- Structured Data -->
 	{@html `<script type="application/ld+json">${JSON.stringify(finalStructuredData)}</script>`}
 
