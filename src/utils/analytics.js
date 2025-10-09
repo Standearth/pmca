@@ -131,6 +131,46 @@ export function trackSocialShare(platform, url = null) {
 }
 
 /**
+ * Track popup modal opens
+ */
+export function trackPopupOpen(sourcePage) {
+	trackEvent('popup_opened', {
+		source_page: sourcePage,
+		page_location: window.location.href,
+		page_path: window.location.pathname
+	});
+}
+
+/**
+ * Track get-started page visits with ref parameter (key conversion)
+ */
+export function trackGetStartedRefConversion(refId) {
+	trackEvent('conversion', {
+		event_category: 'get_started',
+		event_label: 'ref_visit',
+		ref_id: refId,
+		page_location: window.location.href,
+		custom_parameters: {
+			conversion_type: 'ref_visit',
+			campaign_source: 'referral'
+		}
+	});
+}
+
+/**
+ * Track social button clicks on get-started page
+ */
+export function trackSocialButtonClick(platform, hasRef = false, refId = null) {
+	trackEvent('social_share_click', {
+		social_platform: platform,
+		has_ref: hasRef,
+		ref_id: refId,
+		page_location: window.location.href,
+		page_path: '/get-started'
+	});
+}
+
+/**
  * Check if GA is loaded and ready
  */
 export function isGAReady() {

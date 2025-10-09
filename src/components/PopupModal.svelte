@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { preloadIframe, createVisibleIframe, isIframeCached, getCacheStats } from '$utils/iframeCache.js';
+	import { trackPopupOpen } from '$utils/analytics.js';
 	
 	let { 
 		show = $bindable(),
@@ -20,6 +21,31 @@
 	$effect(() => {
 		if (show && iframeContainer && iframeSrc) {
 			showIframe();
+		}
+	});
+
+	// Track popup opens
+	$effect(() => {
+		if (show) {
+			// Get the current page path to identify where popup was opened
+			const currentPath = window.location.pathname;
+			let sourcePage = 'unknown';
+			
+			switch (currentPath) {
+				case '/':
+					sourcePage = 'home';
+					break;
+				case '/learn-more':
+					sourcePage = 'learn-more';
+					break;
+				case '/cancel-prime':
+					sourcePage = 'cancel-prime';
+					break;
+				default:
+					sourcePage = currentPath.replace('/', '') || 'home';
+			}
+			
+			trackPopupOpen(sourcePage);
 		}
 	});
 	
