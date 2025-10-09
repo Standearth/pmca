@@ -36,13 +36,13 @@ function _page($$renderer, $$props) {
     {
       $$renderer2.push("<!--[!-->");
     }
-    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Share your story</h2> <p class="section-intro svelte-1py19mn">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p> <div class="survey-container svelte-1py19mn">`);
+    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Share your story</h2> <div class="survey-container svelte-1py19mn">`);
     {
       $$renderer2.push("<!--[!-->");
     }
     $$renderer2.push(`<!--]--></div></div></section> `);
     TapeTransition($$renderer2);
-    $$renderer2.push(`<!----> <section class="donation svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 3: Power our campaign with a donation</h2> <p class="section-intro svelte-1py19mn">Your contribution helps us reach more Prime members and build the pressure needed to change Amazon.</p> <div class="donation-grid svelte-1py19mn"><button class="donation-btn svelte-1py19mn">$25</button> <button class="donation-btn svelte-1py19mn">$50</button> <button class="donation-btn svelte-1py19mn">$75</button> <button class="donation-btn svelte-1py19mn">$100</button> <button class="donation-btn svelte-1py19mn">$250</button> <button class="donation-btn svelte-1py19mn">$500</button></div></div></section> <div${attr_class("modal-overlay svelte-1py19mn", void 0, { "show": showDonationModal })}><div class="modal-content svelte-1py19mn"><button class="modal-close svelte-1py19mn">×</button> <iframe${attr("src", `https://act.stand.earth/page/77077/donate/1?transaction.donationAmt=${stringify(donationAmount)}`)} title="Make a donation" class="donation-iframe svelte-1py19mn"></iframe></div></div> `);
+    $$renderer2.push(`<!----> <section class="donation svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 3: Power our campaign with a donation</h2> <p class="section-intro svelte-1py19mn">Your contribution will help us reach more Prime members and build the pressure needed to change Amazon.</p> <div class="donation-grid svelte-1py19mn"><button class="donation-btn svelte-1py19mn">$25</button> <button class="donation-btn svelte-1py19mn">$50</button> <button class="donation-btn svelte-1py19mn">$75</button> <button class="donation-btn svelte-1py19mn">$100</button> <button class="donation-btn svelte-1py19mn">$250</button> <button class="donation-btn svelte-1py19mn">$500</button></div></div></section> <div${attr_class("modal-overlay svelte-1py19mn", void 0, { "show": showDonationModal })}><div class="modal-content svelte-1py19mn"><button class="modal-close svelte-1py19mn">×</button> <iframe${attr("src", `https://act.stand.earth/page/77077/donate/1?transaction.donationAmt=${stringify(donationAmount)}`)} title="Make a donation" class="donation-iframe svelte-1py19mn"></iframe></div></div> `);
     Footer($$renderer2);
     $$renderer2.push(`<!---->`);
   });

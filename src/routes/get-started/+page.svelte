@@ -227,7 +227,6 @@
 <section class="survey">
 	<div class="container">
 		<h2>Step 2: Share your story</h2>
-		<p class="section-intro">Help us understand what matters most to you as a Prime member so we can better represent your voice.</p>
 		
 		<div class="survey-container">
 			{#if typeformId}
@@ -244,7 +243,7 @@
 <section class="donation">
 	<div class="container">
 		<h2>Step 3: Power our campaign with a donation</h2>
-		<p class="section-intro">Your contribution helps us reach more Prime members and build the pressure needed to change Amazon.</p>
+		<p class="section-intro">Your contribution will help us reach more Prime members and build the pressure needed to change Amazon.</p>
 		
 		<div class="donation-grid">
 			<button onclick={() => openDonationModal(25)} class="donation-btn">$25</button>
