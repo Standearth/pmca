@@ -15,5 +15,8 @@
 	],
 	"/learn-more": [
 		"src/routes/+layout.js"
+	],
+	"/stories": [
+		"src/routes/+layout.js"
 	]
 }

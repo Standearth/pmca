@@ -56,6 +56,7 @@
 			<nav>
 				<a href="{base}/" onclick={closeMenu}>Home</a>
 				<a href="{base}/learn-more" onclick={closeMenu}>Learn More</a>
+				<a href="{base}/stories" onclick={closeMenu}>Member Stories</a>
 				<a href="{base}/cancel-prime" onclick={closeMenu}>Cancel Prime</a>
 				<button class="get-started-cta" onclick={openPopup}>Get Started</button>
 			</nav>

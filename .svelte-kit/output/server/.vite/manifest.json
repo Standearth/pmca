@@ -10,6 +10,22 @@
       "_server.js"
     ]
   },
+  "_Footer.Bv0KJ-vl.css": {
+    "file": "_app/immutable/assets/Footer.Bv0KJ-vl.css",
+    "src": "_Footer.Bv0KJ-vl.css"
+  },
+  "_Footer.js": {
+    "file": "chunks/Footer.js",
+    "name": "Footer",
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_PopupModal.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Footer.Bv0KJ-vl.css"
+    ]
+  },
   "_Header.DEk9tFkF.css": {
     "file": "_app/immutable/assets/Header.DEk9tFkF.css",
     "src": "_Header.DEk9tFkF.css"
@@ -40,20 +56,30 @@
       "_app/immutable/assets/PopupModal.DNBk0uEp.css"
     ]
   },
-  "_TapeTransition.Cq0Fx_qn.css": {
-    "file": "_app/immutable/assets/TapeTransition.Cq0Fx_qn.css",
-    "src": "_TapeTransition.Cq0Fx_qn.css"
+  "_StoriesCarousel.Dy9Q4WhV.css": {
+    "file": "_app/immutable/assets/StoriesCarousel.Dy9Q4WhV.css",
+    "src": "_StoriesCarousel.Dy9Q4WhV.css"
+  },
+  "_StoriesCarousel.js": {
+    "file": "chunks/StoriesCarousel.js",
+    "name": "StoriesCarousel",
+    "css": [
+      "_app/immutable/assets/StoriesCarousel.Dy9Q4WhV.css"
+    ]
+  },
+  "_TapeTransition.BGjnBST5.css": {
+    "file": "_app/immutable/assets/TapeTransition.BGjnBST5.css",
+    "src": "_TapeTransition.BGjnBST5.css"
   },
   "_TapeTransition.js": {
     "file": "chunks/TapeTransition.js",
     "name": "TapeTransition",
     "imports": [
       "_index.js",
-      "_server.js",
-      "_PopupModal.js"
+      "_server.js"
     ],
     "css": [
-      "_app/immutable/assets/TapeTransition.Cq0Fx_qn.css"
+      "_app/immutable/assets/TapeTransition.BGjnBST5.css"
     ]
   },
   "_environment.js": {
@@ -170,9 +196,11 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_TapeTransition.js",
+      "_Footer.js",
       "_Header.js",
-      "_PopupModal.js"
+      "_TapeTransition.js",
+      "_PopupModal.js",
+      "_StoriesCarousel.js"
     ],
     "css": [
       "_app/immutable/assets/_page.Oq9pcpuX.css"
@@ -186,6 +214,7 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Footer.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
@@ -201,6 +230,7 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Footer.js",
       "_TapeTransition.js"
     ],
     "css": [
@@ -215,8 +245,10 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Footer.js",
+      "_Header.js",
       "_TapeTransition.js",
-      "_Header.js"
+      "_StoriesCarousel.js"
     ],
     "css": [
       "_app/immutable/assets/_page.D9cNDnWA.css"
@@ -230,11 +262,27 @@
     "imports": [
       "_index.js",
       "_server.js",
+      "_Footer.js",
       "_TapeTransition.js",
       "_PopupModal.js"
     ],
     "css": [
       "_app/immutable/assets/_page.CIr5-i6P.css"
+    ]
+  },
+  "src/routes/stories/+page.svelte": {
+    "file": "entries/pages/stories/_page.svelte.js",
+    "name": "entries/pages/stories/_page.svelte",
+    "src": "src/routes/stories/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.D1rACiSw.css"
     ]
   }
 }

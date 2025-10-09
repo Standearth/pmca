@@ -5,6 +5,7 @@
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
+	import StoriesCarousel from "$components/StoriesCarousel.svelte";
 	
 	let heroVideo;
 	let currentCount = $state(0);
@@ -98,6 +99,9 @@
 			</div>
 		</div>
 	</section>
+	
+	<!-- Stories Carousel -->
+	<StoriesCarousel />
 	
 	<!-- Tape Transition -->
 	<TapeTransition />
