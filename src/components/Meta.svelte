@@ -1,7 +1,5 @@
 <script>
 	import { base } from '$app/paths';
-	import { onMount } from 'svelte';
-	import { initGA, trackPageView } from '$utils/analytics.js';
 	
 	let {
 		title = "Join Prime members demanding cleaner Amazon.",
@@ -37,17 +35,6 @@
 	};
 
 	const finalStructuredData = structuredData || defaultStructuredData;
-
-	// Initialize Google Analytics and track page view
-	onMount(() => {
-		// Initialize GA (will only initialize once)
-		initGA();
-		
-		// Track page view after a small delay to ensure GA is loaded
-		setTimeout(() => {
-			trackPageView(title, url);
-		}, 100);
-	});
 </script>
 
 <svelte:head>

@@ -1,56 +1,11 @@
 /**
  * Google Analytics utilities for SvelteKit
- * Handles gtag initialization and event tracking
+ * Uses gtag that's loaded directly in HTML head
  */
 
 import { browser } from '$app/environment';
 
 export const GA_ID = 'G-8SZBSE6Y23';
-
-/**
- * Initialize Google Analytics
- * This should be called once when the app starts
- */
-export function initGA(gtagId = GA_ID) {
-	if (!browser || !gtagId) return;
-
-	try {
-		// Check if gtag is already loaded
-		if (window.gtag) {
-			console.log('Google Analytics already initialized');
-			return;
-		}
-
-		// Load gtag script
-		const script = document.createElement('script');
-		script.async = true;
-		script.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
-		document.head.appendChild(script);
-
-		// Initialize dataLayer and gtag
-		window.dataLayer = window.dataLayer || [];
-		function gtag(...args) {
-			window.dataLayer.push(args);
-		}
-		window.gtag = gtag;
-
-		// Configure gtag when script loads
-		script.onload = () => {
-			gtag('js', new Date());
-			gtag('config', gtagId, {
-				send_page_view: false // We'll send page views manually
-			});
-			console.log('Google Analytics initialized successfully');
-		};
-
-		script.onerror = () => {
-			console.error('Failed to load Google Analytics');
-		};
-
-	} catch (error) {
-		console.error('Error initializing Google Analytics:', error);
-	}
-}
 
 /**
  * Send a page view event

@@ -886,7 +886,24 @@ const options = {
   service_worker: false,
   service_worker_options: void 0,
   templates: {
-    app: ({ head, body, assets, nonce, env }) => '<!doctype html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n	' + head + '\n</head>\n\n<body>\n	<a href="#content" class="skip-to-main">Skip to main content</a>\n	<div>' + body + "</div>\n</body>\n\n</html>",
+    app: ({ head, body, assets, nonce, env }) => `<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SZBSE6Y23"><\/script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8SZBSE6Y23');
+	<\/script>
+	
+	` + head + '\n</head>\n\n<body>\n	<a href="#content" class="skip-to-main">Skip to main content</a>\n	<div>' + body + "</div>\n</body>\n\n</html>\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -958,7 +975,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1br1hoa"
+  version_hash: "5gnr78"
 };
 async function get_hooks() {
   let handle;

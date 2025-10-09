@@ -95,13 +95,6 @@
       "_utils.js"
     ]
   },
-  "_state.svelte.js": {
-    "file": "chunks/state.svelte.js",
-    "name": "state.svelte",
-    "imports": [
-      "_index.js"
-    ]
-  },
   "_utils.js": {
     "file": "chunks/utils.js",
     "name": "utils"
@@ -142,8 +135,7 @@
     "imports": [
       "_index.js",
       "_exports.js",
-      "_utils.js",
-      "_state.svelte.js"
+      "_utils.js"
     ]
   },
   "src/routes/+layout.js": {
@@ -158,9 +150,6 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_exports.js",
-      "_utils.js",
-      "_state.svelte.js",
       "_Header.js"
     ],
     "css": [
