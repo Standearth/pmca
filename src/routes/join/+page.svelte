@@ -9,7 +9,7 @@
 	
 	let heroVideo;
 	let currentCount = $state(0);
-	const targetCount = 18401;
+	const targetCount = 20139;
 	let iframeSrc = $state("https://act.stand.earth/page/88799/petition/1");
 	
 	// const copy = getContext("copy");

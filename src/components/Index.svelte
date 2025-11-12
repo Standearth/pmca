@@ -9,7 +9,7 @@
 	
 	let heroVideo;
 	let currentCount = $state(0);
-	const targetCount = 18401;
+	const targetCount = 20139;
 	let showPopup = $state(false);
 	
 	// const copy = getContext("copy");
