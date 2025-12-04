@@ -239,9 +239,7 @@
 		<h2>Step 2: Share your story</h2>
 		
 		<div class="survey-container">
-			{#if typeformId}
-				<div data-tf-live={typeformId}></div>
-			{/if}
+			<iframe src="https://standearth.soapboxx.us/embed/692f368d76a7fb4f4f9f7565" frameBorder="0" width="100%" height="525px" style="border:none;"></iframe>
 		</div>
 	</div>
 </section>
