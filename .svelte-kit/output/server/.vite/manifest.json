@@ -237,6 +237,24 @@
       "_app/immutable/assets/_page.iK11Dvdw.css"
     ]
   },
+  "src/routes/in/+page.svelte": {
+    "file": "entries/pages/in/_page.svelte.js",
+    "name": "entries/pages/in/_page.svelte",
+    "src": "src/routes/in/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js",
+      "_TapeTransition.js",
+      "_StoriesCarousel.js",
+      "_PopupModal.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CEmviVih.css"
+    ]
+  },
   "src/routes/join/+page.svelte": {
     "file": "entries/pages/join/_page.svelte.js",
     "name": "entries/pages/join/_page.svelte",
