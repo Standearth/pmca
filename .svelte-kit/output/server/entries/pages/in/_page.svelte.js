@@ -10,7 +10,7 @@ function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let currentCount = 0;
     let showPopup = false;
-    const indiaIframeBaseUrl = "https://act.stand.earth/page/88799/petition/1?supporter.Country=India";
+    const indiaIframeBaseUrl = "https://act.stand.earth/page/88799/petition/1?supporter.country=India";
     const preloadFont = [
       base + "/fonts/AmsiPro-Ultra.woff2",
       base + "/fonts/Carlito/Carlito-Regular.ttf",

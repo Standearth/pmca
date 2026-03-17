@@ -13,7 +13,7 @@
 	let showPopup = $state(false);
 
 	// India-specific iframe URL with country pre-population
-	const indiaIframeBaseUrl = "https://act.stand.earth/page/88799/petition/1?supporter.Country=India";
+	const indiaIframeBaseUrl = "https://act.stand.earth/page/88799/petition/1?supporter.country=India";
 
 	const preloadFont = [
 		base+"/fonts/AmsiPro-Ultra.woff2",
