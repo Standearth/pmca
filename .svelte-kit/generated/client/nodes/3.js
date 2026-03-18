@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/cancel-prime/+page.svelte";
+export { default as component } from "../../../../src/routes/ca/+page.svelte";

@@ -206,6 +206,23 @@
       "_app/immutable/assets/_page.Oq9pcpuX.css"
     ]
   },
+  "src/routes/ca/+page.svelte": {
+    "file": "entries/pages/ca/_page.svelte.js",
+    "name": "entries/pages/ca/_page.svelte",
+    "src": "src/routes/ca/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js",
+      "_TapeTransition.js",
+      "_StoriesCarousel.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DvbxuTl8.css"
+    ]
+  },
   "src/routes/cancel-prime/+page.svelte": {
     "file": "entries/pages/cancel-prime/_page.svelte.js",
     "name": "entries/pages/cancel-prime/_page.svelte",

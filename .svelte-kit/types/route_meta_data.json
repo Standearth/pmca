@@ -7,6 +7,9 @@
 	"/cancel-prime": [
 		"src/routes/+layout.js"
 	],
+	"/ca": [
+		"src/routes/+layout.js"
+	],
 	"/get-started": [
 		"src/routes/+layout.js"
 	],
