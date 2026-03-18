@@ -116,7 +116,7 @@
 	
 	<div class="hero-content">
 		<div class="hero-text">
-			<h1>Join Prime members across Canada demanding cleaner Amazon.</h1>
+			<h1>Join Prime members across Canada for cleaner Amazon.</h1>
 			<p class="hero-subtitle">Prime members agree that Amazon needs to do more on climate, from reducing emissions in its delivery fleet, to using renewable energy in its operations.</p>
             <h3>Use your Prime membership power to make Amazon deliver on climate!</h3>
 		<!-- Counter -->
