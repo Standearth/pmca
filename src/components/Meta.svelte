@@ -5,6 +5,7 @@
 		title = "Join Prime members demanding cleaner Amazon.",
 		description = "Use your Prime membership power to make Amazon deliver on climate!",
 		url = "https://primemembers.earth",
+		canonical = url,
 		keywords = "",
 		preloadFont = [],
 		ogType = "website",
@@ -18,7 +19,7 @@
 		"name": "Prime Members for Cleaner Amazon",
 		"url": url,
 		"description": description,
-		"logo": `${url}${base}/logo_black.svg`,
+		"logo": "https://primemembers.earth/logo_black.svg",
 		"sameAs": [
 			"https://stand.earth"
 		],
@@ -91,7 +92,7 @@
 	<meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
 	<!-- Canonical URL -->
-	<link rel="canonical" href={url} />
+	<link rel="canonical" href={canonical} />
 	
 	<!-- Favicon and icons -->
 	<link rel="icon" type="image/svg+xml" href="{base}/marker.svg" />

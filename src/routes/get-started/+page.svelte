@@ -140,7 +140,7 @@
 	});
 </script>
 
-<Meta {title} {description} />
+<Meta {title} {description} canonical="https://primemembers.earth/get-started/" />
 
 <!-- Hero Section -->
 <section class="hero">

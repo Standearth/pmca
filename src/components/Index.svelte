@@ -1,6 +1,7 @@
 <script>
 	import { getContext, onMount } from "svelte";
 	import { base } from '$app/paths';
+	import { targetCount } from "$data/variables.json";
 	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
@@ -8,12 +9,11 @@
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
 	
 	let heroVideo;
-	let currentCount = $state(0);
-	const targetCount = 21179;
+	let currentCount = $state(targetCount);
 	let showPopup = $state(false);
 	
 	// const copy = getContext("copy");
-	// const data = getContext("data");
+	const data = getContext("data");
 	
 	function openPopup() {
 		showPopup = true;
@@ -101,7 +101,7 @@
 	</section>
 	
 	<!-- Stories Carousel -->
-	<StoriesCarousel />
+	<StoriesCarousel ssrStories={data?.ssrStories ?? []} />
 	
 	<!-- Tape Transition -->
 	<TapeTransition />
@@ -114,19 +114,19 @@
 			
 			<div class="action-grid">
 				<div class="action-item">
-					<div class="action-icon"><img src="{base}/marker.svg"></div>
+					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Build Power</h3>
 					<p>Let's reach as many Prime members as possible. Share <span class="highlight">your unique link</span> and spread the word.</p>
 				</div>
 				
 				<div class="action-item">
-					<div class="action-icon"><img src="{base}/marker.svg"></div>
+					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Get Noticed</h3>
 					<p>We need to make sure Amazon hears our demands loud and clear. We have <span class="highlight">just the tools</span> for the job.</p>
 				</div>
 				
 				<div class="action-item">
-					<div class="action-icon"><img src="{base}/marker.svg"></div>
+					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Organize</h3>
 					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here.</p>
 				</div>

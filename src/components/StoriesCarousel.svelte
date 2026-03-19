@@ -3,12 +3,14 @@
 	import { browser } from "$app/environment";
 	import { base } from '$app/paths';
 	import { loadStories, shuffleArray } from "$utils/loadStories.js";
+
+	let { ssrStories = [] } = $props();
 	
-	let stories = $state([]);
+	let stories = $state([...ssrStories]);
 	let currentIndex = $state(0);
 	let carouselContainer;
 	let autoplayInterval;
-	let isLoading = $state(true);
+	let isLoading = $state(ssrStories.length === 0);
 	
 	const storiesPerView = 3;
 	const maxStoryLength = 150; // Character limit for preview
@@ -17,7 +19,7 @@
 		if (!browser) return;
 		
 		try {
-			isLoading = true;
+			if (stories.length === 0) isLoading = true;
 			const fetchedStories = await loadStories();
 			// Get a random selection of stories for the carousel
 			const shuffledStories = shuffleArray(fetchedStories);

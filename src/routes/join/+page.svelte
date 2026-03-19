@@ -9,7 +9,7 @@
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
 	
 	let heroVideo;
-	let currentCount = $state(0);
+	let currentCount = $state(targetCount);
 	let iframeSrc = $state("https://act.stand.earth/page/88799/petition/1");
 	
 	// const copy = getContext("copy");
@@ -90,6 +90,7 @@
 	title="Join Prime Members for Cleaner Amazon" 
 	description="Join the movement! Prime members are demanding Amazon electrify their delivery fleet, use renewable energy, and improve working conditions. Add your voice today." 
 	url="https://primemembers.earth/join" 
+	canonical="https://primemembers.earth/join/"
 	keywords="Amazon Prime, join campaign, climate action, electric delivery, renewable energy, environmental activism"
 	ogType="website"
 	structuredData={joinPageStructuredData}

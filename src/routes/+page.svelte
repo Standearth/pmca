@@ -22,5 +22,5 @@
 	setContext("data", data);
 </script>
 
-<Meta {title} {description} {url} {preloadFont} {keywords} />
+<Meta {title} {description} {url} {preloadFont} {keywords} canonical="https://primemembers.earth/" />
 <Index />

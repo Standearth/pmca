@@ -5,7 +5,7 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 /**
  * Parse CSV text into array of objects
  */
-function parseCSV(csvText) {
+export function parseCSV(csvText) {
 	const lines = csvText.trim().split('\n');
 	const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
 	const stories = [];

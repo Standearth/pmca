@@ -6,7 +6,7 @@
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
 
-	const title = "Learn More - Prime Members for Cleaner Amazon";
+	const title = "Why Amazon Prime Members Have Climate Leverage | Prime Members for a Cleaner Amazon";
 	const description = "Learn more about how Prime members can push Amazon to do more on climate.";
 	
 	let showPopup = $state(false);
@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Meta {title} {description} />
+<Meta {title} {description} canonical="https://primemembers.earth/learn-more/" />
 
 <!-- Hero Section -->
 <section class="hero">

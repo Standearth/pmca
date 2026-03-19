@@ -6,7 +6,7 @@
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
 
-	const title = "Cancel Prime - Prime Members for Cleaner Amazon";
+	const title = "How to Cancel Amazon Prime (FTC Settlement Guide) | Prime Members for a Cleaner Amazon";
 	const description = "Learn how to cancel your Prime membership and use your consumer power for good.";
 	
 	let showPopup = $state(false);
@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Meta {title} {description} />
+<Meta {title} {description} canonical="https://primemembers.earth/cancel-prime/" />
 
 <!-- Hero Section -->
 <section class="hero">

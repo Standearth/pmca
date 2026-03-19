@@ -1,4 +1,4 @@
-import { a5 as attr_class, a8 as bind_props } from "./index.js";
+import { a5 as attr_class, a9 as bind_props } from "./index.js";
 function PopupModal($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let {

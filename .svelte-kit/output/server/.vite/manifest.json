@@ -63,6 +63,10 @@
   "_StoriesCarousel.js": {
     "file": "chunks/StoriesCarousel.js",
     "name": "StoriesCarousel",
+    "imports": [
+      "_index.js",
+      "_server.js"
+    ],
     "css": [
       "_app/immutable/assets/StoriesCarousel.Dy9Q4WhV.css"
     ]
@@ -124,6 +128,10 @@
   "_utils.js": {
     "file": "chunks/utils.js",
     "name": "utils"
+  },
+  "_variables.js": {
+    "file": "chunks/variables.js",
+    "name": "variables"
   },
   "node_modules/@sveltejs/kit/src/runtime/app/server/remote/index.js": {
     "file": "remote-entry.js",
@@ -197,6 +205,7 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
+      "_variables.js",
       "_Header.js",
       "_TapeTransition.js",
       "_PopupModal.js",
@@ -297,6 +306,7 @@
     "isEntry": true,
     "imports": [
       "_index.js",
+      "_variables.js",
       "_server.js",
       "_Footer.js",
       "_Header.js",

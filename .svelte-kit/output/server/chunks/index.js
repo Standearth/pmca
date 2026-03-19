@@ -1684,6 +1684,9 @@ function clsx(value) {
 const whitespace = [..." 	\n\r\f \v\uFEFF"];
 function to_class(value, hash, directives) {
   var classname = value == null ? "" : "" + value;
+  if (hash) {
+    classname = classname ? classname + " " + hash : hash;
+  }
   if (directives) {
     for (var key in directives) {
       if (directives[key]) {
@@ -1703,6 +1706,9 @@ function to_class(value, hash, directives) {
     }
   }
   return classname === "" ? null : classname;
+}
+function to_style(value, styles) {
+  return value == null ? null : String(value);
 }
 function subscribe_to_store(store, run, invalidate) {
   if (store == null) {
@@ -2307,6 +2313,10 @@ function attr_class(value, hash, directives) {
   var result = to_class(value, hash, directives);
   return result ? ` class="${escape_html(result, true)}"` : "";
 }
+function attr_style(value, directives) {
+  var result = to_style(value);
+  return result ? ` style="${escape_html(result, true)}"` : "";
+}
 function store_get(store_values, store_name, store) {
   if (store_name in store_values && store_values[store_name][0] === store) {
     return store_values[store_name][2];
@@ -2377,9 +2387,10 @@ export {
   attr as a3,
   stringify as a4,
   attr_class as a5,
-  head as a6,
+  attr_style as a6,
   ensure_array_like as a7,
-  bind_props as a8,
+  head as a8,
+  bind_props as a9,
   HYDRATION_START as b,
   HYDRATION_START_ELSE as c,
   get as d,
