@@ -1,5 +1,6 @@
 <script>
 	import { getContext, onMount } from "svelte";
+	import { targetCount } from "$data/variables.json";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Header from "$components/Header.svelte";
@@ -9,7 +10,6 @@
 	
 	let heroVideo;
 	let currentCount = $state(0);
-	const targetCount = 21179;
 	let iframeSrc = $state("https://act.stand.earth/page/88799/petition/1");
 	
 	// const copy = getContext("copy");

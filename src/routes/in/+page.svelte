@@ -1,5 +1,6 @@
 <script>
 	import { getContext, onMount } from "svelte";
+	import { targetCount } from "$data/variables.json";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Header from "$components/Header.svelte";
@@ -10,7 +11,6 @@
 	import { trackCampaignAction, trackSocialShare } from '$utils/analytics.js';
 
 	let currentCount = $state(0);
-	const targetCount = 21179;
 	let showPopup = $state(false);
 
 	// India-specific iframe URL with country pre-population

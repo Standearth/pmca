@@ -24,5 +24,8 @@
 	],
 	"/stories": [
 		"src/routes/+layout.js"
+	],
+	"/uk": [
+		"src/routes/+layout.js"
 	]
 }

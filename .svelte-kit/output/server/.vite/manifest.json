@@ -319,5 +319,23 @@
     "css": [
       "_app/immutable/assets/_page.D1rACiSw.css"
     ]
+  },
+  "src/routes/uk/+page.svelte": {
+    "file": "entries/pages/uk/_page.svelte.js",
+    "name": "entries/pages/uk/_page.svelte",
+    "src": "src/routes/uk/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js",
+      "_TapeTransition.js",
+      "_StoriesCarousel.js",
+      "_PopupModal.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Z6uK32tl.css"
+    ]
   }
 }
