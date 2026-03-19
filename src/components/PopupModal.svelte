@@ -84,8 +84,13 @@
 	}
 	
 	onMount(() => {
-		// Update iframe src with URL parameters
-		iframeSrc = `${baseUrl}${window.location.search}`;
+		// Update iframe src with URL parameters, merging baseUrl params with page params
+		const url = new URL(baseUrl);
+		const pageParams = new URLSearchParams(window.location.search);
+		for (const [key, value] of pageParams) {
+			url.searchParams.set(key, value);
+		}
+		iframeSrc = url.toString();
 		
 		// Preload iframe immediately (only happens once globally)
 		preloadIframe(iframeSrc).then(() => {
