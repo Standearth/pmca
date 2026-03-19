@@ -10,7 +10,7 @@ return {
 	assets: new Set([".DS_Store",".htaccess","Bluesky_Logo_White.svg","Prime Member Testimonials - TO BE PUBLISHED.csv","bg2.png","bg_video.mp4","bg_video_uk.mp4","favicon.ico","favicon.svg","fonts/AmsiPro-Ultra.woff","fonts/AmsiPro-Ultra.woff2","fonts/Carlito/Carlito-Bold.ttf","fonts/Carlito/Carlito-BoldItalic.ttf","fonts/Carlito/Carlito-Italic.ttf","fonts/Carlito/Carlito-Regular.ttf","fonts/Carlito/OFL.txt","gtag-testing-guide.md","hero-bg.webp","hero-india.webp","hero-uk.webp","logo_black.png","logo_black.svg","logo_white.png","logo_white.svg","manifest.json","marker.svg","mockup.jpg","pmca_og.jpg","robots.txt","sitemap.xml","stand_white.png","tape.png"]),
 	mimeTypes: {".svg":"image/svg+xml",".csv":"text/csv",".png":"image/png",".mp4":"video/mp4",".woff":"font/woff",".woff2":"font/woff2",".ttf":"font/ttf",".txt":"text/plain",".md":"text/markdown",".webp":"image/webp",".json":"application/json",".jpg":"image/jpeg",".xml":"text/xml"},
 	_: {
-		client: {start:"_app/immutable/entry/start.CU83CQ6y.js",app:"_app/immutable/entry/app.Bw0N5zEY.js",imports:["_app/immutable/entry/start.CU83CQ6y.js","_app/immutable/chunks/wVLuKnme.js","_app/immutable/chunks/OTRRMIXb.js","_app/immutable/chunks/CwHxVK4f.js","_app/immutable/entry/app.Bw0N5zEY.js","_app/immutable/chunks/OTRRMIXb.js","_app/immutable/chunks/C2OtBj50.js","_app/immutable/chunks/BnNOA9kN.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.B57pWzfB.js",app:"_app/immutable/entry/app.DML9ZD3E.js",imports:["_app/immutable/entry/start.B57pWzfB.js","_app/immutable/chunks/DJSy7KjV.js","_app/immutable/chunks/OTRRMIXb.js","_app/immutable/chunks/DQMvUNVu.js","_app/immutable/entry/app.DML9ZD3E.js","_app/immutable/chunks/OTRRMIXb.js","_app/immutable/chunks/C2OtBj50.js","_app/immutable/chunks/BnNOA9kN.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -22,7 +22,8 @@ return {
 			__memo(() => import('./nodes/7.js')),
 			__memo(() => import('./nodes/8.js')),
 			__memo(() => import('./nodes/9.js')),
-			__memo(() => import('./nodes/10.js'))
+			__memo(() => import('./nodes/10.js')),
+			__memo(() => import('./nodes/11.js'))
 		],
 		remotes: {
 			
@@ -50,45 +51,52 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/eu",
+				pattern: /^\/eu\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				endpoint: null
+			},
+			{
 				id: "/get-started",
 				pattern: /^\/get-started\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
 			},
 			{
 				id: "/in",
 				pattern: /^\/in\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 6 },
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
 				endpoint: null
 			},
 			{
 				id: "/join",
 				pattern: /^\/join\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 7 },
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/learn-more",
 				pattern: /^\/learn-more\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
 				endpoint: null
 			},
 			{
 				id: "/stories",
 				pattern: /^\/stories\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/uk",
 				pattern: /^\/uk\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			}
 		],

@@ -10,6 +10,9 @@
 	"/ca": [
 		"src/routes/+layout.js"
 	],
+	"/eu": [
+		"src/routes/+layout.js"
+	],
 	"/get-started": [
 		"src/routes/+layout.js"
 	],
