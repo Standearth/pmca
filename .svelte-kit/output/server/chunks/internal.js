@@ -902,6 +902,24 @@ const options = {
 		gtag('js', new Date());
 		gtag('config', 'G-8SZBSE6Y23');
 	<\/script>
+
+	<!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1492814834142053');
+		fbq('track', 'PageView');
+	<\/script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1492814834142053&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
 	
 	` + head + '\n</head>\n\n<body>\n	<a href="#content" class="skip-to-main">Skip to main content</a>\n	<div>' + body + "</div>\n</body>\n\n</html>\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
@@ -975,7 +993,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "4oan0x"
+  version_hash: "106n4yn"
 };
 async function get_hooks() {
   let handle;

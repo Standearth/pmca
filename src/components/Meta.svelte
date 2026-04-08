@@ -104,6 +104,7 @@
 	<link rel="dns-prefetch" href="//primemembers.earth" />
 	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
 	<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+	<link rel="dns-prefetch" href="//connect.facebook.net" />
 
 	<!-- Structured Data -->
 	{@html `<script type="application/ld+json">${JSON.stringify(finalStructuredData)}</script>`}

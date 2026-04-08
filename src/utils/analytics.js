@@ -131,3 +131,59 @@ export function trackSocialButtonClick(platform, hasRef = false, refId = null) {
 export function isGAReady() {
 	return browser && window.gtag && typeof window.gtag === 'function';
 }
+
+// ─── Meta Pixel helpers ───────────────────────────────────────────────
+
+/**
+ * Check if Meta Pixel (fbq) is loaded and ready
+ */
+export function isFbqReady() {
+	return browser && window.fbq && typeof window.fbq === 'function';
+}
+
+/**
+ * Track a standard or custom Meta Pixel event
+ * @param {string} eventName - e.g. 'Lead', 'Contact', 'ViewContent', or a custom name
+ * @param {object} parameters - optional event parameters
+ */
+export function trackMetaPixelEvent(eventName, parameters = {}) {
+	if (!isFbqReady()) return;
+
+	try {
+		window.fbq('track', eventName, parameters);
+	} catch (error) {
+		console.error('Error tracking Meta Pixel event:', error);
+	}
+}
+
+/**
+ * Track a custom Meta Pixel event (uses trackCustom instead of track)
+ * @param {string} eventName - custom event name
+ * @param {object} parameters - optional event parameters
+ */
+export function trackMetaPixelCustomEvent(eventName, parameters = {}) {
+	if (!isFbqReady()) return;
+
+	try {
+		window.fbq('trackCustom', eventName, parameters);
+	} catch (error) {
+		console.error('Error tracking Meta Pixel custom event:', error);
+	}
+}
+
+/**
+ * Track a WhatsApp button click via Meta Pixel
+ * Fires both the standard 'Contact' event and a custom 'WhatsAppClick' event
+ */
+export function trackMetaPixelWhatsAppClick(page = '', country = '') {
+	trackMetaPixelEvent('Contact', {
+		content_name: 'WhatsApp Join',
+		content_category: 'WhatsApp',
+		country: country,
+		page: page
+	});
+	trackMetaPixelCustomEvent('WhatsAppClick', {
+		country: country,
+		page: page
+	});
+}

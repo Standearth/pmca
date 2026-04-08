@@ -8,7 +8,7 @@
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
-	import { trackCampaignAction, trackSocialShare } from '$utils/analytics.js';
+	import { trackCampaignAction, trackSocialShare, trackMetaPixelWhatsAppClick } from '$utils/analytics.js';
 
 	let currentCount = $state(0);
 	let showPopup = $state(false);
@@ -71,6 +71,7 @@
 	function trackWhatsApp() {
 		trackSocialShare('whatsapp', 'https://whatsapp.com/channel/0029VbCSWS0Lo4haOx1AWF0w');
 		trackCampaignAction('join_whatsapp_click', { country: 'India', page: 'in' });
+		trackMetaPixelWhatsAppClick('in', 'India');
 	}
 
 	onMount(() => {
