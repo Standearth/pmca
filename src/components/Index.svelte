@@ -7,6 +7,7 @@
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
+	import UpdatesCarousel from "$components/UpdatesCarousel.svelte";
 	
 	let heroVideo;
 	let currentCount = $state(targetCount);
@@ -73,6 +74,9 @@
 		
 	</section>
 	
+	<!-- Updates Carousel -->
+	<UpdatesCarousel />
+
 	<!-- Demands Section -->
 	<section class="demands">
 		<div class="container">

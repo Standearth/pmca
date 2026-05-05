@@ -77,5 +77,6 @@ function Footer($$renderer) {
 }
 export {
   Footer as F,
-  Meta as M
+  Meta as M,
+  html as h
 };

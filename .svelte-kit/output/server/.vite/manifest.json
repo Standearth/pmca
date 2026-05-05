@@ -114,6 +114,17 @@
       "_server.js"
     ]
   },
+  "_loadUpdates.js": {
+    "file": "chunks/loadUpdates.js",
+    "name": "loadUpdates",
+    "imports": [
+      "_sanity.js"
+    ]
+  },
+  "_sanity.js": {
+    "file": "chunks/sanity.js",
+    "name": "sanity"
+  },
   "_server.js": {
     "file": "chunks/server.js",
     "name": "server"
@@ -209,10 +220,11 @@
       "_Header.js",
       "_TapeTransition.js",
       "_PopupModal.js",
-      "_StoriesCarousel.js"
+      "_StoriesCarousel.js",
+      "_sanity.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Oq9pcpuX.css"
+      "_app/immutable/assets/_page.u7ifCW3M.css"
     ]
   },
   "src/routes/ca/+page.svelte": {
@@ -364,6 +376,48 @@
     ],
     "css": [
       "_app/immutable/assets/_page.Z6uK32tl.css"
+    ]
+  },
+  "src/routes/updates/+page.svelte": {
+    "file": "entries/pages/updates/_page.svelte.js",
+    "name": "entries/pages/updates/_page.svelte",
+    "src": "src/routes/updates/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js",
+      "_sanity.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Cb_zWrwb.css"
+    ]
+  },
+  "src/routes/updates/[slug]/+page.js": {
+    "file": "entries/pages/updates/_slug_/_page.js",
+    "name": "entries/pages/updates/_slug_/_page",
+    "src": "src/routes/updates/[slug]/+page.js",
+    "isEntry": true,
+    "imports": [
+      "_loadUpdates.js"
+    ]
+  },
+  "src/routes/updates/[slug]/+page.svelte": {
+    "file": "entries/pages/updates/_slug_/_page.svelte.js",
+    "name": "entries/pages/updates/_slug_/_page.svelte",
+    "src": "src/routes/updates/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_Header.js",
+      "_loadUpdates.js",
+      "_sanity.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.B4s9NXXF.css"
     ]
   }
 }

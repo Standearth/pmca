@@ -8,6 +8,17 @@ import { H as Header } from "../../chunks/Header.js";
 import { T as TapeTransition } from "../../chunks/TapeTransition.js";
 import { P as PopupModal } from "../../chunks/PopupModal.js";
 import { S as StoriesCarousel } from "../../chunks/StoriesCarousel.js";
+import "../../chunks/sanity.js";
+function UpdatesCarousel($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    $$renderer2.push(`<section class="updates-carousel svelte-1c9rijk"><div class="container svelte-1c9rijk"><div class="carousel-header svelte-1c9rijk"><h2 class="svelte-1c9rijk">Latest Updates</h2> <p class="carousel-subtitle svelte-1c9rijk">Follow the latest news and milestones from our campaign to push Amazon on climate.</p></div> `);
+    {
+      $$renderer2.push("<!--[-->");
+      $$renderer2.push(`<div class="loading svelte-1c9rijk"><div class="loading-spinner svelte-1c9rijk"></div> <p class="svelte-1c9rijk">Loading updates...</p></div>`);
+    }
+    $$renderer2.push(`<!--]--></div></section>`);
+  });
+}
 function Index($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let currentCount = targetCount;
@@ -17,7 +28,9 @@ function Index($$renderer, $$props) {
     let $$inner_renderer;
     function $$render_inner($$renderer3) {
       Header($$renderer3);
-      $$renderer3.push(`<!----> <section class="hero svelte-tfcqlg"><div class="hero-background svelte-tfcqlg"><video autoplay muted playsinline${attr("poster", `${stringify(base)}/hero-bg.webp`)} class="hero-video svelte-tfcqlg"><source${attr("src", `${stringify(base)}/bg_video.mp4`)} type="video/mp4" class="svelte-tfcqlg"/></video></div> <div class="hero-content svelte-tfcqlg"><div class="hero-text svelte-tfcqlg"><h1 class="svelte-tfcqlg">Prime members want Amazon to do more on climate.</h1> <div class="hero-buttons svelte-tfcqlg"><button class="btn btn-primary svelte-tfcqlg">I want to join</button> <button class="btn btn-secondary svelte-tfcqlg"><a${attr("href", `${stringify(base)}/learn-more`)} class="svelte-tfcqlg">Why this matters</a></button></div></div> <div class="counter svelte-tfcqlg"><div class="counter-circle svelte-tfcqlg"><div class="counter-number svelte-tfcqlg">${escape_html(Math.floor(currentCount).toLocaleString())}</div> <div class="counter-text svelte-tfcqlg">Prime members<br class="svelte-tfcqlg"/>and counting!</div></div></div></div></section> <section class="demands svelte-tfcqlg"><div class="container svelte-tfcqlg"><div class="demands-content svelte-tfcqlg"><div class="demands-text svelte-tfcqlg"><h2 class="svelte-tfcqlg">Here is the problem: Amazon isn't delivering on its climate promises.</h2> <p class="svelte-tfcqlg">Behind the fast deliveries, one-click orders, and flashy climate promises, Amazon's emissions are on the rise, mainly driven by the company’s rapidly expanding data centers and delivery fleet.</p> <h3 class="svelte-tfcqlg"><strong class="svelte-tfcqlg">As Prime members, we have the leverage to say our future is not for sale.</strong></h3></div> <div class="demands-card svelte-tfcqlg"><div class="card-header svelte-tfcqlg"><strong class="svelte-tfcqlg">TO: Amazon</strong><br class="svelte-tfcqlg"/> <strong class="svelte-tfcqlg">FROM: Prime members</strong></div> <p class="svelte-tfcqlg">As your most loyal customers, we are calling on you to:</p> <ol class="svelte-tfcqlg"><li class="svelte-tfcqlg"><span class="accent-orange svelte-tfcqlg">Electrify your global delivery fleet</span> from dock to door</li> <li class="svelte-tfcqlg">Power every data center and warehouse with <span class="accent-orange svelte-tfcqlg">real renewable energy</span></li> <li class="svelte-tfcqlg">Create <span class="accent-orange svelte-tfcqlg">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li></ol> <button class="btn btn-cta svelte-tfcqlg">Add my name</button></div></div></div></section> `);
+      $$renderer3.push(`<!----> <section class="hero svelte-tfcqlg"><div class="hero-background svelte-tfcqlg"><video autoplay muted playsinline${attr("poster", `${stringify(base)}/hero-bg.webp`)} class="hero-video svelte-tfcqlg"><source${attr("src", `${stringify(base)}/bg_video.mp4`)} type="video/mp4" class="svelte-tfcqlg"/></video></div> <div class="hero-content svelte-tfcqlg"><div class="hero-text svelte-tfcqlg"><h1 class="svelte-tfcqlg">Prime members want Amazon to do more on climate.</h1> <div class="hero-buttons svelte-tfcqlg"><button class="btn btn-primary svelte-tfcqlg">I want to join</button> <button class="btn btn-secondary svelte-tfcqlg"><a${attr("href", `${stringify(base)}/learn-more`)} class="svelte-tfcqlg">Why this matters</a></button></div></div> <div class="counter svelte-tfcqlg"><div class="counter-circle svelte-tfcqlg"><div class="counter-number svelte-tfcqlg">${escape_html(Math.floor(currentCount).toLocaleString())}</div> <div class="counter-text svelte-tfcqlg">Prime members<br class="svelte-tfcqlg"/>and counting!</div></div></div></div></section> `);
+      UpdatesCarousel($$renderer3);
+      $$renderer3.push(`<!----> <section class="demands svelte-tfcqlg"><div class="container svelte-tfcqlg"><div class="demands-content svelte-tfcqlg"><div class="demands-text svelte-tfcqlg"><h2 class="svelte-tfcqlg">Here is the problem: Amazon isn't delivering on its climate promises.</h2> <p class="svelte-tfcqlg">Behind the fast deliveries, one-click orders, and flashy climate promises, Amazon's emissions are on the rise, mainly driven by the company’s rapidly expanding data centers and delivery fleet.</p> <h3 class="svelte-tfcqlg"><strong class="svelte-tfcqlg">As Prime members, we have the leverage to say our future is not for sale.</strong></h3></div> <div class="demands-card svelte-tfcqlg"><div class="card-header svelte-tfcqlg"><strong class="svelte-tfcqlg">TO: Amazon</strong><br class="svelte-tfcqlg"/> <strong class="svelte-tfcqlg">FROM: Prime members</strong></div> <p class="svelte-tfcqlg">As your most loyal customers, we are calling on you to:</p> <ol class="svelte-tfcqlg"><li class="svelte-tfcqlg"><span class="accent-orange svelte-tfcqlg">Electrify your global delivery fleet</span> from dock to door</li> <li class="svelte-tfcqlg">Power every data center and warehouse with <span class="accent-orange svelte-tfcqlg">real renewable energy</span></li> <li class="svelte-tfcqlg">Create <span class="accent-orange svelte-tfcqlg">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li></ol> <button class="btn btn-cta svelte-tfcqlg">Add my name</button></div></div></div></section> `);
       StoriesCarousel($$renderer3, { ssrStories: data?.ssrStories ?? [] });
       $$renderer3.push(`<!----> `);
       TapeTransition($$renderer3);
@@ -60,7 +73,7 @@ const copy = {
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2026-04-22-14:59"}`);
+  console.log(`build: ${"2026-05-05-16:44"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {

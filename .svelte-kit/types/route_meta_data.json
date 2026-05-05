@@ -30,5 +30,12 @@
 	],
 	"/uk": [
 		"src/routes/+layout.js"
+	],
+	"/updates": [
+		"src/routes/+layout.js"
+	],
+	"/updates/[slug]": [
+		"src/routes/updates/[slug]/+page.js",
+		"src/routes/+layout.js"
 	]
 }
