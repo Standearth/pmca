@@ -1,0 +1,1 @@
+import"./C8FFzEQw.js";import{f as s,t as r,a as i,c as o,r as p}from"./jQ12fRz9.js";import{s as m}from"./D6SwNvd5.js";import{b as c}from"./DjeHI_oQ.js";var f=s('<div class="tape-section svelte-ex5d9t"><img alt="Tape" class="tape-image svelte-ex5d9t"/></div>');function g(a){var t=f(),e=o(t);p(t),r(()=>m(e,"src",`${c??""}/tape.png`)),i(a,t)}export{g as T};

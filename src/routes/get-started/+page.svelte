@@ -236,13 +236,16 @@
 <!-- Survey Section -->
 <section class="survey">
 	<div class="container">
-		<h2>Step 2: Send a message to Amazon</h2>
+		<h2>Step 2: Share your story</h2>
 		
 		<div class="survey-container">
-			<iframe src="https://standearth.soapboxx.us/embed/692f368d76a7fb4f4f9f7565" frameBorder="0" width="100%" height="525px" style="border:none;"></iframe>
+			<!--<iframe src="https://standearth.soapboxx.us/embed/692f368d76a7fb4f4f9f7565" frameBorder="0" width="100%" height="525px" style="border:none;"></iframe>
 			<div style="width: 100%;overflow: visible;">
 				<iframe id="video-playlist" src="https://standearth.soapboxx.us/embed-video-question?prompt_id=692f368d76a7fb4f4f9f7565" style="border: 0; width:100%;height: 100vh;overflow: hidden;" scrolling="yes" seamless="seamless"></iframe>
-			</div>
+			</div>-->
+			{#if typeformId}
+				<div data-tf-live={typeformId}></div>
+			{/if}
 		</div>
 	</div>
 </section>
