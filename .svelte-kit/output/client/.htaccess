@@ -209,6 +209,14 @@
 </IfModule>
 
 # =====================================================
+# SPA FALLBACK - Serve fallback for client-side routing
+# =====================================================
+
+# When a pre-rendered page doesn't exist (e.g. new CMS content),
+# serve 404.html which bootstraps the SvelteKit SPA client-side.
+ErrorDocument 404 /404.html
+
+# =====================================================
 # MIME TYPES (Ensure proper content types)
 # =====================================================
 
