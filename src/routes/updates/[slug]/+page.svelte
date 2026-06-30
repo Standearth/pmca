@@ -1,13 +1,33 @@
 <script>
+	import { onMount } from "svelte";
+	import { browser } from "$app/environment";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
 	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
-	import { formatDate } from "$utils/loadUpdates.js";
+	import { formatDate, loadUpdate } from "$utils/loadUpdates.js";
 	import { buildImageUrl } from "$utils/sanity.js";
 
 	let { data } = $props();
-	const post = $derived(data.post);
+
+	// freshPost holds data re-fetched from Sanity on the client.
+	// This ensures direct-URL visits (which serve prerendered/build-time HTML)
+	// still show the latest content after hydration.
+	let freshPost = $state(null);
+	const post = $derived(freshPost ?? data.post);
+
+	onMount(async () => {
+		const slug = data.post?.slug;
+		if (slug) {
+			try {
+				const updated = await loadUpdate(slug);
+				if (updated) freshPost = updated;
+			} catch (err) {
+				console.warn('Could not refresh post data:', err);
+				// Keep using the prerendered data as fallback
+			}
+		}
+	});
 
 	const preloadFont = [
 		base + "/fonts/AmsiPro-Ultra.woff2",
