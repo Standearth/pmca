@@ -73,7 +73,7 @@ const copy = {
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2026-06-30-10:15"}`);
+  console.log(`build: ${"2026-06-30-13:00"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {
