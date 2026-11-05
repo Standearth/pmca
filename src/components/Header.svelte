@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import PopupModal from "$components/PopupModal.svelte";
+	import call from "$data/organizingCall.js";
 
 	let showPopup = $state(false);
 	
@@ -66,7 +67,7 @@
 				<a href="{base}/learn-more/" onclick={closeMenu}>Why it matters</a>
 				<a href="{base}/stories/" onclick={closeMenu}>Member Stories</a>
 				<a href="{base}/updates/" onclick={closeMenu}>Latest Updates</a>
-				<a href="{base}/organizing-call/" onclick={closeMenu}>Organizing Call</a>
+				{#if call.live}<a href="{base}/organizing-call/" onclick={closeMenu}>Organizing Call</a>{/if}
 				<a href="{base}/cancel-prime/" onclick={closeMenu}>Cancel Prime</a>
 				<button class="get-started-cta" onclick={openPopup}>Join</button>
 			</nav>

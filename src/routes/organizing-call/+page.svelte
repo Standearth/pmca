@@ -11,7 +11,7 @@
 	const when = `${call.dateLabel}${call.time ? `, ${call.time}` : ''}`;
 </script>
 
-<Meta {title} {description} canonical="https://primemembers.earth/organizing-call/" />
+<Meta {title} {description} canonical="https://primemembers.earth/organizing-call/" noindex={!call.live} />
 
 <!-- Story on the left, sign-up form sticky on the right (form follows the intro on mobile) -->
 <section class="signup">
@@ -29,7 +29,6 @@
 		<aside class="form-column" id="register">
 			<div class="form-card">
 				<h2>Save your spot</h2>
-				<p class="form-lead">{when}. Free. We'll email you the link to join.</p>
 				<EmbeddedForm src="https://act.stand.earth/page/104780/petition/1" title="Sign up for the organizing call" />
 			</div>
 		</aside>
@@ -161,15 +160,9 @@
 	.form-card h2 {
 		font-family: 'AmsiPro', sans-serif;
 		font-size: 1.8rem;
-		margin-bottom: 0.25rem;
-	}
-
-	.form-lead {
-		font-family: 'Carlito', sans-serif;
-		font-size: 1.15rem;
-		color: #444;
 		margin-bottom: 1rem;
 	}
+
 
 	.story {
 		grid-area: story;

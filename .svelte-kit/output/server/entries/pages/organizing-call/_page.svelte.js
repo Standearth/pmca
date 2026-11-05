@@ -16,9 +16,10 @@ function _page($$renderer, $$props) {
     Meta($$renderer2, {
       title,
       description,
-      canonical: "https://primemembers.earth/organizing-call/"
+      canonical: "https://primemembers.earth/organizing-call/",
+      noindex: true
     });
-    $$renderer2.push(`<!----> <section class="signup svelte-i5vhiy"><div class="signup-background svelte-i5vhiy" aria-hidden="true"><img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="" class="svelte-i5vhiy"/></div> <div class="layout svelte-i5vhiy"><header class="intro svelte-i5vhiy"><p class="eyebrow svelte-i5vhiy">Online · ${escape_html(when)}</p> <h1 class="svelte-i5vhiy">Prime members organizing call</h1> <p class="subtitle svelte-i5vhiy">An online call with the Stand.earth team for Prime members who want to get more involved in the campaign. We'll share an update on our work and plan the next steps together.</p></header> <aside class="form-column svelte-i5vhiy" id="register"><div class="form-card svelte-i5vhiy"><h2 class="svelte-i5vhiy">Save your spot</h2> <p class="form-lead svelte-i5vhiy">${escape_html(when)}. Free. We'll email you the link to join.</p> `);
+    $$renderer2.push(`<!----> <section class="signup svelte-i5vhiy"><div class="signup-background svelte-i5vhiy" aria-hidden="true"><img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="" class="svelte-i5vhiy"/></div> <div class="layout svelte-i5vhiy"><header class="intro svelte-i5vhiy"><p class="eyebrow svelte-i5vhiy">Online · ${escape_html(when)}</p> <h1 class="svelte-i5vhiy">Prime members organizing call</h1> <p class="subtitle svelte-i5vhiy">An online call with the Stand.earth team for Prime members who want to get more involved in the campaign. We'll share an update on our work and plan the next steps together.</p></header> <aside class="form-column svelte-i5vhiy" id="register"><div class="form-card svelte-i5vhiy"><h2 class="svelte-i5vhiy">Save your spot</h2> `);
     EmbeddedForm($$renderer2, {
       src: "https://act.stand.earth/page/104780/petition/1",
       title: "Sign up for the organizing call"

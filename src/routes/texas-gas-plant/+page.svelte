@@ -5,7 +5,7 @@
 	import EmbeddedForm from "$components/EmbeddedForm.svelte";
 
 	const title = "Stop Amazon's Texas Gas Plant | Prime Members for a Cleaner Amazon";
-	const description = "Amazon co-founded the Climate Pledge. Now it's building what could be America's biggest gas plant to power AI in West Texas. Tell Amazon to keep its promise.";
+	const description = "Amazon co-founded the Climate Pledge. Now it's building what could be America's biggest gas plant to power AI in West Texas. Tell Amazon: no new fossil fuels for data centers.";
 </script>
 
 <Meta {title} {description} canonical="https://primemembers.earth/texas-gas-plant/" />
@@ -20,13 +20,13 @@
 		<header class="intro">
 			<p class="eyebrow">Amazon's GW Ranch gas plant · West Texas</p>
 			<h1>Amazon co-founded the Climate Pledge. Now it's building America's biggest gas plant to power AI.</h1>
-			<p class="subtitle">Fully built, it could become the country's single largest source of climate pollution. Most of it isn't built yet. Tell Amazon to power it with clean energy instead.</p>
+			<p class="subtitle">Fully built, it could become the country's single largest source of climate pollution. Most of it isn't built yet, and it doesn't have to be. Tell Amazon to stop its fossil fuel expansion.</p>
 		</header>
 
 		<aside class="form-column" id="sign">
 			<div class="form-card">
 				<h2>Sign the petition</h2>
-				<p class="form-lead">Tell Amazon: no new gas for AI.</p>
+				<p class="form-lead">Tell Amazon: no new fossil fuels for data centers.</p>
 				<div class="form-embed">
 					<EmbeddedForm src="https://act.stand.earth/page/104779/petition/1" title="Sign the petition to Amazon" />
 				</div>
@@ -62,8 +62,8 @@
 					<li class="now"><span class="when">2027</span> First ~1 GW comes online</li>
 					<li class="now"><span class="when">By 2031</span> Scales toward 5 GW and beyond</li>
 				</ol>
-				<p>The plant goes up in phases, and <strong>most of the pollution would come from phases Amazon hasn't built yet.</strong> The permit is granted, so this is now Amazon's call alone: it decides how every future phase is powered.</p>
-				<p>And the ground is shifting. Texas has paused new data center permits while its grid operator runs an audit, and Amazon's new Data Center Commitment says nothing about gas or emissions limits.</p>
+				<p>The plant goes up in phases, and <strong>most of the pollution would come from phases Amazon hasn't built yet.</strong> The permit is granted, so this is now Amazon's call: it decides whether those phases get built, and whether they burn gas.</p>
+				<p>And data centers can be stopped. People across the country are pushing back on them, and Texas has paused new data center permits while its grid operator runs an audit. Meanwhile, Amazon's new Data Center Commitment says nothing about gas or emissions limits.</p>
 			</section>
 
 			<section class="block">
@@ -76,8 +76,8 @@
 					</div>
 					<p>Don't build what would be the country's single largest source of climate pollution. We're calling on you to:</p>
 					<ol>
-						<li>Power <span class="accent">every future phase</span> of GW Ranch with clean energy.</li>
-						<li>Add a rule to your Data Center Commitment that <span class="accent">new data centers won't run on new gas</span>.</li>
+						<li><span class="accent">Stop the gas expansion at GW Ranch.</span> Don't build any future phase on gas. If it can't run on clean energy, don't build it at all.</li>
+						<li>Commit to <span class="accent">no new fossil fuels for any Amazon data center</span>, and add it to your Data Center Commitment.</li>
 					</ol>
 				</div>
 				<a class="btn btn-cta jump-to-form" href="#sign">Add my name</a>

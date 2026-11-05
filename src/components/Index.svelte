@@ -10,6 +10,7 @@
 	import Demands from "$components/Demands.svelte";
 	import RotatingPhrase from "$components/RotatingPhrase.svelte";
 	import CallBanner from "$components/CallBanner.svelte";
+	import call from "$data/organizingCall.js";
 	import { diaryStats, loadDiaryStats } from "$runes/diaryStats.svelte.js";
 	
 	let heroVideo;
@@ -87,7 +88,7 @@
 			<div class="diary-band-content">
 				<div class="diary-band-text">
 					<p class="diary-eyebrow">Delivery Diary &amp; EV Spotter</p>
-					<h2>Every Amazon order is leverage. Use it every time a package arrives.</h2>
+					<h2>Amazon makes big promises. Your doorstep shows what it actually delivers.</h2>
 					<p>Prime member or not, if Amazon delivers to your door, your experience counts. Log what lands on your porch and count Amazon's vans, electric or not. Twenty seconds turns an annoyance into evidence, and together the totals show Amazon how many of its customers are watching.</p>
 				</div>
 				<div class="diary-band-cta">
@@ -149,7 +150,7 @@
 				<div class="action-item">
 					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Organize</h3>
-					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here. <a class="highlight" href="{base}/organizing-call/">Join our next organizing call</a>.</p>
+					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here.{#if call.live} <a class="highlight" href="{base}/organizing-call/">Join our next organizing call</a>.{/if}</p>
 				</div>
 			</div>
 			

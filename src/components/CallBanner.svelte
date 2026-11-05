@@ -9,7 +9,7 @@
 	let visible = $state(false);
 
 	onMount(() => {
-		if (Date.now() > new Date(call.endsAt).getTime()) return;
+		if (!call.live || Date.now() > new Date(call.endsAt).getTime()) return;
 		try {
 			if (localStorage.getItem(DISMISS_KEY)) return;
 		} catch {

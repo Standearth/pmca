@@ -40,7 +40,7 @@
 
 	<div class="hero-content">
 		<p class="eyebrow">Delivery Diary &amp; EV Spotter</p>
-		<h1>Every Amazon order is leverage. Use it every time a package arrives.</h1>
+		<h1>Amazon makes big promises. Your doorstep shows what it actually delivers.</h1>
 		<p class="hero-subtitle">Prime member or not, if Amazon delivers to your door, you're one of the customers it depends on. Log what lands on your porch, or an Amazon van you see. Twenty seconds turns an annoyance into evidence Amazon can't ignore.</p>
 
 		<div class="doors">
