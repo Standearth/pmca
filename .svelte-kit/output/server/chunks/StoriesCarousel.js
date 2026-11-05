@@ -1,4 +1,4 @@
-import { a6 as attr_style, a7 as ensure_array_like, a0 as escape_html, a5 as attr_class, a3 as attr, a4 as stringify } from "./index.js";
+import { a8 as attr_style, a5 as ensure_array_like, a2 as escape_html, a6 as attr_class, $ as attr, a0 as stringify } from "./index.js";
 import { b as base } from "./server.js";
 import "@sveltejs/kit/internal/server";
 function StoriesCarousel($$renderer, $$props) {

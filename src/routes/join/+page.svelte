@@ -3,10 +3,11 @@
 	import { targetCount } from "$data/variables.json";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
+	import Demands from "$components/Demands.svelte";
+	import RotatingPhrase from "$components/RotatingPhrase.svelte";
 	
 	let heroVideo;
 	let currentCount = $state(targetCount);
@@ -96,8 +97,6 @@
 	structuredData={joinPageStructuredData}
 	{preloadFont} 
 />
-<Header />
-
 <!-- Hero Section with Embedded Form -->
 <section class="hero">
 	<div class="hero-background">
@@ -115,7 +114,7 @@
 	
 	<div class="hero-content">
 		<div class="hero-text">
-			<h1>Join Prime members demanding cleaner Amazon.</h1>
+			<h1>Prime members want Amazon to do <span style="white-space: nowrap">more on</span> <RotatingPhrase /></h1>
 			<p class="hero-subtitle">Prime members agree that Amazon needs to do more on climate, from reducing emissions in its delivery fleet, to using renewable energy in its operations.</p>
             <h3>Use your Prime membership power to make Amazon deliver on climate!</h3>
 		<!-- Counter -->
@@ -152,18 +151,7 @@
 				<h3><strong>As Prime members, we have the leverage to say our future is not for sale.</strong></h3>
 			</div>
 			
-			<div class="demands-card">
-				<div class="card-header">
-					<strong>TO: Amazon</strong><br>
-					<strong>FROM: Prime members</strong>
-				</div>
-				<p>As your most loyal customers, we are calling on you to:</p>
-				<ol>
-					<li><span class="accent-orange">Electrify your global delivery fleet</span> from dock to door</li>
-					<li>Power every data center and warehouse with <span class="accent-orange">real renewable energy</span></li>
-					<li>Create <span class="accent-orange">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li>
-				</ol>
-			</div>
+			<Demands />
 		</div>
 	</div>
 </section>
@@ -250,7 +238,7 @@
 		color: white;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 6rem 2rem 4rem;
+		padding: 10rem 2rem 4rem;
 		display: grid;
 		grid-template-columns: 1fr 400px;
 		gap: 3rem;
@@ -267,7 +255,7 @@
 		font-weight: bold;
 		margin-bottom: 1.5rem;
 		line-height: 1.2;
-		margin-top:5rem;
+		margin-top: 1rem;
 	}
 	
 	.hero-subtitle {
@@ -365,37 +353,10 @@
 		margin-bottom: 1.5rem;
 	}
 	
-	.demands-card {
-		background: white;
-		font-size:1.6rem;
-		color: black;
-		padding: 2rem;
-		border-radius: 0px;
-		border: 10px solid #ff9f2e;
-	}
 	
-	.card-header {
-		font-family: 'Carlito', sans-serif;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
 	
-	.demands-card p {
-		font-family: 'Carlito', sans-serif;
-		margin-bottom: 1rem;
-		
-	}
 	
-	.demands-card ol {
-		margin: 1.5rem 0;
-		padding-left: 1.5rem;
-	}
 	
-	.demands-card li {
-		font-family: 'Carlito', sans-serif;
-		margin-bottom: 0.8rem;
-		line-height: 1.4;
-	}
 	
 	.how {
 		background: white url('/bg2.png');
@@ -465,13 +426,6 @@
 		font-weight: bold;
 	}
 	
-	.accent-orange {
-		text-decoration: underline;
-		text-decoration-color: #ff9f2e;
-		text-underline-offset: 2px;
-		text-decoration-thickness: 4px;
-		text-decoration-style: solid;
-	}
 	
 	/* Cancel Prime Plug Section */
 	.cancel-prime-plug {

@@ -273,7 +273,6 @@
 		border-radius: 12px;
 		padding: 1.5rem;
 		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-		border-left: 4px solid #1298ff;
 		height: 200px;
 		display: flex;
 		flex-direction: column;

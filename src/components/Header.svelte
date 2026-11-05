@@ -42,11 +42,18 @@
 			</a>
 		</div>
 		
-		<button class="hamburger" onclick={toggleMenu} aria-label="Toggle menu">
-			<span class="hamburger-line"></span>
-			<span class="hamburger-line"></span>
-			<span class="hamburger-line"></span>
-		</button>
+		<!-- Top right: Join and the menu, with the Diary link underneath on every page -->
+		<div class="nav-right">
+			<div class="nav-actions">
+				<button class="join-btn" onclick={openPopup}>Join</button>
+				<button class="hamburger" onclick={toggleMenu} aria-label="Toggle menu">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</button>
+			</div>
+			<a href="{base}/diary/" class="diary-link">Delivery Diary</a>
+		</div>
 	</div>
 	</div>
 	
@@ -55,11 +62,13 @@
 			<button class="menu-close" onclick={closeMenu} aria-label="Close menu">&times;</button>
 			<nav>
 				<a href="{base}/" onclick={closeMenu}>Home</a>
-				<a href="{base}/learn-more" onclick={closeMenu}>Learn More</a>
-				<a href="{base}/stories" onclick={closeMenu}>Member Stories</a>
-				<a href="{base}/updates" onclick={closeMenu}>Latest Updates</a>
-				<a href="{base}/cancel-prime" onclick={closeMenu}>Cancel Prime</a>
-				<button class="get-started-cta" onclick={openPopup}>Get Started</button>
+				<a href="{base}/diary/" onclick={closeMenu}>Delivery Diary</a>
+				<a href="{base}/learn-more/" onclick={closeMenu}>Why it matters</a>
+				<a href="{base}/stories/" onclick={closeMenu}>Member Stories</a>
+				<a href="{base}/updates/" onclick={closeMenu}>Latest Updates</a>
+				<a href="{base}/organizing-call/" onclick={closeMenu}>Organizing Call</a>
+				<a href="{base}/cancel-prime/" onclick={closeMenu}>Cancel Prime</a>
+				<button class="get-started-cta" onclick={openPopup}>Join</button>
 			</nav>
 		</div>
 	{/if}
@@ -103,8 +112,67 @@
 		width: auto;
 	}
 	
-	.hamburger {
+	.nav-right {
 		margin-left: auto;
+		margin-top: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.nav-actions {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.diary-link {
+		color: white;
+		font-family: 'AmsiPro', sans-serif;
+		font-size: 1.05rem;
+		text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+		text-decoration: underline;
+		text-decoration-color: #ff9f2e;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 6px;
+		transition: opacity 0.3s ease;
+	}
+
+	.diary-link:hover {
+		opacity: 0.8;
+	}
+
+	.join-btn {
+		background: #ff9f2e;
+		color: #000;
+		border: none;
+		border-radius: 0;
+		padding: 0.6rem 1.4rem;
+		font-family: 'AmsiPro', sans-serif;
+		font-size: 1.05rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.join-btn:hover {
+		background: #e88a1a;
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 480px) {
+		.nav-actions {
+			gap: 0.75rem;
+		}
+
+		.join-btn {
+			padding: 0.5rem 0.9rem;
+			font-size: 0.95rem;
+		}
+
+		.diary-link {
+			font-size: 0.95rem;
+		}
 	}
 	
 	.hamburger {
@@ -116,7 +184,6 @@
 		justify-content: space-around;
 		width: 40px;
 		height: 40px;
-		margin-top: 40px;
 	}
 	
 	.hamburger-line {

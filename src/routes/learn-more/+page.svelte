@@ -5,6 +5,7 @@
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
+	import Demands from "$components/Demands.svelte";
 
 	const title = "Why Amazon Prime Members Have Climate Leverage | Prime Members for a Cleaner Amazon";
 	const description = "Learn more about how Prime members can push Amazon to do more on climate.";
@@ -94,24 +95,8 @@
 		<h2>Our Demands</h2>
 		<p class="demands-intro">We aren't just customers. As Prime members, we fund Amazon's business and shape its reputation. Together, we're calling for:</p>
 		
-		<div class="demands-grid">
-			<div class="demand-card">
-				<div class="demand-number">1</div>
-				<h3>Zero-Emission Deliveries by 2030</h3>
-				<p>Amazon must commit to transitioning its entire delivery network to zero-emission vehicles, starting with the elimination of emissions from last-mile fleets by 2030.</p>
-			</div>
-			
-			<div class="demand-card">
-				<div class="demand-number">2</div>
-				<h3>Full Renewable Energy Across Operations</h3>
-				<p>Beyond delivery fleets, Amazon must power all of its warehouses, data centers, and offices with real, verifiable renewable energy. This means no reliance on offsets or accounting tricks, but a genuine transition to clean power that aligns with global climate goals.</p>
-			</div>
-			
-			<div class="demand-card">
-				<div class="demand-number">3</div>
-				<h3>Respect for Local Communities</h3>
-				<p>Amazon must operate in ways that respect and protect the health, safety, and rights of the communities where it does business. This includes addressing environmental justice concerns, ensuring fair labor practices, and preventing pollution and harm in frontline neighborhoods.</p>
-			</div>
+		<div class="demands-canonical">
+			<Demands />
 		</div>
 	</div>
 </section>
@@ -122,6 +107,7 @@
 		<h2>Ready to use your Prime Power?</h2>
 		<p>Join thousands of Prime members who are demanding a cleaner Amazon. Your voice matters.</p>
 		<button class="btn btn-cta large" onclick={openPopup}>Join the Movement</button>
+		<p class="cta-links">Already a member? <a href="{base}/diary/">Log your next delivery</a>.</p>
 	</div>
 </section>
 
@@ -403,52 +389,23 @@
 		margin: 0 auto 3rem auto;
 	}
 	
-	.demands-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 2rem;
-		margin-top: 3rem;
+	.demands-canonical {
+		max-width: 760px;
+		margin: 0 auto;
 	}
 	
-	.demand-card {
-		background: white;
-		border: 4px solid #ff9f2e;
-		border-radius: 12px;
-		padding: 2rem;
-		position: relative;
+	.cta-links {
+		margin-top: 1.5rem;
 	}
-	
-	.demand-number {
-		position: absolute;
-		top: -15px;
-		left: 2rem;
-		background: #ff9f2e;
-		color: black;
-		font-family: 'AmsiPro', sans-serif;
-		font-size: 1.5rem;
+
+	.cta-links a {
+		color: white;
 		font-weight: bold;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		text-decoration-color: #ff9f2e;
+		text-decoration-thickness: 3px;
+		text-underline-offset: 4px;
 	}
-	
-	.demand-card h3 {
-		font-family: 'AmsiPro', sans-serif;
-		font-size: 1.3rem;
-		color: black;
-		margin-bottom: 1rem;
-		margin-top: 1rem;
-	}
-	
-	.demand-card p {
-		font-family: 'Carlito', sans-serif;
-		line-height: 1.6;
-		color: #666;
-	}
-	
+
 	/* Call to Action Section */
 	.cta {
 		background: #1298ff;
@@ -508,8 +465,7 @@
 			font-size: 1rem;
 		}
 		
-		.problem-grid,
-		.demands-grid {
+		.problem-grid {
 			grid-template-columns: 1fr;
 		}
 		
@@ -541,19 +497,12 @@
 			margin-bottom: 2rem;
 		}
 		
-		.problem-card,
-		.demand-card {
+		.problem-card {
 			padding: 1.5rem;
 		}
 		
 		.problem-icon {
 			font-size: 2.5rem;
-		}
-		
-		.demand-number {
-			width: 35px;
-			height: 35px;
-			font-size: 1.2rem;
 		}
 	}
 	

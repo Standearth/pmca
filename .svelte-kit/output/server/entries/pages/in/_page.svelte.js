@@ -1,8 +1,7 @@
-import { a3 as attr, a0 as escape_html, a4 as stringify } from "../../../chunks/index.js";
+import { $ as attr, a2 as escape_html, a0 as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
 import { M as Meta, F as Footer } from "../../../chunks/Footer.js";
-import { H as Header } from "../../../chunks/Header.js";
 import { T as TapeTransition } from "../../../chunks/TapeTransition.js";
 import { S as StoriesCarousel } from "../../../chunks/StoriesCarousel.js";
 import { P as PopupModal } from "../../../chunks/PopupModal.js";
@@ -67,8 +66,6 @@ function _page($$renderer, $$props) {
         structuredData: indiaPageStructuredData,
         preloadFont
       });
-      $$renderer3.push(`<!----> `);
-      Header($$renderer3);
       $$renderer3.push(`<!----> `);
       PopupModal($$renderer3, {
         baseUrl: indiaIframeBaseUrl,

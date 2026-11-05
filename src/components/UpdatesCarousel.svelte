@@ -262,7 +262,6 @@
 		background: white;
 		border-radius: 12px;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-		border-left: 4px solid #1298ff;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;

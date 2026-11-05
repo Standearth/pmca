@@ -6,6 +6,7 @@
 		description = "Use your Prime membership power to make Amazon deliver on climate!",
 		url = "https://primemembers.earth",
 		canonical = url,
+		noindex = false,
 		keywords = "",
 		preloadFont = [],
 		ogType = "website",
@@ -36,6 +37,12 @@
 	};
 
 	const finalStructuredData = structuredData || defaultStructuredData;
+
+	// Shared assets always live at the site root, whichever page is being shared.
+	const siteUrl = "https://primemembers.earth";
+	const robots = noindex
+		? "noindex, follow"
+		: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 </script>
 
 <svelte:head>
@@ -63,11 +70,11 @@
 	<!-- Open Graph -->
 	<meta property="og:title" content={title} />
 	<meta property="og:site_name" content="Prime Members for Cleaner Amazon" />
-	<meta property="og:url" content={url} />
+	<meta property="og:url" content={canonical} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content={ogType} />
 	<meta property="og:locale" content="en_US" />
-	<meta property="og:image" content="{url}/pmca_og.jpg" />
+	<meta property="og:image" content="{siteUrl}/pmca_og.jpg" />
 	<meta property="og:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
 	<meta property="og:image:type" content="image/jpg" />
 	<meta property="og:image:width" content="1200" />
@@ -79,17 +86,17 @@
 	<meta name="twitter:creator" content="@standearth" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content="{url}/pmca_og.jpg" />
+	<meta name="twitter:image" content="{siteUrl}/pmca_og.jpg" />
 	<meta name="twitter:image:alt" content="Prime Members for Cleaner Amazon - Join the movement" />
 
 	<!-- LinkedIn -->
-	<meta property="og:image:secure_url" content="{url}/pmca_og.jpg" />
+	<meta property="og:image:secure_url" content="{siteUrl}/pmca_og.jpg" />
 	
 
 	<!-- Search engine directives -->
-	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-	<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-	<meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+	<meta name="robots" content={robots} />
+	<meta name="googlebot" content={robots} />
+	<meta name="bingbot" content={robots} />
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href={canonical} />

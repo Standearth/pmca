@@ -1,8 +1,7 @@
-import { a3 as attr, a4 as stringify } from "../../../chunks/index.js";
+import { $ as attr, a0 as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
 import { M as Meta, F as Footer } from "../../../chunks/Footer.js";
-import { H as Header } from "../../../chunks/Header.js";
 import "../../../chunks/sanity.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
@@ -27,8 +26,6 @@ function _page($$renderer, $$props) {
       structuredData,
       preloadFont
     });
-    $$renderer2.push(`<!----> `);
-    Header($$renderer2);
     $$renderer2.push(`<!----> <section class="hero svelte-tk0old"><div class="hero-background svelte-tk0old"><div class="hero-overlay svelte-tk0old"></div> <img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="Background" class="hero-image svelte-tk0old"/></div> <div class="hero-content svelte-tk0old"><h1 class="svelte-tk0old">Latest Updates</h1> <p class="hero-subtitle svelte-tk0old">Stay up to date with the latest news, milestones, and actions from the Prime Members for Cleaner Amazon campaign.</p></div></section> <section class="updates-section svelte-tk0old"><div class="container svelte-tk0old">`);
     {
       $$renderer2.push("<!--[-->");

@@ -126,6 +126,22 @@ export function trackSocialButtonClick(platform, hasRef = false, refId = null) {
 }
 
 /**
+ * Track a saved Delivery Diary log (GA event + Meta Pixel custom event).
+ * No personal data: log type, campaign source and whether this device has logged before.
+ */
+export function trackDiaryLog(logType, utm = {}, returning = false) {
+	const params = {
+		log_type: logType,
+		returning_logger: returning,
+		utm_source: utm.source || '',
+		utm_medium: utm.medium || '',
+		utm_campaign: utm.campaign || ''
+	};
+	trackEvent('diary_log', { ...params, page_location: browser ? window.location.href : '' });
+	trackMetaPixelCustomEvent('DiaryLog', params);
+}
+
+/**
  * Check if GA is loaded and ready
  */
 export function isGAReady() {

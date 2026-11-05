@@ -1,0 +1,25 @@
+import { $ as attr, a0 as stringify } from "../../../chunks/index.js";
+import { b as base } from "../../../chunks/server.js";
+import "@sveltejs/kit/internal/server";
+import { M as Meta, F as Footer } from "../../../chunks/Footer.js";
+import { E as EmbeddedForm } from "../../../chunks/EmbeddedForm.js";
+function _page($$renderer) {
+  const title = "Stop Amazon's Texas Gas Plant | Prime Members for a Cleaner Amazon";
+  const description = "Amazon co-founded the Climate Pledge. Now it's building what could be America's biggest gas plant to power AI in West Texas. Tell Amazon to keep its promise.";
+  Meta($$renderer, {
+    title,
+    description,
+    canonical: "https://primemembers.earth/texas-gas-plant/"
+  });
+  $$renderer.push(`<!----> <section class="petition svelte-12thure"><div class="petition-background svelte-12thure" aria-hidden="true"><img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="" class="svelte-12thure"/></div> <div class="layout svelte-12thure"><header class="intro svelte-12thure"><p class="eyebrow svelte-12thure">Amazon's GW Ranch gas plant · West Texas</p> <h1 class="svelte-12thure">Amazon co-founded the Climate Pledge. Now it's building America's biggest gas plant to power AI.</h1> <p class="subtitle svelte-12thure">Fully built, it could become the country's single largest source of climate pollution. Most of it isn't built yet. Tell Amazon to power it with clean energy instead.</p></header> <aside class="form-column svelte-12thure" id="sign"><div class="form-card svelte-12thure"><h2 class="svelte-12thure">Sign the petition</h2> <p class="form-lead svelte-12thure">Tell Amazon: no new gas for AI.</p> <div class="form-embed">`);
+  EmbeddedForm($$renderer, {
+    src: "https://act.stand.earth/page/104779/petition/1",
+    title: "Sign the petition to Amazon"
+  });
+  $$renderer.push(`<!----></div></div></aside> <div class="story svelte-12thure"><section class="block svelte-12thure"><h2 class="svelte-12thure">What Amazon is building</h2> <p class="svelte-12thure">Amazon's first off-grid AI data center campus, at GW Ranch in Pecos County, won't run on the grid. It will run on its own private gas plant.</p> <div class="stats svelte-12thure"><div class="stat svelte-12thure"><span class="stat-number svelte-12thure">7.65 GW</span> <span class="stat-label svelte-12thure">of gas power, which would make it the biggest gas plant in the US</span></div> <div class="stat svelte-12thure"><span class="stat-number svelte-12thure">35</span> <span class="stat-label svelte-12thure">gas turbines</span></div> <div class="stat svelte-12thure"><span class="stat-number svelte-12thure">33M tons</span> <span class="stat-label svelte-12thure">of CO2 a year allowed by its permit</span></div></div> <p class="svelte-12thure">And it's not a one-off: GW Ranch is one of eight gas plants being built to serve Amazon data centers. Amazon says the world looks different than when it co-founded the Climate Pledge. But decades of burning gas can't be squared with a pledge to cut emissions in line with Paris.</p></section> <section class="block svelte-12thure"><h2 class="svelte-12thure">Why it's not too late</h2> <ol class="timeline svelte-12thure"><li class="svelte-12thure"><span class="when svelte-12thure">January</span> Texas grants the air permit</li> <li class="svelte-12thure"><span class="when svelte-12thure">July</span> Land clearing starts</li> <li class="now svelte-12thure"><span class="when svelte-12thure">2027</span> First ~1 GW comes online</li> <li class="now svelte-12thure"><span class="when svelte-12thure">By 2031</span> Scales toward 5 GW and beyond</li></ol> <p class="svelte-12thure">The plant goes up in phases, and <strong>most of the pollution would come from phases Amazon hasn't built yet.</strong> The permit is granted, so this is now Amazon's call alone: it decides how every future phase is powered.</p> <p class="svelte-12thure">And the ground is shifting. Texas has paused new data center permits while its grid operator runs an audit, and Amazon's new Data Center Commitment says nothing about gas or emissions limits.</p></section> <section class="block svelte-12thure"><h2 class="svelte-12thure">Our ask</h2> <div class="letter svelte-12thure"><div class="letter-header svelte-12thure"><strong>TO: Andy Jassy, CEO, Amazon, and Matt Garman, CEO, Amazon Web Services</strong><br/> <span>CC: Kara Hurst, Chief Sustainability Officer</span><br/> <strong>FROM: Prime members and Amazon customers</strong></div> <p class="svelte-12thure">Don't build what would be the country's single largest source of climate pollution. We're calling on you to:</p> <ol class="svelte-12thure"><li class="svelte-12thure">Power <span class="accent svelte-12thure">every future phase</span> of GW Ranch with clean energy.</li> <li class="svelte-12thure">Add a rule to your Data Center Commitment that <span class="accent svelte-12thure">new data centers won't run on new gas</span>.</li></ol></div> <a class="btn btn-cta jump-to-form svelte-12thure" href="#sign">Add my name</a></section></div></div></section> `);
+  Footer($$renderer);
+  $$renderer.push(`<!---->`);
+}
+export {
+  _page as default
+};

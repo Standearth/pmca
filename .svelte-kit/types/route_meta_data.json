@@ -10,6 +10,9 @@
 	"/ca": [
 		"src/routes/+layout.js"
 	],
+	"/diary": [
+		"src/routes/+layout.js"
+	],
 	"/eu": [
 		"src/routes/+layout.js"
 	],
@@ -25,7 +28,13 @@
 	"/learn-more": [
 		"src/routes/+layout.js"
 	],
+	"/organizing-call": [
+		"src/routes/+layout.js"
+	],
 	"/stories": [
+		"src/routes/+layout.js"
+	],
+	"/texas-gas-plant": [
 		"src/routes/+layout.js"
 	],
 	"/uk": [

@@ -19,8 +19,10 @@
 			</div>
 			
 			<nav class="footer-nav">
-				<a href="{base}/learn-more">Learn More</a>
-				<button class="get-started-cta" onclick={openPopup}>Get Started</button>
+				<a href="{base}/learn-more/">Why it matters</a>
+				<a href="{base}/diary/">Delivery Diary</a>
+				<a href="{base}/stories/">Stories</a>
+				<button class="get-started-cta" onclick={openPopup}>Join</button>
 			</nav>
 		</div>
 	</div>

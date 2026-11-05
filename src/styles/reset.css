@@ -109,6 +109,15 @@ input[type="range"] {
 	outline: none;
 }
 
+/* The input reset above also hides the tick in checkboxes and the dot in radios. */
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-appearance: auto;
+	appearance: auto;
+	padding: 0;
+	outline: none;
+}
+
 button:focus,
 a:focus,
 a[role="button"]:focus,

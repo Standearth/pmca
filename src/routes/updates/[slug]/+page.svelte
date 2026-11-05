@@ -3,7 +3,6 @@
 	import { browser } from "$app/environment";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import { formatDate, loadUpdate } from "$utils/loadUpdates.js";
 	import { buildImageUrl } from "$utils/sanity.js";
@@ -47,6 +46,17 @@
 	}
 
 	/**
+	 * Editors sometimes paste a bare domain ("primemembers.earth") as a link. Browsers
+	 * treat that as a relative path, so add https:// when it looks like a domain.
+	 */
+	function normalizeHref(href = '') {
+		const value = String(href).trim();
+		if (/^([a-z][a-z0-9+.-]*:|\/|#|\?)/i.test(value)) return value;
+		if (/^(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+(\/|$)/i.test(value)) return `https://${value}`;
+		return value;
+	}
+
+	/**
 	 * Convert a single span's text + marks array into an HTML string.
 	 */
 	function renderSpan(span, markDefs = []) {
@@ -62,10 +72,11 @@
 					// Annotation key (e.g. link)
 					const def = markDefs.find(d => d._key === mark);
 					if (def?._type === 'link') {
-						const isExternal = /^https?:\/\//.test(def.href);
+						const href = normalizeHref(def.href);
+						const isExternal = /^https?:\/\//.test(href);
 						const target = isExternal ? ' target="_blank"' : '';
 						const rel = isExternal ? ' rel="noopener noreferrer"' : '';
-						text = `<a href="${escapeHtml(def.href)}"${target}${rel}>${text}</a>`;
+						text = `<a href="${escapeHtml(href)}"${target}${rel}>${text}</a>`;
 					}
 				}
 			}
@@ -136,8 +147,6 @@
 	ogImage={ogImageUrl}
 	{preloadFont}
 />
-
-<Header />
 
 <!-- Post Hero -->
 <section class="post-hero" style="background-image: url('{heroImageUrl}')">
@@ -280,9 +289,8 @@
 	.prose :global(blockquote) {
 		margin: 2rem 0;
 		padding: 1rem 1.5rem;
-		border-left: 4px solid #1298ff;
 		background: #f0f7ff;
-		border-radius: 0 8px 8px 0;
+		border-radius: 8px;
 	}
 
 	.prose :global(blockquote p) {

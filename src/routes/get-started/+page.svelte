@@ -4,6 +4,8 @@
 	import Meta from "$components/Meta.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
+	import AddToHomeScreen from "$components/AddToHomeScreen.svelte";
+	import { targetCount } from "$data/variables.json";
 	import { trackGetStartedRefConversion, trackSocialButtonClick } from '$utils/analytics.js';
 
 	const title = "Get Started - Prime Members for Cleaner Amazon";
@@ -48,7 +50,7 @@
 	
 	function getShareUrl(platform) {
 		const shareUrl = hasRef ? uniqueShareUrl : BASE_SHARE_URL;
-		const text = "Prime members want Amazon to do more on climate. Join thousands of us demanding change!";
+		const text = "I'm a Prime member logging what Amazon delivers to my door, so Amazon can't ignore what members see. It takes 20 seconds a package. Join me:";
 		
 		switch (platform) {
 			case 'facebook':
@@ -56,7 +58,7 @@
 			case 'bluesky':
 				return `https://bsky.app/intent/compose?text=${encodeURIComponent(text + ' ' + shareUrl)}`;
 			case 'email':
-				return `mailto:?subject=${encodeURIComponent('Join the Prime Members for Cleaner Amazon campaign')}&body=${encodeURIComponent(text + '\n\n' + shareUrl)}`;
+				return `mailto:?subject=${encodeURIComponent('Join me in logging our Amazon deliveries')}&body=${encodeURIComponent(text + '\n\n' + shareUrl)}`;
 			case 'whatsapp':
 				return `https://wa.me/?text=${encodeURIComponent(text + ' ' + shareUrl)}`;
 			case 'linkedin':
@@ -140,7 +142,7 @@
 	});
 </script>
 
-<Meta {title} {description} canonical="https://primemembers.earth/get-started/" />
+<Meta {title} {description} canonical="https://primemembers.earth/get-started/" noindex />
 
 <!-- Hero Section -->
 <section class="hero">
@@ -151,21 +153,29 @@
 	
 	<div class="hero-content">
 		<div class="hero-text">
-			<h1>Your Prime member power has been activated!</h1>
-			<p class="hero-subtitle">You've just joined thousands of Prime members demanding a cleaner Amazon. In the next couple of weeks, we will use our collective power to ramp up pressure on Amazon. Stay tuned!</p> 
-			<div class="hero-box">
-					<h3>Our strength will come from numbers. Let's amplify your voice and mobilize more Prime members to join our movement.</h3>
-			</div>
-			
+			<h1>Welcome. You're one of {targetCount.toLocaleString()} Prime members.</h1>
+			<p class="hero-subtitle">Your Prime membership is leverage, and members are using it every time a package arrives. They log what lands on the porch in the Delivery Diary, and count Amazon's vans, electric or not, with the EV Spotter. Here's how to start.</p>
 		</div>
+	</div>
+</section>
+
+<!-- First action: the Diary -->
+<section class="first-action">
+	<div class="container">
+		<h2>Step 1: Log your next delivery</h2>
+		<p class="section-intro">Twenty seconds turns an annoyance on your porch into evidence, and you see what every member is finding.</p>
+		<div class="first-action-cta">
+				<a class="diary-btn" href="{base}/diary/">Did a package arrive today? Log it now</a>
+		</div>
+		<AddToHomeScreen prominent />
 	</div>
 </section>
 
 <!-- Social Sharing Section -->
 <section class="social-sharing">
 	<div class="container">
-		<h2>Step 1: Spread the word</h2>
-		<p class="section-intro">Help us reach more Prime members by sharing our campaign on your social networks.</p>
+		<h2>Step 2: Bring one Prime member you know</h2>
+		<p class="section-intro">Most people join because someone they know asked. Send your link to one Prime member who'd log their deliveries too.</p>
 		{#if hasRef && uniqueShareUrl}
 				<div class="share-link-box">
 					<h3>Your Unique Share Link</h3>
@@ -234,15 +244,12 @@
 </section>
 
 <!-- Survey Section -->
-<section class="survey">
+<section class="survey" id="story">
 	<div class="container">
-		<h2>Step 2: Share your story</h2>
+		<h2>Step 3: Share your story</h2>
+		<p class="section-intro">What's the most oversized box Amazon has ever sent you? Tell us about it, or any delivery that stuck with you.</p>
 		
 		<div class="survey-container">
-			<!--<iframe src="https://standearth.soapboxx.us/embed/692f368d76a7fb4f4f9f7565" frameBorder="0" width="100%" height="525px" style="border:none;"></iframe>
-			<div style="width: 100%;overflow: visible;">
-				<iframe id="video-playlist" src="https://standearth.soapboxx.us/embed-video-question?prompt_id=692f368d76a7fb4f4f9f7565" style="border: 0; width:100%;height: 100vh;overflow: hidden;" scrolling="yes" seamless="seamless"></iframe>
-			</div>-->
 			{#if typeformId}
 				<div data-tf-live={typeformId}></div>
 			{/if}
@@ -256,7 +263,7 @@
 <!-- Donation Section -->
 <section class="donation">
 	<div class="container">
-		<h2>Step 3: Power our campaign with a donation</h2>
+		<h2>Step 4: Power our campaign with a donation</h2>
 		<p class="section-intro">Your contribution will help us reach more Prime members and build the pressure needed to change Amazon.</p>
 		
 		<div class="donation-grid">
@@ -351,24 +358,6 @@
 		opacity: 0.9;
 	}
 
-	.hero-box {
-		background: rgba(255, 255, 255, 0.1);
-		border: 2px solid #ff9f2e;
-		border-radius: 0;
-		padding: 1rem;
-		margin-top: 2rem;
-		backdrop-filter: blur(10px);
-		max-width:900px;
-		margin-left:auto;
-		margin-right:auto;
-	}
-	
-	.hero-box h3 {
-		font-family: 'AmsiPro', sans-serif;
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-		color: #ff9f2e;
-	}
 	
 	.share-link-box {
 		background: rgba(255, 255, 255, 0.1);
@@ -449,6 +438,46 @@
 		padding: 0 2rem;
 	}
 	
+	/* First action */
+	.first-action {
+		background: #1298ff;
+		color: white;
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.first-action h2 {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: clamp(2rem, 4vw, 3rem);
+		margin-bottom: 1rem;
+	}
+
+	.first-action .section-intro {
+		color: white;
+		opacity: 0.9;
+	}
+
+	.first-action-cta {
+		margin-top: 2rem;
+	}
+
+	.diary-btn {
+		display: inline-block;
+		background: #ff9f2e;
+		color: #000;
+		font-family: 'AmsiPro', sans-serif;
+		font-size: clamp(1.2rem, 3vw, 1.6rem);
+		padding: 1.5rem 2.5rem;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.diary-btn:hover {
+		background: #e88a1a;
+		transform: translateY(-2px);
+	}
+
+
 	/* Social Sharing Section */
 	.social-sharing {
 		background: white;

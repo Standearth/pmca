@@ -1,10 +1,8 @@
-import * as universal from '../entries/pages/updates/_slug_/_page.js';
+
 
 export const index = 13;
 let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/updates/_slug_/_page.svelte.js')).default;
-export { universal };
-export const universal_id = "src/routes/updates/[slug]/+page.js";
-export const imports = ["_app/immutable/nodes/13.B2GPThDT.js","_app/immutable/chunks/D0iwhpLH.js","_app/immutable/chunks/CksoBI8i.js","_app/immutable/chunks/Dp1pzeXC.js","_app/immutable/chunks/C8FFzEQw.js","_app/immutable/chunks/jQ12fRz9.js","_app/immutable/chunks/BkpJ5uXJ.js","_app/immutable/chunks/D6SwNvd5.js","_app/immutable/chunks/DoqlwY0V.js","_app/immutable/chunks/Cln4SFU6.js","_app/immutable/chunks/BEAaxSPn.js","_app/immutable/chunks/C_VdK2e9.js"];
-export const stylesheets = ["_app/immutable/assets/PopupModal.DNBk0uEp.css","_app/immutable/assets/Footer.Bv0KJ-vl.css","_app/immutable/assets/Header.SZcKhyiG.css","_app/immutable/assets/13.COqJ1w4W.css"];
+export const component = async () => component_cache ??= (await import('../entries/pages/texas-gas-plant/_page.svelte.js')).default;
+export const imports = ["_app/immutable/nodes/13.CcqJjdPk.js","_app/immutable/chunks/CU-tRMw3.js","_app/immutable/chunks/B1sNhxQd.js","_app/immutable/chunks/CMZItCY0.js","_app/immutable/chunks/A_aw-G6X.js","_app/immutable/chunks/CA6k3LiW.js","_app/immutable/chunks/D-Ot8fhB.js","_app/immutable/chunks/nPsU4gIN.js","_app/immutable/chunks/D__ce518.js"];
+export const stylesheets = ["_app/immutable/assets/PopupModal.DNBk0uEp.css","_app/immutable/assets/Footer.Bv0KJ-vl.css","_app/immutable/assets/EmbeddedForm.BnW9FuYT.css","_app/immutable/assets/13.DwD49raR.css"];
 export const fonts = [];

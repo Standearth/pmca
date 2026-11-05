@@ -1,4 +1,4 @@
-import { a3 as attr, a4 as stringify } from "./index.js";
+import { $ as attr, a0 as stringify } from "./index.js";
 import { b as base } from "./server.js";
 import "@sveltejs/kit/internal/server";
 function TapeTransition($$renderer) {

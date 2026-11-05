@@ -2,12 +2,15 @@
 	import { getContext, onMount } from "svelte";
 	import { base } from '$app/paths';
 	import { targetCount } from "$data/variables.json";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import PopupModal from "$components/PopupModal.svelte";
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
 	import UpdatesCarousel from "$components/UpdatesCarousel.svelte";
+	import Demands from "$components/Demands.svelte";
+	import RotatingPhrase from "$components/RotatingPhrase.svelte";
+	import CallBanner from "$components/CallBanner.svelte";
+	import { diaryStats, loadDiaryStats } from "$runes/diaryStats.svelte.js";
 	
 	let heroVideo;
 	let currentCount = $state(targetCount);
@@ -22,6 +25,8 @@
 	}
 	
 	onMount(() => {
+		loadDiaryStats();
+
 		// Animate counter
 		const duration = 2000;
 		const increment = targetCount / (duration / 50);
@@ -36,8 +41,6 @@
 		return () => clearInterval(timer);
 	});
 </script>
-
-<Header />
 
 <!-- Hero Section -->
 	<section class="hero">
@@ -56,24 +59,48 @@
 		
 		<div class="hero-content">
 			<div class="hero-text">
-				<h1>Prime members want Amazon to do more on climate.</h1>
+				<h1>Prime members want Amazon to do <span style="white-space: nowrap">more on</span> <RotatingPhrase /></h1>
 				<div class="hero-buttons">
 					<button class="btn btn-primary" onclick={openPopup}>I want to join</button>
-					<button class="btn btn-secondary"><a href="{base}/learn-more">Why this matters</a></button>
+					<a class="btn btn-secondary" href="{base}/diary/">Log a delivery</a>
 				</div>
 			</div>
 			
-			<!-- Counter -->
+			<!-- Counters -->
 			<div class="counter">
 				<div class="counter-circle">
 					<div class="counter-number">{Math.floor(currentCount).toLocaleString()}</div>
 					<div class="counter-text">Prime members<br>and counting!</div>
 				</div>
+				<a class="counter-circle orange" href="{base}/diary/">
+					<div class="counter-number">{diaryStats.count.toLocaleString()}</div>
+					<div class="counter-text">deliveries &amp;<br>sightings logged</div>
+				</a>
 			</div>
 		</div>
 		
 	</section>
 	
+	<!-- Delivery Diary band -->
+	<section class="diary-band">
+		<div class="container">
+			<div class="diary-band-content">
+				<div class="diary-band-text">
+					<p class="diary-eyebrow">Delivery Diary &amp; EV Spotter</p>
+					<h2>Every Amazon order is leverage. Use it every time a package arrives.</h2>
+					<p>Prime member or not, if Amazon delivers to your door, your experience counts. Log what lands on your porch and count Amazon's vans, electric or not. Twenty seconds turns an annoyance into evidence, and together the totals show Amazon how many of its customers are watching.</p>
+				</div>
+				<div class="diary-band-cta">
+					<div class="diary-band-count">
+						<span class="diary-band-number">{diaryStats.count.toLocaleString()}</span>
+						<span>deliveries and sightings logged</span>
+					</div>
+					<a class="btn btn-cta" href="{base}/diary/">Log a delivery</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Updates Carousel -->
 	<UpdatesCarousel />
 
@@ -87,19 +114,9 @@
 					<h3><strong>As Prime members, we have the leverage to say our future is not for sale.</strong></h3>
 				</div>
 				
-				<div class="demands-card">
-					<div class="card-header">
-						<strong>TO: Amazon</strong><br>
-						<strong>FROM: Prime members</strong>
-					</div>
-					<p>As your most loyal customers, we are calling on you to:</p>
-					<ol>
-						<li><span class="accent-orange">Electrify your global delivery fleet</span> from dock to door</li>
-						<li>Power every data center and warehouse with <span class="accent-orange">real renewable energy</span></li>
-						<li>Create <span class="accent-orange">better working conditions</span>, including fair break times, safety standards, and protecting workers' right to organize</li>
-					</ol>
+				<Demands>
 					<button class="btn btn-cta" onclick={openPopup}>Add my name</button>
-				</div>
+				</Demands>
 			</div>
 		</div>
 	</section>
@@ -114,7 +131,7 @@
 	<section class="how">
 		<div class="container">
 			<h2>Here is how we move Amazon</h2>
-			<p class="how-subtitle">Recent polling showed 4 out of 5 Prime members want Amazon to do better on climate. Let's use our collective voice to demand a more ethical, sustainable Amazon.</p>
+			<p class="how-subtitle">Recent polling showed 4 out of 5 Prime members want Amazon to do better on climate. Amazon depends on its customers, so the more of us who speak up together, the harder we are to ignore. We're building that people power, and using it to push Amazon to do more.</p>
 			
 			<div class="action-grid">
 				<div class="action-item">
@@ -126,13 +143,13 @@
 				<div class="action-item">
 					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Get Noticed</h3>
-					<p>We need to make sure Amazon hears our demands loud and clear. We have <span class="highlight">just the tools</span> for the job.</p>
+					<p>Every package and van you log in the <a class="highlight" href="{base}/diary/">Delivery Diary and EV Spotter</a> adds to evidence we put in front of Amazon, the press and the public, so our demands come with proof.</p>
 				</div>
 				
 				<div class="action-item">
 					<div class="action-icon"><img src="{base}/marker.svg" alt="" role="presentation" /></div>
 					<h3>Organize</h3>
-					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here.</p>
+					<p>From <span class="highlight">Amazon employees</span>, to <span class="highlight">local communities</span>, our collective power can only grow from here. <a class="highlight" href="{base}/organizing-call/">Join our next organizing call</a>.</p>
 				</div>
 			</div>
 			
@@ -148,7 +165,7 @@
 			<div class="plug-content">
 				<div class="plug-text">
 					<h3>Considering canceling your Prime membership?</h3>
-					<p>Amazon just got in BIG trouble for making cancelling Prime membership deliberately difficult.. Learn how the process works now.</p>
+					<p>Amazon just got in BIG trouble for making cancelling Prime membership deliberately difficult. Learn how the process works now.</p>
 				</div>
 				<div class="plug-cta">
 					<a href="{base}/cancel-prime" class="btn btn-secondary">Learn about canceling Prime</a>
@@ -161,6 +178,8 @@
 
 <!-- Popup Modal -->
 <PopupModal bind:show={showPopup} />
+
+<CallBanner />
 
 <style>
 	.hero {
@@ -246,15 +265,6 @@
 		border-radius:0px;
 	}
 
-	.btn-secondary a {
-		color:#ff9f2e;
-		text-decoration:none;
-	}
-
-	.btn-secondary a:hover {
-		color:#000;
-		text-decoration:none;
-	}
 	
 	.btn-secondary:hover {
 		background: #ff9f2e;
@@ -265,6 +275,69 @@
 	.counter {
 		margin-top: 2rem;
 		z-index: 3;
+		display: flex;
+		gap: 1.25rem;
+		flex-wrap: wrap;
+	}
+
+	.counter-circle.orange {
+		background: #ff9f2e;
+		color: #000;
+		text-decoration: none;
+	}
+
+	.diary-band {
+		background: #000;
+		color: white;
+		padding: 3.5rem 0;
+	}
+
+	.diary-band-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.diary-eyebrow {
+		font-family: 'AmsiPro', sans-serif;
+		color: #ff9f2e;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75rem;
+	}
+
+	.diary-band h2 {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+		line-height: 1.2;
+		margin-bottom: 1rem;
+	}
+
+	.diary-band-text p {
+		font-family: 'Carlito', sans-serif;
+		font-size: 1.15rem;
+		line-height: 1.6;
+	}
+
+
+	.diary-band-cta {
+		text-align: center;
+	}
+
+	.diary-band-count {
+		display: flex;
+		flex-direction: column;
+		font-family: 'Carlito', sans-serif;
+		font-size: 1.1rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.diary-band-number {
+		font-family: 'AmsiPro', sans-serif;
+		font-size: 3rem;
+		color: #ff9f2e;
+		line-height: 1.1;
 	}
 	
 	.counter-circle {
@@ -355,37 +428,6 @@
 		margin-bottom: 1.5rem;
 	}
 	
-	.demands-card {
-		background: white;
-		font-size:1.6rem;
-		color: black;
-		padding: 2rem;
-		border-radius: 0px;
-		border: 10px solid #ff9f2e;
-	}
-	
-	.card-header {
-		font-family: 'Carlito', sans-serif;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	
-	.demands-card p {
-		font-family: 'Carlito', sans-serif;
-		margin-bottom: 1rem;
-		
-	}
-	
-	.demands-card ol {
-		margin: 1.5rem 0;
-		padding-left: 1.5rem;
-	}
-	
-	.demands-card li {
-		font-family: 'Carlito', sans-serif;
-		margin-bottom: 0.8rem;
-		line-height: 1.4;
-	}
 	
 	.btn-cta {
 		background: #ff9f2e;
@@ -475,13 +517,6 @@
 		font-weight: bold;
 	}
 	
-	.accent-orange {
-		text-decoration: underline;
-		text-decoration-color: #ff9f2e;
-		text-underline-offset: 2px;
-		text-decoration-thickness: 4px;
-		text-decoration-style: solid;
-	}
 	
 	.ready-section {
 		margin-top: 3rem;
@@ -532,7 +567,8 @@
 		.cancel-prime-plug {
 			padding: 2rem 0;
 		}
-		.demands-content {
+		.demands-content,
+		.diary-band-content {
 			grid-template-columns: 1fr;
 			gap: 2rem;
 		}

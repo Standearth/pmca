@@ -3,7 +3,6 @@
 	import { targetCount } from "$data/variables.json";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import TapeTransition from "$components/TapeTransition.svelte";
 	import StoriesCarousel from "$components/StoriesCarousel.svelte";
@@ -97,8 +96,6 @@
 	structuredData={joinPageStructuredData}
 	{preloadFont} 
 />
-<Header />
-
 <!-- Hero Section with Embedded Form -->
 <section class="hero">
 	<div class="hero-background">

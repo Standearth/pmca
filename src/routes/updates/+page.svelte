@@ -3,7 +3,6 @@
 	import { browser } from "$app/environment";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import { loadUpdates, formatDate } from "$utils/loadUpdates.js";
 	import { buildImageUrl } from "$utils/sanity.js";
@@ -83,8 +82,6 @@
 	structuredData={structuredData}
 	{preloadFont}
 />
-
-<Header />
 
 <!-- Hero Section -->
 <section class="hero">
@@ -302,7 +299,6 @@
 		background: white;
 		border-radius: 12px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-		border-left: 4px solid #1298ff;
 		overflow: hidden;
 		transition: all 0.3s ease;
 		animation: fadeInUp 0.6s ease-out both;

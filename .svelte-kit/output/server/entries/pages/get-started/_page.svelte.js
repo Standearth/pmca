@@ -1,8 +1,23 @@
-import { a3 as attr, a5 as attr_class, a4 as stringify } from "../../../chunks/index.js";
+import { $ as attr, a2 as escape_html, a6 as attr_class, a0 as stringify } from "../../../chunks/index.js";
 import { b as base } from "../../../chunks/server.js";
 import "@sveltejs/kit/internal/server";
 import { M as Meta, F as Footer } from "../../../chunks/Footer.js";
 import { T as TapeTransition } from "../../../chunks/TapeTransition.js";
+import "clsx";
+/* empty css                                                            */
+import { t as targetCount } from "../../../chunks/variables.js";
+function AddToHomeScreen($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    {
+      $$renderer2.push("<!--[!-->");
+      {
+        $$renderer2.push("<!--[!-->");
+      }
+      $$renderer2.push(`<!--]-->`);
+    }
+    $$renderer2.push(`<!--]-->`);
+  });
+}
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const title = "Get Started - Prime Members for Cleaner Amazon";
@@ -12,14 +27,14 @@ function _page($$renderer, $$props) {
     const BASE_SHARE_URL = "https://primemembers.earth/";
     function getShareUrl(platform) {
       const shareUrl = BASE_SHARE_URL;
-      const text = "Prime members want Amazon to do more on climate. Join thousands of us demanding change!";
+      const text = "I'm a Prime member logging what Amazon delivers to my door, so Amazon can't ignore what members see. It takes 20 seconds a package. Join me:";
       switch (platform) {
         case "facebook":
           return `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
         case "bluesky":
           return `https://bsky.app/intent/compose?text=${encodeURIComponent(text + " " + shareUrl)}`;
         case "email":
-          return `mailto:?subject=${encodeURIComponent("Join the Prime Members for Cleaner Amazon campaign")}&body=${encodeURIComponent(text + "\n\n" + shareUrl)}`;
+          return `mailto:?subject=${encodeURIComponent("Join me in logging our Amazon deliveries")}&body=${encodeURIComponent(text + "\n\n" + shareUrl)}`;
         case "whatsapp":
           return `https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}`;
         case "linkedin":
@@ -31,9 +46,12 @@ function _page($$renderer, $$props) {
     Meta($$renderer2, {
       title,
       description,
-      canonical: "https://primemembers.earth/get-started/"
+      canonical: "https://primemembers.earth/get-started/",
+      noindex: true
     });
-    $$renderer2.push(`<!----> <section class="hero svelte-1py19mn"><div class="hero-background svelte-1py19mn"><div class="hero-overlay svelte-1py19mn"></div> <img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="Background" class="hero-image svelte-1py19mn"/></div> <div class="hero-content svelte-1py19mn"><div class="hero-text svelte-1py19mn"><h1 class="svelte-1py19mn">Your Prime member power has been activated!</h1> <p class="hero-subtitle svelte-1py19mn">You've just joined thousands of Prime members demanding a cleaner Amazon. In the next couple of weeks, we will use our collective power to ramp up pressure on Amazon. Stay tuned!</p> <div class="hero-box svelte-1py19mn"><h3 class="svelte-1py19mn">Our strength will come from numbers. Let's amplify your voice and mobilize more Prime members to join our movement.</h3></div></div></div></section> <section class="social-sharing svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 1: Spread the word</h2> <p class="section-intro svelte-1py19mn">Help us reach more Prime members by sharing our campaign on your social networks.</p> `);
+    $$renderer2.push(`<!----> <section class="hero svelte-1py19mn"><div class="hero-background svelte-1py19mn"><div class="hero-overlay svelte-1py19mn"></div> <img${attr("src", `${stringify(base)}/hero-bg.webp`)} alt="Background" class="hero-image svelte-1py19mn"/></div> <div class="hero-content svelte-1py19mn"><div class="hero-text svelte-1py19mn"><h1 class="svelte-1py19mn">Welcome. You're one of ${escape_html(targetCount.toLocaleString())} Prime members.</h1> <p class="hero-subtitle svelte-1py19mn">Your Prime membership is leverage, and members are using it every time a package arrives. They log what lands on the porch in the Delivery Diary, and count Amazon's vans, electric or not, with the EV Spotter. Here's how to start.</p></div></div></section> <section class="first-action svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 1: Log your next delivery</h2> <p class="section-intro svelte-1py19mn">Twenty seconds turns an annoyance on your porch into evidence, and you see what every member is finding.</p> <div class="first-action-cta svelte-1py19mn"><a class="diary-btn svelte-1py19mn"${attr("href", `${stringify(base)}/diary/`)}>Did a package arrive today? Log it now</a></div> `);
+    AddToHomeScreen($$renderer2);
+    $$renderer2.push(`<!----></div></section> <section class="social-sharing svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Bring one Prime member you know</h2> <p class="section-intro svelte-1py19mn">Most people join because someone they know asked. Send your link to one Prime member who'd log their deliveries too.</p> `);
     {
       $$renderer2.push("<!--[!-->");
     }
@@ -41,13 +59,13 @@ function _page($$renderer, $$props) {
     {
       $$renderer2.push("<!--[!-->");
     }
-    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 2: Share your story</h2> <div class="survey-container svelte-1py19mn">`);
+    $$renderer2.push(`<!--]--></div></section> <section class="survey svelte-1py19mn" id="story"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 3: Share your story</h2> <p class="section-intro svelte-1py19mn">What's the most oversized box Amazon has ever sent you? Tell us about it, or any delivery that stuck with you.</p> <div class="survey-container svelte-1py19mn">`);
     {
       $$renderer2.push("<!--[!-->");
     }
     $$renderer2.push(`<!--]--></div></div></section> `);
     TapeTransition($$renderer2);
-    $$renderer2.push(`<!----> <section class="donation svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 3: Power our campaign with a donation</h2> <p class="section-intro svelte-1py19mn">Your contribution will help us reach more Prime members and build the pressure needed to change Amazon.</p> <div class="donation-grid svelte-1py19mn"><button class="donation-btn svelte-1py19mn">$25</button> <button class="donation-btn svelte-1py19mn">$50</button> <button class="donation-btn svelte-1py19mn">$75</button> <button class="donation-btn svelte-1py19mn">$100</button> <button class="donation-btn svelte-1py19mn">$250</button> <button class="donation-btn svelte-1py19mn">$500</button></div></div></section> <div${attr_class("modal-overlay svelte-1py19mn", void 0, { "show": showDonationModal })}><div class="modal-content svelte-1py19mn"><button class="modal-close svelte-1py19mn">×</button> <iframe${attr("src", `https://act.stand.earth/page/77077/donate/1?transaction.donationAmt=${stringify(donationAmount)}`)} title="Make a donation" class="donation-iframe svelte-1py19mn"></iframe></div></div> `);
+    $$renderer2.push(`<!----> <section class="donation svelte-1py19mn"><div class="container svelte-1py19mn"><h2 class="svelte-1py19mn">Step 4: Power our campaign with a donation</h2> <p class="section-intro svelte-1py19mn">Your contribution will help us reach more Prime members and build the pressure needed to change Amazon.</p> <div class="donation-grid svelte-1py19mn"><button class="donation-btn svelte-1py19mn">$25</button> <button class="donation-btn svelte-1py19mn">$50</button> <button class="donation-btn svelte-1py19mn">$75</button> <button class="donation-btn svelte-1py19mn">$100</button> <button class="donation-btn svelte-1py19mn">$250</button> <button class="donation-btn svelte-1py19mn">$500</button></div></div></section> <div${attr_class("modal-overlay svelte-1py19mn", void 0, { "show": showDonationModal })}><div class="modal-content svelte-1py19mn"><button class="modal-close svelte-1py19mn">×</button> <iframe${attr("src", `https://act.stand.earth/page/77077/donate/1?transaction.donationAmt=${stringify(donationAmount)}`)} title="Make a donation" class="donation-iframe svelte-1py19mn"></iframe></div></div> `);
     Footer($$renderer2);
     $$renderer2.push(`<!---->`);
   });

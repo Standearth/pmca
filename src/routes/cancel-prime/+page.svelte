@@ -92,11 +92,12 @@
 <!-- Call to Action Section -->
 <section class="cta">
 	<div class="container">
-		<h2>Not ready to cancel? User your Prime member power for good.</h2>
+		<h2>Not ready to cancel? Use your Prime member power for good.</h2>
 		<p>Use your Prime membership power to demand a cleaner Amazon. Join thousands of other members who are pushing for real change.</p>
 		<div class="cta-buttons">
 			<button class="btn btn-cta large" onclick={openPopup}>Keep Prime, Demand Change</button>
 			<p class="small-text">You can always cancel later if Amazon doesn't listen</p>
+			<p class="small-text">Staying? <a href="{base}/diary/">Log your next delivery</a> in the Delivery Diary.</p>
 		</div>
 	</div>
 </section>
@@ -503,6 +504,11 @@
 		color: #999;
 		font-style: italic;
 		margin: 0;
+	}
+
+	.small-text a {
+		color: inherit;
+		font-weight: bold;
 	}
 	
 	/* Mobile Responsiveness */

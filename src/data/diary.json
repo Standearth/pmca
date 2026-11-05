@@ -1,0 +1,14 @@
+{
+	"_readme": "Delivery Diary settings. forms.endpoint is the Apps Script web app URL (apps-script/README.md). Until it is set the form runs in test mode: it works and says so, but nothing is saved. The values below are fallbacks, shown only while the endpoint is unset or unreachable; the live count and electric share come from the endpoint. optInDisclaimer is the privacy text shown under the Log it button when someone ticks the campaign updates box (HTML allowed, e.g. a link to the privacy policy).",
+	"siteUrl": "https://primemembers.earth",
+	"forms": {
+		"endpoint": "https://script.google.com/macros/s/AKfycbwvA3TvzerQnYMbFZeysE1jvdgIQxpiLN0LFdFL2nkra1Zd3s7IDEzDtphHW9AVvf1a/exec"
+	},
+	"loggedFallback": 1287,
+	"electricShare": {
+		"electric": null,
+		"total": null
+	},
+	"retention": "",
+	"optInDisclaimer": ""
+}

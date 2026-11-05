@@ -10,6 +10,38 @@
       "_server.js"
     ]
   },
+  "_AddToHomeScreen.BJqIK5D7.css": {
+    "file": "_app/immutable/assets/AddToHomeScreen.BJqIK5D7.css",
+    "src": "_AddToHomeScreen.BJqIK5D7.css"
+  },
+  "_Demands.6XLwx9r4.css": {
+    "file": "_app/immutable/assets/Demands.6XLwx9r4.css",
+    "src": "_Demands.6XLwx9r4.css"
+  },
+  "_Demands.js": {
+    "file": "chunks/Demands.js",
+    "name": "Demands",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Demands.6XLwx9r4.css"
+    ]
+  },
+  "_EmbeddedForm.BnW9FuYT.css": {
+    "file": "_app/immutable/assets/EmbeddedForm.BnW9FuYT.css",
+    "src": "_EmbeddedForm.BnW9FuYT.css"
+  },
+  "_EmbeddedForm.js": {
+    "file": "chunks/EmbeddedForm.js",
+    "name": "EmbeddedForm",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/EmbeddedForm.BnW9FuYT.css"
+    ]
+  },
   "_Footer.Bv0KJ-vl.css": {
     "file": "_app/immutable/assets/Footer.Bv0KJ-vl.css",
     "src": "_Footer.Bv0KJ-vl.css"
@@ -26,22 +58,6 @@
       "_app/immutable/assets/Footer.Bv0KJ-vl.css"
     ]
   },
-  "_Header.DEk9tFkF.css": {
-    "file": "_app/immutable/assets/Header.DEk9tFkF.css",
-    "src": "_Header.DEk9tFkF.css"
-  },
-  "_Header.js": {
-    "file": "chunks/Header.js",
-    "name": "Header",
-    "imports": [
-      "_index.js",
-      "_server.js",
-      "_PopupModal.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Header.DEk9tFkF.css"
-    ]
-  },
   "_PopupModal.DNBk0uEp.css": {
     "file": "_app/immutable/assets/PopupModal.DNBk0uEp.css",
     "src": "_PopupModal.DNBk0uEp.css"
@@ -56,9 +72,23 @@
       "_app/immutable/assets/PopupModal.DNBk0uEp.css"
     ]
   },
-  "_StoriesCarousel.Dy9Q4WhV.css": {
-    "file": "_app/immutable/assets/StoriesCarousel.Dy9Q4WhV.css",
-    "src": "_StoriesCarousel.Dy9Q4WhV.css"
+  "_RotatingPhrase.BFcmeE76.css": {
+    "file": "_app/immutable/assets/RotatingPhrase.BFcmeE76.css",
+    "src": "_RotatingPhrase.BFcmeE76.css"
+  },
+  "_RotatingPhrase.js": {
+    "file": "chunks/RotatingPhrase.js",
+    "name": "RotatingPhrase",
+    "imports": [
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/RotatingPhrase.BFcmeE76.css"
+    ]
+  },
+  "_StoriesCarousel.BcYShQxx.css": {
+    "file": "_app/immutable/assets/StoriesCarousel.BcYShQxx.css",
+    "src": "_StoriesCarousel.BcYShQxx.css"
   },
   "_StoriesCarousel.js": {
     "file": "chunks/StoriesCarousel.js",
@@ -68,7 +98,7 @@
       "_server.js"
     ],
     "css": [
-      "_app/immutable/assets/StoriesCarousel.Dy9Q4WhV.css"
+      "_app/immutable/assets/StoriesCarousel.BcYShQxx.css"
     ]
   },
   "_TapeTransition.BGjnBST5.css": {
@@ -85,6 +115,10 @@
     "css": [
       "_app/immutable/assets/TapeTransition.BGjnBST5.css"
     ]
+  },
+  "_diaryStats.svelte.js": {
+    "file": "chunks/diaryStats.svelte.js",
+    "name": "diaryStats.svelte"
   },
   "_environment.js": {
     "file": "chunks/environment.js",
@@ -195,10 +229,12 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_Header.js"
+      "_index.js",
+      "_server.js",
+      "_PopupModal.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Cyyw4k0w.css"
+      "_app/immutable/assets/_layout.B_thAUVF.css"
     ]
   },
   "src/routes/+page.server.js": {
@@ -217,14 +253,16 @@
       "_server.js",
       "_Footer.js",
       "_variables.js",
-      "_Header.js",
       "_TapeTransition.js",
       "_PopupModal.js",
       "_StoriesCarousel.js",
-      "_sanity.js"
+      "_sanity.js",
+      "_Demands.js",
+      "_RotatingPhrase.js",
+      "_diaryStats.svelte.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.u7ifCW3M.css"
+      "_app/immutable/assets/_page.BPsPocnY.css"
     ]
   },
   "src/routes/ca/+page.svelte": {
@@ -236,7 +274,6 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_TapeTransition.js",
       "_StoriesCarousel.js"
     ],
@@ -257,7 +294,25 @@
       "_PopupModal.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BtKe6U8P.css"
+      "_app/immutable/assets/_page.DYTq-tQy.css"
+    ]
+  },
+  "src/routes/diary/+page.svelte": {
+    "file": "entries/pages/diary/_page.svelte.js",
+    "name": "entries/pages/diary/_page.svelte",
+    "src": "src/routes/diary/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_variables.js",
+      "_Footer.js",
+      "_TapeTransition.js",
+      "_diaryStats.svelte.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CoBvL3pb.css",
+      "_app/immutable/assets/AddToHomeScreen.BJqIK5D7.css"
     ]
   },
   "src/routes/eu/+page.svelte": {
@@ -269,7 +324,6 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_TapeTransition.js",
       "_StoriesCarousel.js",
       "_PopupModal.js"
@@ -287,10 +341,12 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_TapeTransition.js"
+      "_TapeTransition.js",
+      "_variables.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.iK11Dvdw.css"
+      "_app/immutable/assets/_page.BbMUJ6jb.css",
+      "_app/immutable/assets/AddToHomeScreen.BJqIK5D7.css"
     ]
   },
   "src/routes/in/+page.svelte": {
@@ -302,7 +358,6 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_TapeTransition.js",
       "_StoriesCarousel.js",
       "_PopupModal.js"
@@ -321,12 +376,13 @@
       "_variables.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_TapeTransition.js",
-      "_StoriesCarousel.js"
+      "_StoriesCarousel.js",
+      "_Demands.js",
+      "_RotatingPhrase.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D9cNDnWA.css"
+      "_app/immutable/assets/_page.BXpBdJQL.css"
     ]
   },
   "src/routes/learn-more/+page.svelte": {
@@ -339,10 +395,27 @@
       "_server.js",
       "_Footer.js",
       "_TapeTransition.js",
-      "_PopupModal.js"
+      "_PopupModal.js",
+      "_Demands.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CIr5-i6P.css"
+      "_app/immutable/assets/_page.nNcI765t.css"
+    ]
+  },
+  "src/routes/organizing-call/+page.svelte": {
+    "file": "entries/pages/organizing-call/_page.svelte.js",
+    "name": "entries/pages/organizing-call/_page.svelte",
+    "src": "src/routes/organizing-call/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_EmbeddedForm.js",
+      "_variables.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.C2xLnVkN.css"
     ]
   },
   "src/routes/stories/+page.svelte": {
@@ -353,11 +426,25 @@
     "imports": [
       "_index.js",
       "_server.js",
-      "_Footer.js",
-      "_Header.js"
+      "_Footer.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.D1rACiSw.css"
+      "_app/immutable/assets/_page.vJapSVpH.css"
+    ]
+  },
+  "src/routes/texas-gas-plant/+page.svelte": {
+    "file": "entries/pages/texas-gas-plant/_page.svelte.js",
+    "name": "entries/pages/texas-gas-plant/_page.svelte",
+    "src": "src/routes/texas-gas-plant/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_server.js",
+      "_Footer.js",
+      "_EmbeddedForm.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.mcvgUlht.css"
     ]
   },
   "src/routes/uk/+page.svelte": {
@@ -369,7 +456,6 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_TapeTransition.js",
       "_StoriesCarousel.js",
       "_PopupModal.js"
@@ -387,11 +473,10 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_sanity.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Cb_zWrwb.css"
+      "_app/immutable/assets/_page.Ckm5emOJ.css"
     ]
   },
   "src/routes/updates/[slug]/+page.js": {
@@ -412,12 +497,11 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_Header.js",
       "_loadUpdates.js",
       "_sanity.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.B4s9NXXF.css"
+      "_app/immutable/assets/_page.DZOSadPm.css"
     ]
   }
 }

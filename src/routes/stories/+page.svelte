@@ -3,7 +3,6 @@
 	import { browser } from "$app/environment";
 	import { base } from '$app/paths';
 	import Meta from "$components/Meta.svelte";
-	import Header from "$components/Header.svelte";
 	import Footer from "$components/Footer.svelte";
 	import { loadStories, shuffleArray } from "$utils/loadStories.js";
 	
@@ -148,8 +147,6 @@
 	{preloadFont} 
 />
 
-<Header />
-
 <!-- Hero Section -->
 <section class="hero">
 	<div class="hero-background">
@@ -219,10 +216,11 @@
 <section class="cta-section">
 	<div class="container">
 		<div class="cta-content">
-			<h2>Ready to add your voice?</h2>
-			<p>Join thousands of Prime members calling for Amazon to do better on climate.</p>
+			<h2>Got a delivery story of your own?</h2>
+			<p>Log your next delivery in the Delivery Diary. Twenty seconds turns an annoyance on your porch into evidence.</p>
 			<div class="cta-actions">
-				<a href="{base}/join" class="btn btn-cta">Join the campaign</a>
+				<a href="{base}/diary/" class="btn btn-cta">Log your next delivery</a>
+				<a href="{base}/join/" class="btn btn-secondary">Not a member? Join</a>
 			</div>
 		</div>
 	</div>
@@ -407,7 +405,6 @@
 		border-radius: 12px;
 		padding: 2rem;
 		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-		border-left: 4px solid #1298ff;
 		transition: all 0.3s ease;
 		animation: fadeInUp 0.6s ease-out both;
 		position: relative;
