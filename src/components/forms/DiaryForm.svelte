@@ -27,6 +27,7 @@
 	let diaryAnswers = $state(emptyDiary());
 	let spotterAnswers = $state(emptySpotter());
 	let expanded = $state(false);
+	let comment = $state('');
 	let ref = $state('');
 	let status = $state('idle'); // idle | sending | done
 	let error = $state('');
@@ -56,9 +57,9 @@
 
 	function answersFor(currentDoor) {
 		if (currentDoor === 'diary') {
-			return { log_type: 'diary', ...$state.snapshot(diaryAnswers) };
+			return { log_type: 'diary', ...$state.snapshot(diaryAnswers), comment: comment.trim() };
 		}
-		return { log_type: 'spotter', ...$state.snapshot(spotterAnswers) };
+		return { log_type: 'spotter', ...$state.snapshot(spotterAnswers), comment: comment.trim() };
 	}
 
 	async function handleSubmit(event) {
@@ -110,6 +111,7 @@
 		diaryAnswers = emptyDiary();
 		spotterAnswers = emptySpotter();
 		expanded = false;
+		comment = '';
 		ref = newRef();
 		startedAt = Date.now();
 		door = nextDoor;
@@ -179,6 +181,14 @@
 				</label>
 			{/if}
 			<ChoiceQuestion question={sightingWhen} bind:value={spotterAnswers.sighting_when} required idPrefix="s" />
+		{/if}
+
+		{#if door}
+			<label class="text-field comment">
+				<span>Anything else to add? <em>(optional)</em></span>
+				<textarea bind:value={comment} maxlength="500" rows="3"></textarea>
+				<small>Please leave out names, addresses and other personal details.</small>
+			</label>
 		{/if}
 
 		<div class="trap" aria-hidden="true">
@@ -306,7 +316,22 @@
 		font-family: 'AmsiPro', sans-serif;
 	}
 
-	.text-field input {
+	.text-field.comment {
+		margin-top: 0;
+	}
+
+	.text-field em {
+		font-family: 'Carlito', sans-serif;
+		font-style: normal;
+		color: #666;
+	}
+
+	.text-field textarea {
+		resize: vertical;
+	}
+
+	.text-field input,
+	.text-field textarea {
 		font-family: 'Carlito', sans-serif;
 		font-size: 1.05rem;
 		min-height: 44px;

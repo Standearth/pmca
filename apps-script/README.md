@@ -48,7 +48,7 @@ The electric share updates itself. It stays hidden until `min_vehicles_for_share
 ## Requests and reports
 
 - **Deletion:** Delivery Diary → **Delete a member's logs**, enter the email. Also remove them from EN if they were imported as an opt-in.
-- **Anonymised dataset**, for sharing the data beyond the team: Delivery Diary → **Build anonymised export**. It has no names or emails, postal codes cut to 3 characters, and dates without times.
+- **Anonymised dataset**, for sharing the data beyond the team: Delivery Diary → **Build anonymised export**. It has no names or emails, postal codes cut to 3 characters, and dates without times. Free-text comments are left out too, since people may write personal details in them; read them in the Logs tab (`comment` column).
 - **Evidence rule:** publish counts, never rates. Members choose what to log.
 
 ## Keep in sync

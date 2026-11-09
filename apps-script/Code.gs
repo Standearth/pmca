@@ -43,7 +43,7 @@ const COLUMNS = [
 	'email', 'first_name', 'postal_code', 'country',
 	'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
 	'page', 'submitted_at_client',
-	'opt_in'
+	'opt_in', 'comment'
 ];
 const SETTINGS_DEFAULTS = [
 	['min_vehicles_for_share', 25, 'Hide the electric share until this many Amazon vehicles are logged'],
@@ -196,9 +196,10 @@ function toRow_(p) {
 		utm_term: u.term,
 		page: p.page,
 		submitted_at_client: p.submitted_at_client,
-		opt_in: s.opt_in === true ? 'yes' : 'no'
+		opt_in: s.opt_in === true ? 'yes' : 'no',
+		comment: a.comment
 	};
-	return COLUMNS.map((c) => (c === 'received_at' ? values[c] : clean_(values[c], 200)));
+	return COLUMNS.map((c) => (c === 'received_at' ? values[c] : clean_(values[c], c === 'comment' ? 500 : 200)));
 }
 
 // Trims, caps length and defuses spreadsheet formulas (=, +, -, @) in free text.

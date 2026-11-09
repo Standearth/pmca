@@ -164,6 +164,7 @@ function DiaryForm($$renderer, $$props) {
     let optIn = false;
     let diaryAnswers = emptyDiary();
     let spotterAnswers = emptySpotter();
+    let comment = "";
     let status = "idle";
     let trap = "";
     const showGrouped = diaryAnswers.split_status === SPLIT_STILL_COMING;
@@ -277,6 +278,18 @@ function DiaryForm($$renderer, $$props) {
             $$renderer3.push("<!--[!-->");
           }
           $$renderer3.push(`<!--]-->`);
+        }
+        $$renderer3.push(`<!--]--> `);
+        if (door) {
+          $$renderer3.push("<!--[-->");
+          $$renderer3.push(`<label class="text-field comment svelte-1rdl5ux"><span>Anything else to add? <em class="svelte-1rdl5ux">(optional)</em></span> <textarea maxlength="500" rows="3" class="svelte-1rdl5ux">`);
+          const $$body = escape_html(comment);
+          if ($$body) {
+            $$renderer3.push(`${$$body}`);
+          }
+          $$renderer3.push(`</textarea> <small class="svelte-1rdl5ux">Please leave out names, addresses and other personal details.</small></label>`);
+        } else {
+          $$renderer3.push("<!--[!-->");
         }
         $$renderer3.push(`<!--]--> <div class="trap svelte-1rdl5ux" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"${attr("value", trap)}/></label></div> `);
         if (door) {
