@@ -53,7 +53,8 @@ function Index($$renderer, $$props) {
       TapeTransition($$renderer3);
       $$renderer3.push(`<!----> <section class="how svelte-tfcqlg"><div class="container svelte-tfcqlg"><h2 class="svelte-tfcqlg">Here is how we move Amazon</h2> <p class="how-subtitle svelte-tfcqlg">Recent polling showed 4 out of 5 Prime members want Amazon to do better on climate. Amazon depends on its customers, so the more of us who speak up together, the harder we are to ignore. We're building that people power, and using it to push Amazon to do more.</p> <div class="action-grid svelte-tfcqlg"><div class="action-item svelte-tfcqlg"><div class="action-icon svelte-tfcqlg"><img${attr("src", `${stringify(base)}/marker.svg`)} alt="" role="presentation" class="svelte-tfcqlg"/></div> <h3 class="svelte-tfcqlg">Build Power</h3> <p class="svelte-tfcqlg">Let's reach as many Prime members as possible. Share <span class="highlight svelte-tfcqlg">your unique link</span> and spread the word.</p></div> <div class="action-item svelte-tfcqlg"><div class="action-icon svelte-tfcqlg"><img${attr("src", `${stringify(base)}/marker.svg`)} alt="" role="presentation" class="svelte-tfcqlg"/></div> <h3 class="svelte-tfcqlg">Get Noticed</h3> <p class="svelte-tfcqlg">Every package and van you log in the <a class="highlight svelte-tfcqlg"${attr("href", `${stringify(base)}/diary/`)}>Delivery Diary and EV Spotter</a> adds to evidence we put in front of Amazon, the press and the public, so our demands come with proof.</p></div> <div class="action-item svelte-tfcqlg"><div class="action-icon svelte-tfcqlg"><img${attr("src", `${stringify(base)}/marker.svg`)} alt="" role="presentation" class="svelte-tfcqlg"/></div> <h3 class="svelte-tfcqlg">Organize</h3> <p class="svelte-tfcqlg">From <span class="highlight svelte-tfcqlg">Amazon employees</span>, to <span class="highlight svelte-tfcqlg">local communities</span>, our collective power can only grow from here.`);
       {
-        $$renderer3.push("<!--[!-->");
+        $$renderer3.push("<!--[-->");
+        $$renderer3.push(`<a class="highlight svelte-tfcqlg"${attr("href", `${stringify(base)}/organizing-call/`)}>Join our next organizing call</a>.`);
       }
       $$renderer3.push(`<!--]--></p></div></div> <div class="ready-section svelte-tfcqlg"><button class="btn btn-cta large svelte-tfcqlg">I am ready to join</button></div></div></section> <section class="cancel-prime-plug svelte-tfcqlg"><div class="container svelte-tfcqlg"><div class="plug-content svelte-tfcqlg"><div class="plug-text svelte-tfcqlg"><h3 class="svelte-tfcqlg">Considering canceling your Prime membership?</h3> <p class="svelte-tfcqlg">Amazon just got in BIG trouble for making cancelling Prime membership deliberately difficult. Learn how the process works now.</p></div> <div class="plug-cta svelte-tfcqlg"><a${attr("href", `${stringify(base)}/cancel-prime`)} class="btn btn-secondary svelte-tfcqlg">Learn about canceling Prime</a></div></div></div></section> `);
       Footer($$renderer3);
@@ -96,7 +97,7 @@ const copy = {
 function version() {
   console.log("--- --- --- --- --- ---");
   console.log(`svelte-starter: ${"6.15.0"}`);
-  console.log(`build: ${"2026-11-09-16:27"}`);
+  console.log(`build: ${"2026-11-17-10:09"}`);
   console.log("--- --- --- --- --- ---");
 }
 function _page($$renderer, $$props) {
