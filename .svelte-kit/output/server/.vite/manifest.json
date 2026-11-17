@@ -411,10 +411,11 @@
       "_index.js",
       "_server.js",
       "_Footer.js",
-      "_EmbeddedForm.js"
+      "_EmbeddedForm.js",
+      "_variables.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.BdmA7l75.css"
+      "_app/immutable/assets/_page.Cevqik6K.css"
     ]
   },
   "src/routes/stories/+page.svelte": {

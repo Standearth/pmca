@@ -4,9 +4,11 @@
 	import Footer from "$components/Footer.svelte";
 	import EmbeddedForm from "$components/EmbeddedForm.svelte";
 	import call from "$data/organizingCall.js";
+	import { targetCount } from "$data/variables.json";
 
-	const title = `Every Package Counts: ${call.shortDate} on Zoom | Prime Members for a Cleaner Amazon`;
-	const description = `An online gathering of Amazon customers this holiday season. ${call.dateLabel}${call.time ? `, ${call.time}` : ''}, on Zoom.`;
+	const title = `Prime Members Organizing Call, ${call.shortDate} | Prime Members for a Cleaner Amazon`;
+	const description = `An online organizing call for Prime members on ${call.dateLabel}. Get a campaign update and find out how to get more involved.`;
+	const when = `${call.dateLabel}${call.time ? `, ${call.time}` : ''}`;
 </script>
 
 <Meta {title} {description} canonical="https://primemembers.earth/organizing-call/" noindex={!call.live} />
@@ -19,55 +21,45 @@
 
 	<div class="layout">
 		<header class="intro">
-			<p class="eyebrow">Online organizing call</p>
-			<h1>Every Package Counts</h1>
-			<p class="subtitle">An online gathering of Amazon customers this holiday season</p>
-			<p class="when">
-				<span class="when-date">{call.dateLabel}</span>
-				<span class="when-time">{call.time}{call.time ? ' · ' : ''}on Zoom</span>
-			</p>
+			<p class="eyebrow">Online · {when}</p>
+			<h1>Prime members organizing call</h1>
+			<p class="subtitle">An online call with the Stand.earth team for Prime members who want to get more involved in the campaign. We'll share an update on our work and plan the next steps together.</p>
 		</header>
 
 		<aside class="form-column" id="register">
 			<div class="form-card">
 				<h2>Save your spot</h2>
 				<EmbeddedForm src="https://act.stand.earth/page/104780/petition/1" title="Sign up for the organizing call" />
-				<p class="form-note">Can't make it live? Sign up and we'll send you the recording.</p>
 			</div>
 		</aside>
 
 		<div class="story">
 			<section class="block">
 				<h2>Why join</h2>
-				<p>A lot of us rely on Amazon and have mixed feelings about what that convenience costs. Last year, Amazon's climate pollution jumped 16%. And it's backing a huge new gas plant in Texas to power a data center.</p>
-				<p>Amazon has the money and technology to choose cleaner options. What will move it is us, its customers. When we organize and speak up together, we put at risk what Amazon protects most: our loyalty.</p>
-				<p>The holiday shopping season is Amazon's busiest time of year, when our voices carry furthest. That's why we're meeting now.</p>
+				<p>{targetCount.toLocaleString()} people have joined the campaign so far. This call is for those who want to do more than add their name. You'll meet other members and find out how you can take on a bigger role.</p>
 			</section>
 
 			<section class="block">
-				<h2>What we'll do together</h2>
+				<h2>What's on the agenda</h2>
 				<ol class="agenda">
 					<li>
-						<h3><span class="agenda-number">1</span>Hear from members</h3>
-						<p>PMCA members will share why they got involved and what happened when we took our concerns directly to Amazon.</p>
+						<h3><span class="agenda-number">1</span>Campaign update</h3>
+						<p>What we've asked Amazon for, what people are reporting in the <a href="{base}/diary/">Delivery Diary</a>, and how Amazon has responded.</p>
 					</li>
 					<li>
-						<h3><span class="agenda-number">2</span>Start our Delivery Diary together</h3>
-						<p>We'll kick off the <a href="{base}/diary/">Delivery Diary</a> holiday push, with everyone logging a first entry live. Together we'll build the record Amazon won't publish: how our packages actually arrive.</p>
+						<h3><span class="agenda-number">2</span>Amazon's data centers</h3>
+						<p>Amazon is building a gas plant in Texas to power an AI data center campus. We'll explain the plan and our <a href="{base}/texas-gas-plant/">petition</a> against it.</p>
 					</li>
 					<li>
-						<h3><span class="agenda-number">3</span>Choose your next step</h3>
-						<p>We'll share what comes next and the ways you can step up, from signing our <a href="{base}/texas-gas-plant/">Texas gas plant petition</a> to joining PMCA's leadership team.</p>
+						<h3><span class="agenda-number">3</span>Next steps</h3>
+						<p>Ways to get more involved, and the upcoming moments when we can put pressure on Amazon.</p>
 					</li>
 				</ol>
-				<p class="takeaway">You'll leave with one concrete thing to do this holiday season.</p>
 			</section>
 
 			<section class="block">
 				<h2>Who should come</h2>
-				<p>Any Amazon customer, whether you're brand new or have been with us from the start. No experience needed.</p>
-				<p>If you can, have a recent Amazon delivery in mind. We'll log it together.</p>
-				<p class="hosts">Hosted by Prime members across the US and Canada.</p>
+				<p>Prime members and other Amazon customers. You don't need any experience.</p>
 				<a class="btn btn-cta jump-to-form" href="#register">Save my spot</a>
 			</section>
 		</div>
@@ -143,30 +135,9 @@
 
 	.subtitle {
 		font-family: 'Carlito', sans-serif;
-		font-size: 1.4rem;
-		line-height: 1.45;
+		font-size: 1.3rem;
+		line-height: 1.55;
 		max-width: 640px;
-	}
-
-	/* The date is the one thing everyone needs to remember, so it gets its own block. */
-	.when {
-		display: inline-flex;
-		flex-direction: column;
-		gap: 0.35rem;
-		margin-top: 2rem;
-		padding: 1rem 1.5rem;
-		background: #ff9f2e;
-		color: #000;
-		font-family: 'AmsiPro', sans-serif;
-		line-height: 1.1;
-	}
-
-	.when-date {
-		font-size: clamp(1.6rem, 3.5vw, 2.3rem);
-	}
-
-	.when-time {
-		font-size: clamp(1.15rem, 2.2vw, 1.4rem);
 	}
 
 	/* The column spans both rows so the card can stick for the whole story. */
@@ -192,13 +163,6 @@
 		margin-bottom: 1rem;
 	}
 
-	.form-note {
-		font-family: 'Carlito', sans-serif;
-		font-size: 1rem;
-		color: #555;
-		margin-top: 0.75rem;
-	}
-
 
 	.story {
 		grid-area: story;
@@ -221,26 +185,6 @@
 		font-size: 1.2rem;
 		line-height: 1.6;
 		opacity: 0.92;
-	}
-
-	.block p + p {
-		margin-top: 1rem;
-	}
-
-	.block a:not(.btn) {
-		color: #ff9f2e;
-		font-weight: bold;
-	}
-
-	.block .takeaway {
-		margin-top: 1.75rem;
-		font-weight: bold;
-		opacity: 1;
-	}
-
-	.block .hosts {
-		margin-top: 1.5rem;
-		font-style: italic;
 	}
 
 	/* Numbers start on the same left edge as the paragraphs around them. */
@@ -273,6 +217,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.agenda a {
+		color: #ff9f2e;
+		font-weight: bold;
 	}
 
 	.btn {

@@ -33,9 +33,9 @@
 {#if visible}
 	<aside class="call-banner" aria-label="Organizing call">
 		<button type="button" class="close" aria-label="Hide this" onclick={dismiss}>&times;</button>
-		<p class="eyebrow">Live on Zoom · {call.shortDate}</p>
-		<p class="headline">Every Package Counts</p>
-		<p class="sub">An online gathering of Amazon customers this holiday season. {call.dateLabel}{call.time ? `, ${call.time}` : ''}.</p>
+		<p class="eyebrow">Live organizing call · {call.shortDate}</p>
+		<p class="headline">Prime members: let's plan what's next, together.</p>
+		<p class="sub">{call.dateLabel}{call.time ? `, ${call.time}` : ''}. Online, free.</p>
 		<a class="cta" href="{base}/organizing-call/">Save my spot</a>
 	</aside>
 {/if}
